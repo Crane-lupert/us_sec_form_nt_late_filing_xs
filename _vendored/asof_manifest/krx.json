@@ -1,0 +1,99 @@
+{
+  "_meta": {
+    "schema_version": "v1",
+    "vendor": "krx",
+    "last_full_rebuild": "2026-06-05",
+    "scanner_version": "n/a (mostly trade-date or announcement-stamped)",
+    "dump_root_or_endpoint": "https://data.krx.co.kr/ (free tier) + KIND (kind.krx.co.kr)",
+    "notes": "KRX free-tier 시세 + ETF PDF + index constituents + KIND announcements. All knowable from publish/announcement timestamp. Caveat: investor-type flow has T+1 publication."
+  },
+  "entries": {
+    "krx.daily_시세.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "trade_date",
+      "safe_as_of_field": "trade_date",
+      "shift_recipe": "none",
+      "notes": "Daily 시세 (close/open/high/low/volume). Trade-date stamped. Used by KR17/KR38 forward-return computation.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "krx.etf_pdf.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "publish_date",
+      "safe_as_of_field": "publish_date",
+      "shift_recipe": "none",
+      "notes": "ETF 구성종목 PDF. KRX publishes daily after market close.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "krx.index_consts.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "effective_date",
+      "safe_as_of_field": "announcement_date",
+      "shift_recipe": "external_lookup",
+      "shift_recipe_fallback_days": -10,
+      "notes": "KOSPI200/KOSDAQ150/KRX300/KRX100 constituents. KIND publishes index rebalance announcement ~10 trading days before effective date. If using effective_date as as-of, shift backwards by 10 trading days (or use announcement_date from KIND lookup). Critical for any backtest that filters universe by index membership.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "krx.kind_announcements.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "announcement_timestamp",
+      "safe_as_of_field": "announcement_timestamp",
+      "shift_recipe": "none",
+      "notes": "KIND corporate filings — announcement-stamped, knowable in real time.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "krx.investor_type_flow.<value_fields>": {
+      "classification": "pattern_a_no_intrinsic_anchor",
+      "raw_as_of_field": "trade_date",
+      "safe_as_of_field": null,
+      "shift_recipe": "shift_business_days",
+      "shift_recipe_fallback_days": 1,
+      "notes": "KRX publishes investor-type buy/sell aggregates T+1 trading day. If joining to T-day return, +1 BDay shift.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "krx.kofia_aggregate.<value_fields>": {
+      "classification": "pattern_a_no_intrinsic_anchor",
+      "raw_as_of_field": "trade_date",
+      "safe_as_of_field": null,
+      "shift_recipe": "shift_business_days",
+      "shift_recipe_fallback_days": 1,
+      "notes": "KOFIA publishes daily aggregates (margin lending, short balance) T+1.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "krx.kis_ws_ticks.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "exchange_timestamp",
+      "safe_as_of_field": "exchange_timestamp",
+      "shift_recipe": "none",
+      "notes": "KIS OpenAPI WebSocket trade ticks — exchange-side timestamp.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    }
+  }
+}

@@ -1,0 +1,505 @@
+{
+  "_meta": {
+    "schema_version": "v1",
+    "vendor": "wrds",
+    "last_full_rebuild": "2026-06-04T18:56:15Z",
+    "scanner_version": "wrds_scanner.py@v1.0_2026-06-05",
+    "dump_root_or_endpoint": "E:/wrds-data-courier/output/dump/",
+    "notes": "Initial stub seeded from wrds-dump-usability-snapshot.md §B + §B.5 Pattern A risk catalog. Empirical datadate→rdq / fpedats→anndats deltas pending wrds_scanner.py first run."
+  },
+  "entries": {
+    "wrds.comp_na_daily_all.fundq.<value_fields>": {
+      "classification": "pattern_a_intrinsic_anchor_available",
+      "raw_as_of_field": "datadate",
+      "safe_as_of_field": "rdq",
+      "shift_recipe": "use_intrinsic_anchor",
+      "notes": "Classic Compustat look-ahead: datadate = fiscal-period end, rdq = preliminary earnings announcement date. Use rdq + 1 business day to be safe for intraday timing.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B.5",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-04T18:56:15Z"
+      },
+      "empirical": {
+        "delta_median_days": 32.0,
+        "delta_p10_p90": [
+          18.0,
+          59.0
+        ],
+        "delta_p50_p99": [
+          32.0,
+          112.77000000000044
+        ],
+        "n_evidence": 31624,
+        "cross_ref_source": "intrinsic_anchor_rdq_in_same_table",
+        "last_scanned": "2026-06-04T18:56:15Z",
+        "scanner_version": "wrds_scanner.py@v1.0_2026-06-05"
+      }
+    },
+    "wrds.comp_na_daily_all.funda.<value_fields>": {
+      "classification": "pattern_a_intrinsic_anchor_available",
+      "raw_as_of_field": "datadate",
+      "safe_as_of_field": "rdq",
+      "shift_recipe": "use_intrinsic_anchor",
+      "shift_recipe_fallback_days": 30,
+      "notes": "Annual fundamentals. funda.rdq historically sparse (pre-2000 NULL rate high). For 10-K event studies, prefer SEC EDGAR 10-K acceptance-datetime. Fallback +30d buffer if both NULL.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B.5",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.comp_na_daily_all.secd.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "datadate",
+      "safe_as_of_field": "datadate",
+      "shift_recipe": "none",
+      "notes": "Daily prices. secd.datadate semantics = trade date (NOT fiscal end). Context-dependent meaning of 'datadate'.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.comp_na_daily_all.company.<value_fields>": {
+      "classification": "static",
+      "raw_as_of_field": null,
+      "safe_as_of_field": null,
+      "shift_recipe": "none",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.tr_ibes.det_xepsus.<forecast_value_fields>": {
+      "classification": "pattern_a_intrinsic_anchor_available",
+      "raw_as_of_field": "fpedats",
+      "safe_as_of_field": "anndats",
+      "shift_recipe": "use_intrinsic_anchor",
+      "notes": "IBES analyst-forecast detail. fpedats = fiscal-period end, anndats = forecast announcement date. For realized EPS use anndats_act instead.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B.5",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-04T18:56:15Z"
+      },
+      "empirical": {
+        "delta_median_days": -307.0,
+        "delta_p10_p90": [
+          -777.0,
+          -48.0
+        ],
+        "delta_p50_p99": [
+          -307.0,
+          35.0
+        ],
+        "n_evidence": 49998,
+        "cross_ref_source": "intrinsic_anchor_anndats_in_same_table",
+        "last_scanned": "2026-06-04T18:56:15Z",
+        "scanner_version": "wrds_scanner.py@v1.0_2026-06-05"
+      }
+    },
+    "wrds.tr_ibes.det_xepsus.<actual_value_fields>": {
+      "classification": "pattern_a_intrinsic_anchor_available",
+      "raw_as_of_field": "fpedats",
+      "safe_as_of_field": "anndats_act",
+      "shift_recipe": "use_intrinsic_anchor",
+      "notes": "Use anndats_act for actual EPS announcement date.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B.5",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-04T18:56:15Z"
+      },
+      "empirical": {
+        "delta_median_days": 49.0,
+        "delta_p10_p90": [
+          29.0,
+          73.0
+        ],
+        "delta_p50_p99": [
+          49.0,
+          85.0
+        ],
+        "n_evidence": 44519,
+        "cross_ref_source": "intrinsic_anchor_anndats_act_in_same_table",
+        "last_scanned": "2026-06-04T18:56:15Z",
+        "scanner_version": "wrds_scanner.py@v1.0_2026-06-05"
+      }
+    },
+    "wrds.tr_ibes.statsum_xepsus.<value_fields>": {
+      "classification": "pattern_a_intrinsic_anchor_available",
+      "raw_as_of_field": "fpedats",
+      "safe_as_of_field": "statpers",
+      "shift_recipe": "use_intrinsic_anchor",
+      "notes": "IBES consensus summary. statpers = consensus snapshot date (knowable in real time).",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B.5",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-04T18:56:15Z"
+      },
+      "empirical": {
+        "delta_median_days": -285.0,
+        "delta_p10_p90": [
+          -1262.0,
+          -14.0
+        ],
+        "delta_p50_p99": [
+          -285.0,
+          47.0
+        ],
+        "n_evidence": 49946,
+        "cross_ref_source": "intrinsic_anchor_statpers_in_same_table",
+        "last_scanned": "2026-06-04T18:56:15Z",
+        "scanner_version": "wrds_scanner.py@v1.0_2026-06-05"
+      }
+    },
+    "wrds.tr_ibes.act_xepsus.<value_fields>": {
+      "classification": "pattern_a_intrinsic_anchor_available",
+      "raw_as_of_field": "pends",
+      "safe_as_of_field": "anndats_act",
+      "shift_recipe": "use_intrinsic_anchor",
+      "notes": "IBES actual EPS. Use anndats_act.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B.5",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.crsp_a_stock.dsf.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "date",
+      "safe_as_of_field": "date",
+      "shift_recipe": "none",
+      "notes": "CRSP daily stock file — trade-date stamped.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.crsp_a_stock.dsf_v2.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "date",
+      "safe_as_of_field": "date",
+      "shift_recipe": "none",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.crsp_a_stock.msf.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "date",
+      "safe_as_of_field": "date",
+      "shift_recipe": "none",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.crsp_a_stock.dsedelist.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "dlstdt",
+      "safe_as_of_field": "dlstdt",
+      "shift_recipe": "none",
+      "notes": "Delisting date — event-stamped.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.optionm_all.opprcd*.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "date",
+      "safe_as_of_field": "date",
+      "shift_recipe": "none",
+      "notes": "Wildcard for all opprcdYYYY tables. OptionMetrics IvyDB daily — trade-date stamped.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.trace_enhanced.trace_enhanced.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "trd_exctn_dt",
+      "safe_as_of_field": "trd_exctn_dt",
+      "shift_recipe": "none",
+      "notes": "FINRA TRACE corporate bond ticks.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.wrdsapps_bondret.trace_enhanced_clean.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "tradedate",
+      "safe_as_of_field": "tradedate",
+      "shift_recipe": "none",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.markit_cds.cds*.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "date",
+      "safe_as_of_field": "date",
+      "shift_recipe": "none",
+      "notes": "Wildcard for cdsYYYY tables.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.msrb_all.msrb.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "trade_date",
+      "safe_as_of_field": "trade_date",
+      "shift_recipe": "none",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.fisd_fisd.*.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "offering_date",
+      "safe_as_of_field": "offering_date",
+      "shift_recipe": "none",
+      "notes": "Use offering_date for bond issuance event. effective_date is later registry update, not the public-knowable date.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.crsp_q_mutualfunds.fund_flows.<flow_fields>": {
+      "classification": "pattern_a_no_intrinsic_anchor",
+      "raw_as_of_field": "caldt",
+      "safe_as_of_field": null,
+      "shift_recipe": "shift_calendar_days",
+      "shift_recipe_fallback_days": 45,
+      "notes": "CRSP MF fund_flows publication lag ~30-60d post month-end. No clean knowable-date field in same table. D8 (passive_active_flow_disagreement_llm) verified precedent: signal_lag_quarters ∈ {0,1,2} sweep + Gate L 0.71/0.63 ≥ 0.50 lock under lag=1 conservative. Recommend +45 calendar days as default safe shift (midpoint of 30-60d range).",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §4.2 D8",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.crsp_q_mutualfunds.fund_tna.<value_fields>": {
+      "classification": "pattern_a_no_intrinsic_anchor",
+      "raw_as_of_field": "caldt",
+      "safe_as_of_field": null,
+      "shift_recipe": "shift_calendar_days",
+      "shift_recipe_fallback_days": 45,
+      "notes": "Same as fund_flows.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §4.2 D8",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.crsp_q_mutualfunds.monthly_tna_ret_nav.<value_fields>": {
+      "classification": "pattern_a_no_intrinsic_anchor",
+      "raw_as_of_field": "caldt",
+      "safe_as_of_field": null,
+      "shift_recipe": "shift_calendar_days",
+      "shift_recipe_fallback_days": 45,
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §4.2 D8",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.crsp_q_mutualfunds.holdings.<value_fields>": {
+      "classification": "pattern_a_no_intrinsic_anchor",
+      "raw_as_of_field": "report_dt",
+      "safe_as_of_field": null,
+      "shift_recipe": "shift_calendar_days",
+      "shift_recipe_fallback_days": 60,
+      "notes": "N-CSR / N-Q filing lag ~60 days. Best is SEC EDGAR N-CSR acceptance-datetime cross-reference.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B.5",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.crsp_q_mutualfunds.fund_summary2.<value_fields>": {
+      "classification": "pattern_a_no_intrinsic_anchor",
+      "raw_as_of_field": "caldt",
+      "safe_as_of_field": null,
+      "shift_recipe": "shift_calendar_days",
+      "shift_recipe_fallback_days": 45,
+      "notes": "Fund classification + summary stats. Same publication-lag class as fund_flows.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §4.2 D8",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.crsp_q_mutualfunds.daily_returns.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "caldt",
+      "safe_as_of_field": "caldt",
+      "shift_recipe": "none",
+      "notes": "Daily MF returns — knowable EOD same trade-date.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.crsp_q_mutualfunds.daily_nav.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "caldt",
+      "safe_as_of_field": "caldt",
+      "shift_recipe": "none",
+      "notes": "Daily NAV — knowable EOD.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.bank_all.wrds_call_*.<value_fields>": {
+      "classification": "pattern_a_no_intrinsic_anchor",
+      "raw_as_of_field": "rssd9999",
+      "safe_as_of_field": null,
+      "shift_recipe": "shift_calendar_days",
+      "shift_recipe_fallback_days": 45,
+      "notes": "FFIEC bank call reports. Filing deadline +30 days from quarter-end with extensions. Use +45 conservative shift.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B.5",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.comp_global_daily.g_funda.<value_fields>": {
+      "classification": "pattern_a_no_intrinsic_anchor",
+      "raw_as_of_field": "datadate",
+      "safe_as_of_field": null,
+      "shift_recipe": "shift_calendar_days",
+      "shift_recipe_fallback_days": 120,
+      "notes": "International fundamentals. No clean rdq for non-US. Country reporting deadlines vary (EU 90d, JP 90-120d, KR 90d). +120d conservative fallback covers Japan worst-case.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B.5",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.comp_global_daily.g_fundq.<value_fields>": {
+      "classification": "pattern_a_no_intrinsic_anchor",
+      "raw_as_of_field": "datadate",
+      "safe_as_of_field": null,
+      "shift_recipe": "shift_calendar_days",
+      "shift_recipe_fallback_days": 90,
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B.5",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.trucost_environ.wrds_environment.<value_fields>": {
+      "classification": "pattern_a_no_intrinsic_anchor",
+      "raw_as_of_field": "data_year",
+      "safe_as_of_field": null,
+      "shift_recipe": "shift_calendar_days",
+      "shift_recipe_fallback_days": 365,
+      "notes": "Trucost annual environmental data. Year T data typically published Year T+1 H2. +365d conservative.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B.5",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.wrdsapps_finratio*.<value_fields>": {
+      "classification": "pattern_a_intrinsic_anchor_available",
+      "raw_as_of_field": "qdate",
+      "safe_as_of_field": "public_date",
+      "shift_recipe": "use_intrinsic_anchor",
+      "notes": "WRDS-precomputed firm ratios. Use public_date (WRDS publish date), not qdate (quarter end).",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B.5",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.wrdsapps_evtstudy_us.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "evtdate",
+      "safe_as_of_field": "evtdate",
+      "shift_recipe": "none",
+      "notes": "Pre-centered event-study returns.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.crsp_a_indexes.*.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "date",
+      "safe_as_of_field": "date",
+      "shift_recipe": "none",
+      "notes": "Trade-date stamped factor/index returns.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.ff_all.*.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "date",
+      "safe_as_of_field": "date",
+      "shift_recipe": "none",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.reprisk_pm.*.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "event_date",
+      "safe_as_of_field": "event_date",
+      "shift_recipe": "none",
+      "notes": "ESG controversies — RepRisk publication-stamped.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.fjc_litigation.*.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "filing_date",
+      "safe_as_of_field": "filing_date",
+      "shift_recipe": "none",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "wrds.wrdsapps_patents.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "pub_date",
+      "safe_as_of_field": "pub_date",
+      "shift_recipe": "none",
+      "notes": "Use pub_date (public availability), NOT grant_date or app_date.",
+      "provenance": {
+        "evidence_audit": "data/wrds-dump-usability-snapshot.md §B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    }
+  }
+}

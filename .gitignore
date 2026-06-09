@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+.env
+.envrc
+data/cache/
+*.parquet
+*.csv.gz
+*.feather
+.DS_Store
+.idea/
+.vscode/
+.coverage
+htmlcov/

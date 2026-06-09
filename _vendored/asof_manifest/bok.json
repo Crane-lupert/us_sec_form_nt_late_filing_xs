@@ -1,0 +1,48 @@
+{
+  "_meta": {
+    "schema_version": "v1",
+    "vendor": "bok",
+    "last_full_rebuild": "2026-06-05",
+    "scanner_version": "manual_seed@2026-06-05",
+    "dump_root_or_endpoint": "https://ecos.bok.or.kr/api/StatisticSearch/{API_KEY}/json/kr/{start}/{end}/{stat_code}/{cycle}/{sub_code}",
+    "notes": "Initial stub seeded from KR25 ABANDONED close-report §6 Item 1 (2026-06-05). All three BOK ECOS daily series verified trade-date / decision-date stamped — no shift required. Empirical pagination ceiling = 10,000 rows per request; daily 40+ year series require 5-year chunked fetch per `kr_fx_exposure_beta_cross_section_xs/src/data_load.py` `fetch_bok_ecos_usd_krw()`."
+  },
+  "entries": {
+    "bok.ecos_731Y001.usd_krw": {
+      "classification": "safe",
+      "raw_as_of_field": "TIME",
+      "safe_as_of_field": "TIME",
+      "shift_recipe": "none",
+      "notes": "원/미국달러(매매기준율) daily close; trade-date stamped. BOK ECOS stat_code 731Y001 / sub_code 0000001. Verified by KR25 LT-1 β_FX rolling regression (10,265 daily obs 1988-2025). KR25 SPEC originally cited deprecated stat-code `036Y001_USD_PM`; live working code = `731Y001/0000001`. availability_lag_days = 0.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-05-KR25-ABANDONED-close-report.md §6 Item 1",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "bok.ecos_722Y001.base_rate": {
+      "classification": "safe",
+      "raw_as_of_field": "TIME",
+      "safe_as_of_field": "TIME",
+      "shift_recipe": "none",
+      "notes": "한국은행 기준금리 daily; decision-date publication. BOK ECOS stat_code 722Y001. MPC decision-date publication = same-day knowable. Verified by KR25 Step 6 event calendar (158 event-months 2000-2025: 125 hold + 18 hike + 15 cut MPC decisions classified per month). availability_lag_days = 0.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-05-KR25-ABANDONED-close-report.md §6 Item 1",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "bok.ecos_817Y002.ktb_3y_yield": {
+      "classification": "safe",
+      "raw_as_of_field": "TIME",
+      "safe_as_of_field": "TIME",
+      "shift_recipe": "none",
+      "notes": "KTB 3-year yield daily; trade-date stamped. BOK ECOS stat_code 817Y002. availability_lag_days = 0. (KR25 referenced this code in SPEC §A.1 for control-variable construction; usage path not exercised because Step 7 binding gate failed before yield-controls integration.)",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-05-KR25-ABANDONED-close-report.md §6 Item 1",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    }
+  }
+}

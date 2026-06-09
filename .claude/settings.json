@@ -1,0 +1,49 @@
+{
+  "_comment": "Canonical .claude/settings.json schema for QR Scout external research repos. Drop-in copy at bootstrap time. Schema validated against Claude Code spec 2025-Q4. DO NOT modify hooks.SessionStart shape (matcher + hooks array nested) — flat shape causes parse error.",
+  "_source": "meta-harness/templates/external-repo-claude-settings.template.json (launch-bootstrap-protocol Rule 11)",
+  "permissions": {
+    "deny": [
+      "Bash(python -c \"import wrds*\":*)",
+      "Bash(wrds.Connection*:*)",
+      "Bash(*OPENROUTER_API_KEY*:*)",
+      "Bash(*ANTHROPIC_API_KEY*:*)",
+      "Bash(*OPENAI_API_KEY*:*)",
+      "Bash(*WRDS_USER*:*)",
+      "Bash(*WRDS_PASS*:*)",
+      "Bash(gh push:*)",
+      "Bash(git push:*)"
+    ],
+    "allow": [
+      "Read(D:/vscode/meta-harness/audits/**)",
+      "Read(D:/vscode/meta-harness/templates/**)",
+      "Read(D:/vscode/meta-harness/docs/**)",
+      "Read(D:/vscode/meta-harness/data/**)",
+      "Read(D:/vscode/meta-harness/scripts/**)",
+      "Read(E:/wrds-data-courier/output/dump/**)",
+      "Bash(cat:* D:/vscode/meta-harness/audits/*.md)",
+      "Bash(python D:/vscode/meta-harness/templates/external-api-reachability-corroboration.py:*)",
+      "Bash(powershell -File D:/vscode/career-workspace/.tmp_launch_chrome_cdp.ps1:*)",
+      "Bash(python D:/vscode/meta-harness/templates/kill-audit-generator.py:*)",
+      "Bash(python D:/vscode/meta-harness/scripts/asof-vendored/sync.py:*)",
+      "Bash(python D:/vscode/meta-harness/scripts/asof-vendored/check-drift.py:*)",
+      "Bash(bash D:/vscode/meta-harness/scripts/audit-pipeline-determinism.sh:*)",
+      "Bash(python D:/vscode/personal_alerts/alert.py:*)",
+      "Bash(python:*)",
+      "Bash(pytest:*)",
+      "Bash(git:*)",
+      "Bash(ls:*)",
+      "Bash(grep:*)",
+      "Bash(curl http://localhost:9222*)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {"type": "command", "command": "python .claude/hooks/asof-drift-check.py"}
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "schema_version": "v1",
+    "vendor": "dart",
+    "last_full_rebuild": "2026-06-05",
+    "scanner_version": "n/a (single endpoint, knowable-stamped)",
+    "dump_root_or_endpoint": "https://opendart.fss.or.kr/api/",
+    "notes": "DART OpenAPI returns filings with rcept_dt (receipt date) and rcept_no (monotonic receipt number). All knowable from publication time. SAFE by definition."
+  },
+  "entries": {
+    "dart.opendart.rcept_dt": {
+      "classification": "safe",
+      "raw_as_of_field": "rcept_dt",
+      "safe_as_of_field": "rcept_dt",
+      "shift_recipe": "none",
+      "notes": "Filing receipt date (KST). Canonical KR disclosure as-of anchor. Used by external_lookup resolver in shared_utils.asof.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    }
+  }
+}

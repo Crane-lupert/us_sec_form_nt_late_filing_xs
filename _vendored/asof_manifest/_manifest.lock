@@ -1,0 +1,15 @@
+{
+  "schema_version": "v1",
+  "bootstrapped_at": "2026-06-07T14:13:33Z",
+  "meta_harness_path": "D:\\vscode\\meta-harness\\data\\asof-manifest",
+  "files": {
+    "bok.json": "e22fe0f914081073f87f4d2a3b923f438d803a398f93c67d9f5836929053f6a9",
+    "dart.json": "5df507e608bf99a0b777eab38030ade1c8bd2daad094a44743e91a3477c2d739",
+    "fnguide.json": "9f84fffef258424301d62295f8ae63234d1035a887078191812556c63372ea72",
+    "krx.json": "f1cbd0c2276770779df8c893cf38ff5a8eac0f669422c36e2c0464fa7a4736fd",
+    "sec_edgar.json": "0ab30e1d3e95e1e228acdc3d9904b0097c42f6a811abefe763cc0cda4fd4e8a2",
+    "wrds.json": "80d56ade20a897e5fcb84ff9470f0fa678f4b6020068bceb8d0d5d04925ee34f",
+    "yfinance.json": "4772cf7b5cc457ac0706de74ae4b8035a38a5bc810ed826578fc1c0a1c14873b"
+  },
+  "asof_py_sha256": "5127c48ed38c5067bdcfd5d494ccdddd302af018850bd597d56ba4819772aa43"
+}

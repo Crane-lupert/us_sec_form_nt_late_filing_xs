@@ -1,0 +1,92 @@
+{
+  "_meta": {
+    "schema_version": "v1",
+    "vendor": "sec_edgar",
+    "last_full_rebuild": "2026-06-05",
+    "scanner_version": "n/a (filing acceptance-datetime stamped)",
+    "dump_root_or_endpoint": "https://www.sec.gov/cgi-bin/browse-edgar + EDGAR full-text-search API",
+    "notes": "All EDGAR filings have acceptance-datetime (when SEC marked filing public). SAFE for use as as-of anchor."
+  },
+  "entries": {
+    "sec_edgar.10-K.acceptance_datetime": {
+      "classification": "safe",
+      "raw_as_of_field": "acceptance_datetime",
+      "safe_as_of_field": "acceptance_datetime",
+      "shift_recipe": "none",
+      "notes": "10-K annual report acceptance datetime. Canonical US 'when knowable' for annual filings. Use this when WRDS Compustat funda.rdq is NULL (pre-2000 historical).",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.4",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "sec_edgar.10-Q.acceptance_datetime": {
+      "classification": "safe",
+      "raw_as_of_field": "acceptance_datetime",
+      "safe_as_of_field": "acceptance_datetime",
+      "shift_recipe": "none",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.4",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "sec_edgar.8-K.acceptance_datetime": {
+      "classification": "safe",
+      "raw_as_of_field": "acceptance_datetime",
+      "safe_as_of_field": "acceptance_datetime",
+      "shift_recipe": "none",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.4",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "sec_edgar.485APOS.acceptance_datetime": {
+      "classification": "safe",
+      "raw_as_of_field": "acceptance_datetime",
+      "safe_as_of_field": "acceptance_datetime",
+      "shift_recipe": "none",
+      "notes": "Fund prospectus amendment. Used by D8 (passive_active_flow_disagreement_llm) as file_date.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §4.2 D8",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "sec_edgar.485BPOS.acceptance_datetime": {
+      "classification": "safe",
+      "raw_as_of_field": "acceptance_datetime",
+      "safe_as_of_field": "acceptance_datetime",
+      "shift_recipe": "none",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §4.2 D8",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "sec_edgar.N-PORT.acceptance_datetime": {
+      "classification": "safe",
+      "raw_as_of_field": "acceptance_datetime",
+      "safe_as_of_field": "acceptance_datetime",
+      "shift_recipe": "none",
+      "notes": "Currently only Q3-month publicly available; monthly amendment regime delayed to 2027/2028.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.4",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "sec_edgar.Form4.acceptance_datetime": {
+      "classification": "safe",
+      "raw_as_of_field": "acceptance_datetime",
+      "safe_as_of_field": "acceptance_datetime",
+      "shift_recipe": "none",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.4",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    }
+  }
+}

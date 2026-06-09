@@ -1,0 +1,1093 @@
+{
+  "_meta": {
+    "schema_version": "v1",
+    "vendor": "fnguide",
+    "last_full_rebuild": "2026-06-04T19:10:28Z",
+    "scanner_version": "fnguide_scanner.py@v1.0_2026-06-05",
+    "dump_root_or_endpoint": "E:/Fnguide/ + E:/personal_bot_kr_data_fnguide_backup/data_fnguide/",
+    "notes": "Initial stub seeded from KR23 §6 evidence (4-firm × FY2023 Pattern A + Samsung FP56000500 Pattern B). Empirical deltas pending fnguide_scanner.py first full run (DART OpenAPI cross-ref ~50 firms × 5 fiscal years)."
+  },
+  "entries": {
+    "fnguide.E:/Fnguide/매출액_원.xlsx.default": {
+      "classification": "pattern_a_external_cross_ref_required",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": null,
+      "shift_recipe": "external_lookup",
+      "shift_recipe_fallback_days": 90,
+      "empirical": {
+        "delta_median_days": 44.0,
+        "delta_p10_p90": [
+          35.9,
+          49.1
+        ],
+        "n_evidence": 20,
+        "cross_ref_source": "DART_OpenAPI_rcept_dt_actual_filing",
+        "last_scanned": "2026-06-04T19:10:28Z",
+        "delta_p50_p99": [
+          44.0,
+          50.0
+        ],
+        "scanner_version": "fnguide_scanner.py@v1.0_2026-06-05",
+        "raw_evidence_records": [
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-09",
+            "delta_days": 37
+          },
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-08",
+            "delta_days": 36
+          },
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-07",
+            "delta_days": 35
+          },
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-12",
+            "delta_days": 41
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-22",
+            "delta_days": 50
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-22",
+            "delta_days": 50
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-21",
+            "delta_days": 49
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-19",
+            "delta_days": 48
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-16",
+            "delta_days": 44
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-16",
+            "delta_days": 44
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-15",
+            "delta_days": 43
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-13",
+            "delta_days": 42
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-16",
+            "delta_days": 44
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-04",
+            "delta_days": 32
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-14",
+            "delta_days": 42
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-18",
+            "delta_days": 47
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-18",
+            "delta_days": 46
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-21",
+            "delta_days": 49
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-20",
+            "delta_days": 48
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-20",
+            "delta_days": 49
+          }
+        ]
+      },
+      "notes": "Pattern A confirmed by KR23 §6.3. Annual fundamentals back-dated ~3.4-3.6 months to fiscal-period-end (2023-12-01 column for FY2023 vs actual DART filing 2024-03-12 to 2024-03-19). Quarterly fundamentals expected ~30-45d back-date. Mitigation: cross-reference DART OpenAPI rcept_dt per (corp_code, period) and shift value to actual filing date.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-03-KR23-ABANDONED-pre-Phase0-close-report.md §6.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-04T19:10:28Z"
+      }
+    },
+    "fnguide.E:/Fnguide/영업이익_원.xlsx.default": {
+      "classification": "pattern_a_external_cross_ref_required",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": null,
+      "shift_recipe": "external_lookup",
+      "shift_recipe_fallback_days": 90,
+      "notes": "Same vendor format as 매출액_원.xlsx; KR23 §6 evidence extrapolated. Awaiting scanner empirical confirmation.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-03-KR23-ABANDONED-pre-Phase0-close-report.md §6.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-04T19:10:28Z"
+      },
+      "empirical": {
+        "delta_median_days": 44.0,
+        "delta_p10_p90": [
+          35.9,
+          49.1
+        ],
+        "delta_p50_p99": [
+          44.0,
+          50.0
+        ],
+        "n_evidence": 20,
+        "cross_ref_source": "DART_OpenAPI_rcept_dt_actual_filing",
+        "last_scanned": "2026-06-04T19:10:28Z",
+        "scanner_version": "fnguide_scanner.py@v1.0_2026-06-05",
+        "raw_evidence_records": [
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-09",
+            "delta_days": 37
+          },
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-08",
+            "delta_days": 36
+          },
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-07",
+            "delta_days": 35
+          },
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-12",
+            "delta_days": 41
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-22",
+            "delta_days": 50
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-22",
+            "delta_days": 50
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-21",
+            "delta_days": 49
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-19",
+            "delta_days": 48
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-16",
+            "delta_days": 44
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-16",
+            "delta_days": 44
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-15",
+            "delta_days": 43
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-13",
+            "delta_days": 42
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-16",
+            "delta_days": 44
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-04",
+            "delta_days": 32
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-14",
+            "delta_days": 42
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-18",
+            "delta_days": 47
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-18",
+            "delta_days": 46
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-21",
+            "delta_days": 49
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-20",
+            "delta_days": 48
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-20",
+            "delta_days": 49
+          }
+        ]
+      }
+    },
+    "fnguide.E:/Fnguide/매출원가_원.xlsx.default": {
+      "classification": "pattern_a_external_cross_ref_required",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": null,
+      "shift_recipe": "external_lookup",
+      "shift_recipe_fallback_days": 90,
+      "notes": "FnGuide §A.2 NFS-IFRS(C) monthly fundamentals — all 17 files in this group inherit same Pattern A.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-03-KR23-ABANDONED-pre-Phase0-close-report.md §6.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-04T19:10:28Z"
+      },
+      "empirical": {
+        "delta_median_days": 43.5,
+        "delta_p10_p90": [
+          36.1,
+          49.9
+        ],
+        "delta_p50_p99": [
+          43.5,
+          50.0
+        ],
+        "n_evidence": 12,
+        "cross_ref_source": "DART_OpenAPI_rcept_dt_actual_filing",
+        "last_scanned": "2026-06-04T19:10:28Z",
+        "scanner_version": "fnguide_scanner.py@v1.0_2026-06-05",
+        "raw_evidence_records": [
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-09",
+            "delta_days": 37
+          },
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-08",
+            "delta_days": 36
+          },
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-07",
+            "delta_days": 35
+          },
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-12",
+            "delta_days": 41
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-22",
+            "delta_days": 50
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-22",
+            "delta_days": 50
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-21",
+            "delta_days": 49
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-19",
+            "delta_days": 48
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-16",
+            "delta_days": 44
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-16",
+            "delta_days": 44
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-15",
+            "delta_days": 43
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-13",
+            "delta_days": 42
+          }
+        ]
+      }
+    },
+    "fnguide.E:/Fnguide/총자산_원.xlsx.default": {
+      "classification": "pattern_a_external_cross_ref_required",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": null,
+      "shift_recipe": "external_lookup",
+      "shift_recipe_fallback_days": 90,
+      "notes": "BS aggregate.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-03-KR23-ABANDONED-pre-Phase0-close-report.md §6.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-04T19:10:28Z"
+      },
+      "empirical": {
+        "delta_median_days": 44.0,
+        "delta_p10_p90": [
+          35.9,
+          49.1
+        ],
+        "delta_p50_p99": [
+          44.0,
+          50.0
+        ],
+        "n_evidence": 20,
+        "cross_ref_source": "DART_OpenAPI_rcept_dt_actual_filing",
+        "last_scanned": "2026-06-04T19:10:28Z",
+        "scanner_version": "fnguide_scanner.py@v1.0_2026-06-05",
+        "raw_evidence_records": [
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-09",
+            "delta_days": 37
+          },
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-08",
+            "delta_days": 36
+          },
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-07",
+            "delta_days": 35
+          },
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-12",
+            "delta_days": 41
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-22",
+            "delta_days": 50
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-22",
+            "delta_days": 50
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-21",
+            "delta_days": 49
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-19",
+            "delta_days": 48
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-16",
+            "delta_days": 44
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-16",
+            "delta_days": 44
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-15",
+            "delta_days": 43
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-13",
+            "delta_days": 42
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-16",
+            "delta_days": 44
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-04",
+            "delta_days": 32
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-14",
+            "delta_days": 42
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-18",
+            "delta_days": 47
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-18",
+            "delta_days": 46
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-21",
+            "delta_days": 49
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-20",
+            "delta_days": 48
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-20",
+            "delta_days": 49
+          }
+        ]
+      }
+    },
+    "fnguide.E:/Fnguide/총자본_원.xlsx.default": {
+      "classification": "pattern_a_external_cross_ref_required",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": null,
+      "shift_recipe": "external_lookup",
+      "shift_recipe_fallback_days": 90,
+      "provenance": {
+        "evidence_audit": "audits/2026-06-03-KR23-ABANDONED-pre-Phase0-close-report.md §6.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-04T19:10:28Z"
+      },
+      "empirical": {
+        "delta_median_days": 44.0,
+        "delta_p10_p90": [
+          35.9,
+          49.1
+        ],
+        "delta_p50_p99": [
+          44.0,
+          50.0
+        ],
+        "n_evidence": 20,
+        "cross_ref_source": "DART_OpenAPI_rcept_dt_actual_filing",
+        "last_scanned": "2026-06-04T19:10:28Z",
+        "scanner_version": "fnguide_scanner.py@v1.0_2026-06-05",
+        "raw_evidence_records": [
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-09",
+            "delta_days": 37
+          },
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-08",
+            "delta_days": 36
+          },
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-07",
+            "delta_days": 35
+          },
+          {
+            "stock_code": "005930",
+            "name": "삼성전자",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-12",
+            "delta_days": 41
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-22",
+            "delta_days": 50
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-22",
+            "delta_days": 50
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-21",
+            "delta_days": 49
+          },
+          {
+            "stock_code": "000660",
+            "name": "SK하이닉스",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-19",
+            "delta_days": 48
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-16",
+            "delta_days": 44
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-16",
+            "delta_days": 44
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-15",
+            "delta_days": 43
+          },
+          {
+            "stock_code": "005380",
+            "name": "현대차",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-13",
+            "delta_days": 42
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-16",
+            "delta_days": 44
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-04",
+            "delta_days": 32
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-14",
+            "delta_days": 42
+          },
+          {
+            "stock_code": "035420",
+            "name": "NAVER",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-18",
+            "delta_days": 47
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2020,
+            "fnguide_first_col": "2021-01-31",
+            "dart_rcept_dt": "2021-03-18",
+            "delta_days": 46
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2021,
+            "fnguide_first_col": "2022-01-31",
+            "dart_rcept_dt": "2022-03-21",
+            "delta_days": 49
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2022,
+            "fnguide_first_col": "2023-01-31",
+            "dart_rcept_dt": "2023-03-20",
+            "delta_days": 48
+          },
+          {
+            "stock_code": "035720",
+            "name": "카카오",
+            "fiscal_year": 2023,
+            "fnguide_first_col": "2024-01-31",
+            "dart_rcept_dt": "2024-03-20",
+            "delta_days": 49
+          }
+        ]
+      }
+    },
+    "fnguide.E:/Fnguide/총자산증가율_전분기_원.xlsx.default": {
+      "classification": "pattern_a_external_cross_ref_required",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": null,
+      "shift_recipe": "external_lookup",
+      "shift_recipe_fallback_days": 90,
+      "notes": "§A.4 NF/R-IFRS(C) ratio derived from §A.2; same Pattern A inheritance.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-03-KR23-ABANDONED-pre-Phase0-close-report.md §6.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "fnguide.E:/Fnguide/관리종목여부.xlsx.default": {
+      "classification": "suspected_pattern_b_forward_fill_backwards",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": null,
+      "shift_recipe": "external_lookup",
+      "shift_recipe_fallback_days": 15,
+      "notes": "KRX 관리종목 designation has KIND announcement date vs effective date. Vendor anchor unverified. SUSPECTED forward-look if FnGuide stamps before KIND announcement. 10-firm KIND cross-reference procedure in audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §4.1. Until verified, conservative fallback = +15 trading days (covers typical announcement-to-effective gap).",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-05-personal-bot-fleet-asof-audit.md §2.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "fnguide.E:/Fnguide/daily_price.csv.default": {
+      "classification": "safe",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": "column_date",
+      "shift_recipe": "none",
+      "notes": "FnGuide §A.1 SSC daily price — trade-date stamped. Verified by KR17 / KR38 forward-return computation.",
+      "provenance": {
+        "evidence_audit": "data/fnguide-dump-usability-snapshot.md §A.1",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "fnguide.E:/Fnguide/daily_시가총액.xlsx.default": {
+      "classification": "safe",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": "column_date",
+      "shift_recipe": "none",
+      "provenance": {
+        "evidence_audit": "data/fnguide-dump-usability-snapshot.md §A.1",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "fnguide.E:/Fnguide/daily_거래량.xlsx.default": {
+      "classification": "safe",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": "column_date",
+      "shift_recipe": "none",
+      "provenance": {
+        "evidence_audit": "data/fnguide-dump-usability-snapshot.md §A.1",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "fnguide.E:/Fnguide/수정주가.xlsx.default": {
+      "classification": "safe",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": "column_date",
+      "shift_recipe": "none",
+      "notes": "Adjusted price, trade-date stamped.",
+      "provenance": {
+        "evidence_audit": "data/fnguide-dump-usability-snapshot.md §A.1",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "fnguide.E:/personal_bot_kr_data_fnguide_backup/data_fnguide/한국주식_샤프용EPS_남직원수.CSV#관리종목여부": {
+      "classification": "suspected_pattern_b_forward_fill_backwards",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": null,
+      "shift_recipe": "external_lookup",
+      "shift_recipe_fallback_days": 15,
+      "notes": "Same suspected pattern as E:/Fnguide/관리종목여부.xlsx but daily-bundled in §B. personal_bot_kr/shared/data_io/fnguide_pit.py admin_flag source.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-05-personal-bot-fleet-asof-audit.md §2.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "fnguide.E:/personal_bot_kr_data_fnguide_backup/data_fnguide/한국주식_샤프용EPS_남직원수.CSV#KOSPI 200 편입여부": {
+      "classification": "suspected_pattern_b_forward_fill_backwards",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": null,
+      "shift_recipe": "external_lookup",
+      "shift_recipe_fallback_days": 10,
+      "notes": "KOSPI200 rebalance announcement → effective ~10 trading-day gap. Vendor anchor unverified. Conservative fallback shift = +10 trading days backwards from FnGuide transition (if vendor stamps effective).",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-05-personal-bot-fleet-asof-audit.md §2.3",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "fnguide.E:/personal_bot_kr_data_fnguide_backup/data_fnguide/한국주식_거래관련간단하게.CSV#시가총액 (티커-상장예정주식수 포함)(원)": {
+      "classification": "safe",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": "column_date",
+      "shift_recipe": "none",
+      "notes": "SSC daily market cap, trade-date stamped. personal_bot_kr PIT cache market_cap source.",
+      "provenance": {
+        "evidence_audit": "data/fnguide-dump-usability-snapshot.md §B.1",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "fnguide.E:/personal_bot_kr_data_fnguide_backup/data_fnguide/한국주식_거래관련간단하게.CSV#상장주식수(주)": {
+      "classification": "safe",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": "column_date",
+      "shift_recipe": "none",
+      "notes": "SSC daily listed shares, trade-date stamped. personal_bot_kr PIT cache listed_shares source.",
+      "provenance": {
+        "evidence_audit": "data/fnguide-dump-usability-snapshot.md §B.1",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "fnguide.E:/personal_bot_kr_data_fnguide_backup/data_fnguide/<*>.CSV#FP70*": {
+      "classification": "pattern_a_external_cross_ref_required",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": null,
+      "shift_recipe": "external_lookup",
+      "shift_recipe_fallback_days": 90,
+      "notes": "Wildcard entry — all FP70xxxx item codes in §B (FSP-IFRS(C) derived performance items) inherit Pattern A from underlying §A.2 fundamentals. Used by personal_bot_kr/research/fundamental_momentum/extract_panel.py.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-05-personal-bot-fleet-asof-audit.md §2.1",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "fnguide.E:/personal_bot_kr_data_fnguide_backup/data_fnguide/<*>.CSV#6000*": {
+      "classification": "pattern_a_external_cross_ref_required",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": null,
+      "shift_recipe": "external_lookup",
+      "shift_recipe_fallback_days": 90,
+      "notes": "Wildcard entry — all 6000xxxx item codes in §B (NFS-IFRS(C) raw fundamentals) inherit Pattern A. Daily-forward-filled but underlying quarterly.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.1",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "fnguide.E:/personal_bot_kr_data_fnguide_backup/data_fnguide/<*>.CSV#FP56000500": {
+      "classification": "pattern_b_forward_fill_backwards",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": null,
+      "shift_recipe": "reject",
+      "notes": "공시일자(잠정) 필드 자체가 backward-fill 됨. KR23 §6.3 Samsung A005930 evidence: 2010-04-06 announcement value populated starting at 2010-03-01 (36+ trading days of forward-fill BACKWARDS). The disclosure-date field itself is corrupted; cannot be used as as-of anchor. Reject this field entirely; use DART rcept_dt instead.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-03-KR23-ABANDONED-pre-Phase0-close-report.md §6.3 Pattern B",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "fnguide.E:/personal_bot_kr_data_fnguide_backup/data_fnguide/<*>.CSV#F730*": {
+      "classification": "suspected_safe",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": "column_date",
+      "shift_recipe": "none",
+      "notes": "Consensus / sell-side forecast estimates. The value is forward-looking by design (target date in future); column-date is the publication date of the aggregated consensus. Likely SAFE if vendor stamps on aggregation publication. Verify with first-non-blank-column inspection for known forecast publication dates.",
+      "provenance": {
+        "evidence_audit": "data/fnguide-dump-usability-snapshot.md §B.2",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "fnguide.E:/personal_bot_kr_data_fnguide_backup/data_fnguide/<*>.CSV#CI20*": {
+      "classification": "safe",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": "column_date",
+      "shift_recipe": "none",
+      "notes": "CIA — daily investor-type buy/sell/net. KRX publishes investor-type flow next-day; vendor aggregation date matches trade day.",
+      "provenance": {
+        "evidence_audit": "data/fnguide-dump-usability-snapshot.md §B.5",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "fnguide.E:/personal_bot_kr_data_fnguide_backup/data_fnguide/<*>.CSV#S41*": {
+      "classification": "safe",
+      "raw_as_of_field": "column_date",
+      "safe_as_of_field": "column_date",
+      "shift_recipe": "none",
+      "notes": "SSC daily price/microstructure (S410*) + BTA daily β (S41B0*). Trade-date stamped.",
+      "provenance": {
+        "evidence_audit": "data/fnguide-dump-usability-snapshot.md §B.1",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    }
+  }
+}

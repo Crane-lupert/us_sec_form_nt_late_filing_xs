@@ -1,0 +1,72 @@
+{
+  "_meta": {
+    "schema_version": "v1",
+    "vendor": "yfinance",
+    "last_full_rebuild": "2026-06-05",
+    "scanner_version": "n/a (price tick endpoint, trade-stamped)",
+    "dump_root_or_endpoint": "yfinance Python API",
+    "notes": "Adjusted prices / OHLCV / dividend / split events. All trade-date or event-date stamped. SAFE by definition for price/return use. Fundamentals via yfinance (balance sheet / income statement) inherit SEC EDGAR filing dates — use sec_edgar manifest entries if used."
+  },
+  "entries": {
+    "yfinance.daily_price.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "date",
+      "safe_as_of_field": "date",
+      "shift_recipe": "none",
+      "notes": "yf.download(symbol, period, interval='1d') OHLCV+Adj Close. Trade-date stamped.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.4",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "yfinance.dividends.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "ex_date",
+      "safe_as_of_field": "ex_date",
+      "shift_recipe": "none",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.4",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "yfinance.splits.<value_fields>": {
+      "classification": "safe",
+      "raw_as_of_field": "split_date",
+      "safe_as_of_field": "split_date",
+      "shift_recipe": "none",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.4",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "yfinance.balance_sheet.<value_fields>": {
+      "classification": "pattern_a_external_cross_ref_required",
+      "raw_as_of_field": "fiscal_period_end",
+      "safe_as_of_field": null,
+      "shift_recipe": "external_lookup",
+      "shift_recipe_fallback_days": 90,
+      "notes": "yfinance ticker.balance_sheet returns fiscal-period-end indexed values without SEC EDGAR filing date. If used, cross-reference SEC EDGAR 10-K/10-Q acceptance-datetime.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.4",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    },
+    "yfinance.income_stmt.<value_fields>": {
+      "classification": "pattern_a_external_cross_ref_required",
+      "raw_as_of_field": "fiscal_period_end",
+      "safe_as_of_field": null,
+      "shift_recipe": "external_lookup",
+      "shift_recipe_fallback_days": 90,
+      "notes": "Same as balance_sheet.",
+      "provenance": {
+        "evidence_audit": "audits/2026-06-04-asof-date-bias-portfolio-wide-data-source-audit.md §3.4",
+        "added": "2026-06-05",
+        "last_reviewed": "2026-06-05"
+      }
+    }
+  }
+}
