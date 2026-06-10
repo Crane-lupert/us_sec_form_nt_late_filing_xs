@@ -1,0 +1,35 @@
+Bodies with narrative >= 200 chars: 3959
+Already classified (with same model): 3225
+  [3250/3959] ok=25 parse_fail=0 call_fail=0 spent=$0.0028
+  [3275/3959] ok=50 parse_fail=0 call_fail=0 spent=$0.0050
+  [3300/3959] ok=75 parse_fail=0 call_fail=0 spent=$0.0078
+  [3325/3959] ok=100 parse_fail=0 call_fail=0 spent=$0.0114
+  [3350/3959] ok=125 parse_fail=0 call_fail=0 spent=$0.0145
+  [3375/3959] ok=150 parse_fail=0 call_fail=0 spent=$0.0173
+  [3400/3959] ok=175 parse_fail=0 call_fail=0 spent=$0.0201
+  [3425/3959] ok=200 parse_fail=0 call_fail=0 spent=$0.0226
+  [3450/3959] ok=225 parse_fail=0 call_fail=0 spent=$0.0251
+  [3475/3959] ok=250 parse_fail=0 call_fail=0 spent=$0.0280
+  [3500/3959] ok=275 parse_fail=0 call_fail=0 spent=$0.0302
+  [3525/3959] ok=300 parse_fail=0 call_fail=0 spent=$0.0333
+  [3550/3959] ok=325 parse_fail=0 call_fail=0 spent=$0.0363
+  [3575/3959] ok=350 parse_fail=0 call_fail=0 spent=$0.0390
+  [3600/3959] ok=375 parse_fail=0 call_fail=0 spent=$0.0420
+  [3625/3959] ok=400 parse_fail=0 call_fail=0 spent=$0.0445
+  [3650/3959] ok=425 parse_fail=0 call_fail=0 spent=$0.0470
+  [3675/3959] ok=450 parse_fail=0 call_fail=0 spent=$0.0498
+  [3700/3959] ok=475 parse_fail=0 call_fail=0 spent=$0.0526
+  [3725/3959] ok=500 parse_fail=0 call_fail=0 spent=$0.0552
+  [3750/3959] ok=525 parse_fail=0 call_fail=0 spent=$0.0579
+  [3775/3959] ok=550 parse_fail=0 call_fail=0 spent=$0.0607
+  [3800/3959] ok=575 parse_fail=0 call_fail=0 spent=$0.0628
+  [3825/3959] ok=600 parse_fail=0 call_fail=0 spent=$0.0652
+  [3850/3959] ok=625 parse_fail=0 call_fail=0 spent=$0.0681
+  [3875/3959] ok=650 parse_fail=0 call_fail=0 spent=$0.0712
+  [3900/3959] ok=675 parse_fail=0 call_fail=0 spent=$0.0734
+  [3925/3959] ok=700 parse_fail=0 call_fail=0 spent=$0.0768
+  [3950/3959] ok=725 parse_fail=0 call_fail=0 spent=$0.0795
+  [3959/3959] ok=734 parse_fail=0 call_fail=0 spent=$0.0805
+
+DONE - ok=734, parse_fail=0, call_fail=0, total_spent=$0.0805
+Output: data\nt_classifications.jsonl

@@ -1,0 +1,85 @@
+{
+  "n_results": 2965,
+  "cells": {
+    "4-1_pooled_90d": {
+      "form_filter": "pooled",
+      "window": "fwd_90d",
+      "recurring": {
+        "n": 1747,
+        "mean_pct": -9.1809,
+        "stdev_pct": 74.1227,
+        "t_stat": -5.177
+      },
+      "non_recurring": {
+        "n": 1218,
+        "mean_pct": -3.3339,
+        "stdev_pct": 55.7147,
+        "t_stat": -2.088
+      },
+      "diff_pct_recurring_minus_non": -5.847,
+      "bonferroni12_critical": 2.78,
+      "bonferroni12_PASS_recurring_only_mech": true,
+      "v5_dir_PASS": true
+    },
+    "4-2_pooled_252d": {
+      "form_filter": "pooled",
+      "window": "fwd_252d",
+      "recurring": {
+        "n": 1712,
+        "mean_pct": -12.6496,
+        "stdev_pct": 118.6429,
+        "t_stat": -4.411
+      },
+      "non_recurring": {
+        "n": 1179,
+        "mean_pct": -5.2188,
+        "stdev_pct": 88.6526,
+        "t_stat": -2.021
+      },
+      "diff_pct_recurring_minus_non": -7.4308,
+      "bonferroni12_critical": 2.78,
+      "bonferroni12_PASS_recurring_only_mech": true,
+      "v5_dir_PASS": true
+    },
+    "4-3_NT10Q_90d": {
+      "form_filter": "NT 10-Q",
+      "window": "fwd_90d",
+      "recurring": {
+        "n": 1183,
+        "mean_pct": -7.897,
+        "stdev_pct": 76.2151,
+        "t_stat": -3.564
+      },
+      "non_recurring": {
+        "n": 561,
+        "mean_pct": -4.8651,
+        "stdev_pct": 64.0557,
+        "t_stat": -1.799
+      },
+      "diff_pct_recurring_minus_non": -3.0319,
+      "bonferroni12_critical": 2.78,
+      "bonferroni12_PASS_recurring_only_mech": true,
+      "v5_dir_PASS": true
+    },
+    "4-4_NT10K_90d": {
+      "form_filter": "NT 10-K",
+      "window": "fwd_90d",
+      "recurring": {
+        "n": 530,
+        "mean_pct": -11.527,
+        "stdev_pct": 72.642,
+        "t_stat": -3.653
+      },
+      "non_recurring": {
+        "n": 652,
+        "mean_pct": -2.3989,
+        "stdev_pct": 49.4339,
+        "t_stat": -1.239
+      },
+      "diff_pct_recurring_minus_non": -9.1281,
+      "bonferroni12_critical": 2.78,
+      "bonferroni12_PASS_recurring_only_mech": true,
+      "v5_dir_PASS": true
+    }
+  }
+}
