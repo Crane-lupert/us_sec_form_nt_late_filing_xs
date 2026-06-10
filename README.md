@@ -3,7 +3,7 @@
 SEC Form NT 10-K/10-Q late filing → NT body LLM-extracted restatement forward signal + recurring filer XS short.
 
 ## Status
-Phase 0 entry — bootstrapped 2026-06-10. iter 14 V-batch. Rule 9 LAUNCH-with-tag BORDERLINE P(fail) 40-60%, LDS LIVE-DEPLOYABLE 5/7.
+Phase 0 entry — bootstrapped 2026-06-10. Phase 1 LAYER A LOCKED. Phase 2 6-axis robustness retained with OOS-Sharpe caveat. **Phase 3 Step 1 (2026-06-11) PIT acceptance-anchor verified** — in-sample after-hours filing share 63.5%, 90d Net Sharpe 0.46 → 0.59 under acceptance_et + T+1 reanchor. Steps 2 (vintage LLM relabel) + 3 (delisting/borrow proxy) open. iter 14 V-batch. Rule 9 LAUNCH-with-tag BORDERLINE P(fail) 40-60%, LDS LIVE-DEPLOYABLE 5/7.
 
 ## Quick links
 - SoT: `D:/vscode/meta-harness/audits/2026-06-10-V5-*.md`

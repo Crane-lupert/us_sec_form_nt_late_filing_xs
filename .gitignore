@@ -8,9 +8,12 @@ venv/
 .envrc
 data/cache/
 data/yfinance_cache/
+data/sec_submissions_cache/
 *.parquet
 *.csv.gz
 *.feather
+reports/*.log
+.claude/scheduled_tasks.lock
 .DS_Store
 .idea/
 .vscode/

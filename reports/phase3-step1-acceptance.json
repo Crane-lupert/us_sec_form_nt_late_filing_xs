@@ -1,0 +1,22 @@
+{
+  "in_sample": {
+    "n_total": 3970,
+    "n_matched_in_recent": 3893,
+    "n_unmatched_in_recent": 77,
+    "n_matched_no_acceptance": 0,
+    "n_after_16et": 2471,
+    "n_before_16et": 1422,
+    "after_16et_share_pct": 63.47,
+    "match_rate_pct": 98.06
+  },
+  "oos": {
+    "n_total": 912,
+    "n_matched_in_recent": 912,
+    "n_unmatched_in_recent": 0,
+    "n_matched_no_acceptance": 0,
+    "n_after_16et": 702,
+    "n_before_16et": 210,
+    "after_16et_share_pct": 76.97,
+    "match_rate_pct": 100.0
+  }
+}

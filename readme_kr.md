@@ -8,7 +8,7 @@
 
 ## 한 줄 요약
 
-미국 상장사가 분기/연간 보고서를 **제때 못 낸다** 고 SEC 에 제출하는 **Form NT 10-K / NT 10-Q (지연공시 통지서)** 의 본문을 LLM 으로 분석해서, 그 본문에서 "회계 이슈" 라고 분류된 회사가 향후 90일 안에 실제 **재무 정정 (restatement)** 을 낼 확률을 예측하는 신호를 만들었다. 미국 NYSE+Nasdaq 상장 1,106 개 CIK / 3,970 건 NT filing (2014-2024) 에서, **P(90일 내 정정 | accounting_issue) = 32.6% vs 일반 = 23.5%, 차이 +9.06pp (z=5.61, 5.6σ)** 의 forward 신호 + 90일 long-short **Net Sharpe 0.46 (15bps 거래비용 차감 후)** 를 달성했다.
+미국 상장사가 분기/연간 보고서를 **제때 못 낸다** 고 SEC 에 제출하는 **Form NT 10-K / NT 10-Q (지연공시 통지서)** 의 본문을 LLM 으로 분석해서, 그 본문에서 "회계 이슈" 라고 분류된 회사가 향후 90일 안에 실제 **재무 정정 (restatement)** 을 낼 확률을 예측하는 신호를 만들었다. 미국 NYSE+Nasdaq 상장 1,106 개 CIK / 3,970 건 NT filing (2014-2024) 에서, **P(90일 내 정정 | accounting_issue) = 32.6% vs 일반 = 23.5%, 차이 +9.06pp (z=5.61, 5.6σ)** 의 forward 신호 + 90일 long-short **Net Sharpe 0.46 (15bps 거래비용 차감 후)** 를 달성했다. **Phase 3 Step 1 (2026-06-11)**: SEC EDGAR `acceptanceDateTime` 으로 PIT-tradable 검증 — in-sample 의 **63.5% 가 16:00 ET 이후 제출**임에도 T+1 reanchor 시 90d Net Sharpe **0.46 → 0.59** (오히려 개선) → LAYER A LOCK 이 intraday look-ahead 아티팩트 아님 확인.
 
 ---
 
@@ -200,6 +200,73 @@ Phase 0 진입 전 4종 BLOCKING gate. 모두 PASS:
 
 ---
 
+## ⑨-bis Phase 3 Step 1 — PIT acceptance-anchor 검증 (2026-06-11)
+
+### 동기
+
+Phase 0-2 의 모든 결과는 EDGAR `date_filed` (달력 일자) 를 T=0 로 사용. 이건 **PIT-naïve** anchor — SEC EDGAR 의 NT 12b-25 acceptance window 는 22:00 ET 까지이고, 시장 종가 16:00 ET 이후 제출된 filing 은 그 날 close 에 시장이 못 본다. 즉 `date_filed` close 에 진입한다는 가정은 **장후 제출 filing 의 경우 intraday look-ahead** 를 implicit 하게 깔고 있음. 실거래 적용 전 이 누수의 magnitude 측정 필수.
+
+### 데이터 파이프라인
+
+1. **acceptanceDateTime 추출** — SEC EDGAR Submissions API (`data.sec.gov/submissions/CIK*.json`) 의 `acceptanceDateTime` 필드 (UTC) 를 NT 코호트 (in-sample 3,970 + OOS 912) 와 join. America/New_York 으로 변환 후 16:00 ET cutoff flag (`after_16et`).
+2. **PIT anchor 정의** — `anchor_date = acceptance_et_date + (1d if after_16et else 0d)`. firm return series 의 첫 거래일 ≥ anchor_date 이 T=0.
+3. **angle-2 forward CAR + Net Sharpe 재계산** — `compute-angle-2-forward-pit.py` + `compute-net-sharpe-strategy-d.py --input data/angle_2_forward_pit.jsonl`.
+
+### Step 1a — 장후 제출 비중
+
+| Cohort | NYSE/Nasdaq filings | Match rate | **after_16et 비중** |
+|---|---|---|---|
+| In-sample (2014-2024) | 3,970 | 98.06% | **63.47%** (2,471 / 3,893) |
+| OOS (2025-2026) | 912 | 100.00% | **76.97%** (702 / 912) |
+
+→ **가설 확정**: NT 12b-25 ≈ deadline EOD 제출. 기존 `date_filed` anchor 가 사실상 in-sample 의 63% 에 대해 "intraday look-ahead" 를 가정하고 있었음.
+
+### Step 1b — V5-11(c) Net Sharpe PIT 재검증
+
+In-sample 3,811 rows (AI + other 라벨, PIT join 후):
+
+| Window | Original `date_filed` anchor | **PIT acceptance + T+1** | Verdict 변화 |
+|---|---|---|---|
+| 30d | gross 0.124 → net **−0.154** (KILL) | gross −0.194 → net **−0.227** (KILL) | KILL → KILL (조금 악화) |
+| **90d** | gross 0.469 → net **0.461** (PASS) | gross 0.600 → net **0.591** (PASS) | **PASS → PASS (개선)** |
+
+PIT 90d 상세: ann_mean +25.81%, ann_vol 43.69%, **net Sharpe 0.59** (≥0.30 PASS floor), long_only 0.71 / short_only −0.22.
+
+### Step 1c — 왜 90d Sharpe 가 *오히려 개선* 되나
+
+직관과 반대 결과. 메커니즘:
+- 장후 제출 NT 는 그 날 거래 중에 이미 **issue 누설** (volume + price pressure) 이 있는 경우가 많음
+- `date_filed` close 자체가 그 날 noise + 일부 reaction 흡수 → forward window 의 첫 day 가 contaminated
+- PIT T+1 reanchor 가 그 오염된 1일을 strip → cleaner signal-day forward window
+- 30d 셀 (이미 음수) 도 같은 logic 으로 조금 더 음수
+
+### Step 1 결론
+
+**V5-11(c) 90d 셀 PASS** under acceptance-anchor + T+1. **LAYER A LOCK 은 intraday look-ahead 아티팩트가 아님**. Phase 1 의 econometric LOCK 이 PIT-clean 가정 하에서도 보존.
+
+### Step 1 이 닫지 못한 누수 (Step 2, 3 으로 이월)
+
+1. **LLM vintage look-ahead** — `nt_classifications.jsonl` 은 2024-vintage 모델 (`gpt-4o-mini` + `Llama-3.3-70B-Instruct`) 로 라벨링. 두 모델 모두 training cutoff 이 in-sample window post-date. PIT 가격이 옳더라도 classifier weights 가 forward outcome 정보를 학습했을 가능성 (model 이 "이 회사가 나중에 restate 했다" 를 implicit 하게 know 함). 2-vendor κ=0.71 이 single-vendor 아티팩트는 배제하지만 shared pre-training prior 까지 배제하진 못함. **Step 2 = vintage-controlled (pre-2024) alt-LLM 으로 OOS 재라벨링** ($1-4 비용, OpenRouter Claude 회피).
+2. **차등 TC + borrow availability** — 15bps round-trip 단일 가정. recurring-filer XS short 는 sub-$1B float small-cap 비중 큼 → 실제 50bps round-trip + locate/borrow 가능성 제한적. R4 sensitivity sweep 이 {25, 50, 100, 200, 320} bps 균일하게 swept 했지만 float-tier stratify 안 함. **Step 3 = CRSP delisting return + Russell 3000 멤버십 proxy + 50bps 차등 TC**.
+3. **OOS PIT coverage** — OOS PIT angle-2 의 car_fwd cardinality 가 폭락 (912 → 3 with car_fwd_30d). yfinance cache truncation (2026-04-01 까지만) 때문. CRSP OOS fetch 확장 후 재실행 필요.
+
+**상세 audit**: [audits/2026-06-11-V5-phase-3-step-1-pit-acceptance-anchor.md](audits/2026-06-11-V5-phase-3-step-1-pit-acceptance-anchor.md)
+
+### Phase 3 Step 1 결과 ledger
+
+| Artifact | 위치 |
+|---|---|
+| acceptance 분포 + match rate | [reports/phase3-step1-acceptance.json](reports/phase3-step1-acceptance.json) |
+| in-sample PIT angle-2 forward CAR | [reports/phase3-step1-angle2-pit-insample.json](reports/phase3-step1-angle2-pit-insample.json) |
+| OOS PIT angle-2 (coverage caveat) | [reports/phase3-step1-angle2-pit-oos.json](reports/phase3-step1-angle2-pit-oos.json) |
+| **PIT Net Sharpe (V5-11c)** | [reports/phase3-step1-net-sharpe-pit.json](reports/phase3-step1-net-sharpe-pit.json) |
+| PIT data (in-sample) | [data/form_nt_pit.jsonl](data/form_nt_pit.jsonl) |
+| PIT data (OOS) | [data/form_nt_pit_oos.jsonl](data/form_nt_pit_oos.jsonl) |
+| PIT angle-2 forward (in-sample) | [data/angle_2_forward_pit.jsonl](data/angle_2_forward_pit.jsonl) |
+| PIT monthly PnL ledger | [data/net_sharpe_strategy_d_pit.jsonl](data/net_sharpe_strategy_d_pit.jsonl) |
+
+---
+
 ## ⑩ 산출물
 
 | 항목 | 위치 |
@@ -261,7 +328,7 @@ cf. 사용자 LLM cap 명시: $0-100 / $50/yr ceiling for Strategy D. **1.08% ut
 - β2 family precedent (8-K Item 4.02 FROZEN-NEGATIVE 2026-04-27) 를 portfolio context 로 활용 — V5 가 ex-ante Form NT 로 ex-post 8-K 보다 tractable 함을 입증
 - $0.54 / $50 cap = **1.08%** LLM utilization 으로 LAYER A + Phase 2 6-axis robustness — Strategy D CLAUDE-AVOIDANCE (gpt-4o-mini primary + Llama-3.3-70B robustness) 디폴트 확인
 
-**Phase 3 deliverable**: (i) **sector-residualized basket** 을 PRIMARY portfolio (R3 무료 lift), (ii) **NT 10-Q cohort overweight** (R5 dominant), (iii) **2025-2026 OOS holdout 누적** 으로 V5-11(c) OOS 재검증, (iv) anchor PARTIAL → LIVE upgrade. Phase 0+1+2 자체는 — **LAYER A LOCKED + OOS caveat documented**, 정직히 publishable.
+**Phase 3 deliverable**: (i) **Step 1 PIT acceptance-anchor 검증 완료 (2026-06-11)** — in-sample 90d Net Sharpe 0.46 → 0.59 개선 (PIT-clean), (ii) **Step 2 vintage LLM 재라벨** (pre-2024 cutoff alt-LLM 으로 forward outcome leakage 검증, $1-4), (iii) **Step 3 CRSP delisting + Russell 3000 borrow proxy + 차등 TC** (small-cap tradability), (iv) **sector-residualized basket 을 PRIMARY portfolio** (R3 무료 lift), (v) **NT 10-Q cohort overweight** (R5 dominant), (vi) **2025-2026 OOS holdout 누적** 으로 V5-11(c) OOS 재검증, (vii) anchor PARTIAL → LIVE upgrade. Phase 0+1+2 + Phase 3 Step 1 자체는 — **LAYER A LOCKED + PIT-tradable verified (90d) + Step 2/3 잔여 누수 documented**, 정직히 publishable.
 
 ---
 
@@ -269,7 +336,7 @@ cf. 사용자 LLM cap 명시: $0-100 / $50/yr ceiling for Strategy D. **1.08% ut
 
 | Piece | Status | 비고 |
 |---|---|---|
-| **V5 (us_sec_form_nt_late_filing_xs, 본 repo)** | ✅ **LAYER A retained / Phase 2 6-axis robust / OOS Sharpe caveat** | in-sample Bonferroni 18/24 mech, sector-resid Sharpe 0.66, OOS rate z=2.83 PASS, OOS Sharpe -0.41 KILL |
+| **V5 (us_sec_form_nt_late_filing_xs, 본 repo)** | ✅ **LAYER A retained / Phase 2 6-axis robust / Phase 3 Step 1 PIT-tradable verified / OOS Sharpe caveat + Step 2,3 잔여** | in-sample Bonferroni 18/24 mech, sector-resid Sharpe 0.66, **PIT 90d Sharpe 0.46→0.59 개선**, OOS rate z=2.83 PASS, OOS Sharpe -0.41 KILL, after-hours 63.5%/77.0% |
 | X (sec-comment-letter-alpha) | ✅ 14-day complete | OOS \|t\|=2.86, 2 BH-survivors, methodology sister |
 | β2 (eight_k_non_reliance_llm) | ⏸️ FROZEN-NEGATIVE 2026-04-27 | 8-K Item 4.02 ex-post; V5 가 ex-ante NT 로 succeed |
 

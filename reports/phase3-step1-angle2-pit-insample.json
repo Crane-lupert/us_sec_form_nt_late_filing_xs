@@ -1,0 +1,51 @@
+{
+  "n_classified": 3959,
+  "n_joined": 3882,
+  "n_no_pit_match": 0,
+  "n_pit_indeterminate": 77,
+  "windows_days": [
+    14,
+    30,
+    90,
+    180
+  ],
+  "anchor_definition": "acceptance_et_date + (1d if after_16et else 0d)",
+  "car_diff_cells": {
+    "car_diff_30d": {
+      "accounting_issue": {
+        "n": 1725,
+        "mean_pct": 1.061,
+        "stdev_pct": 35.3598,
+        "t_stat": 1.246
+      },
+      "other": {
+        "n": 1447,
+        "mean_pct": 2.7214,
+        "stdev_pct": 47.1923,
+        "t_stat": 2.194
+      },
+      "diff_pct_ai_minus_other": -1.6604
+    },
+    "car_diff_90d": {
+      "accounting_issue": {
+        "n": 1339,
+        "mean_pct": 2.7194,
+        "stdev_pct": 70.135,
+        "t_stat": 1.419
+      },
+      "other": {
+        "n": 1220,
+        "mean_pct": 12.9602,
+        "stdev_pct": 97.6996,
+        "t_stat": 4.633
+      },
+      "diff_pct_ai_minus_other": -10.2408
+    }
+  },
+  "label_distribution": {
+    "accounting_issue": 2106,
+    "unresolved_sec_comment": 71,
+    "other": 1705
+  },
+  "after_16et_share_in_joined_pct": 63.55
+}

@@ -1,7 +1,7 @@
 # us_sec_form_nt_late_filing_xs — V5
 
 **ID**: V5 — SEC Form NT 10-K/10-Q late filing → NT body LLM-extracted restatement forward signal + recurring filer XS short
-**Status**: Phase 0 entry (bootstrapped 2026-06-10)
+**Status**: Phase 3 Step 1 complete (2026-06-11) — Phase 0-2 LAYER A LOCKED retained with OOS-Sharpe caveat; Phase 3 Step 1 PIT acceptance-anchor verified (90d Net Sharpe 0.46 → 0.59); Steps 2 (vintage LLM relabel) + 3 (delisting/borrow proxy) open
 **Anchor classification**: PARTIAL 3-4/6 via **Bartov, E. & Konchitchki, Y. (2017) "SEC Filings, Regulatory Deadlines, and Capital Market Consequences" *Accounting Horizons* 31(4):109-127 (SSRN 3065694)** PRIMARY (사용자 cite 4/4 fail post-pivot); 2,115 firms × 9yr; NT 10-Q CAR -2.93%, NT 10-K -1.96%, 사후 drift down
 **Bayesian prior LAYER A LOCKED**: ~20-30% (PARTIAL anchor + LDS 5/7 + 사용자 cite 4/4 P8 fail correction)
 **Phase 0 duration**: 10-14 days, $0-100 LLM (Strategy D NT body classification)
@@ -11,6 +11,7 @@
 - Pre-bootstrap review: `D:/vscode/meta-harness/audits/2026-06-10-V5-sec-form-nt-bootstrap-review.md`
 - Autopilot prompt SoT: `D:/vscode/meta-harness/audits/2026-06-10-V5-autopilot-prompt.txt`
 - Launch SPEC SoT: `D:/vscode/meta-harness/audits/2026-06-10-V5-launch-spec.md`
+- **Phase 3 Step 1 PIT acceptance-anchor**: `audits/2026-06-11-V5-phase-3-step-1-pit-acceptance-anchor.md`
 
 ## CRITICAL — V5 Stage 0 sub-gate (사용자 명시 2026-06-10, 4종 의무)
 
@@ -31,8 +32,9 @@
 3. **Data-validity HARD KILL** (graduated 3-tier):
    - **V5-11(a)** Lock F clean + EDGAR Form NT bulk + NT-firm CIK matching ≥90% **against Bartov-K 2017 comparable cohort (US-major-exchange-listed)** → binary clean / fire. Free-tier proxy via SEC `company_tickers.json` measured 84.4% (1,784/2,115) on 2026-06-10 → **PASS-CONDITIONAL** pending CRSP-historical confirmation. See `audits/2026-06-10-V5-lock-c-amendment-v5-11a-denominator.md` for full canonical language.
    - **V5-11(b)** Bonferroni-12 cells ≥3/12 |t|>2.78 (3 angle [event-CAR / restatement-prob LLM / recurring filer XS] × 2 cohort × 2 forward): PASS ≥3 / BORDERLINE 2 / KILL ≤1
-   - **V5-11(c)** Net Sharpe post-15bps ≥0.30: PASS / BORDERLINE 0.21-0.29 / KILL <0.21
+   - **V5-11(c)** Net Sharpe post-15bps ≥0.30: PASS / BORDERLINE 0.21-0.29 / KILL <0.21. **Phase 1 PASS 0.46 (90d) → Phase 3 Step 1 PIT-clean re-verification 0.59 (90d)**.
    - **V5-11(d)** Anchor faithfulness ≥PARTIAL via Bartov-K 2017 AH + Stage 0 2018+ verify
+   - **V5-11(e)** **PIT-tradable anchor lock** (added 2026-06-11) — T=0 must use SEC EDGAR `acceptanceDateTime` (ET); after-hours (≥16:00 ET) reanchored to T+1. In-sample after-hours share 63.47%; V5-11(c) survives.
 
 ## 4-layer governance (mandatory)
 ### (a) WRDS access — local dump path only (Rule 6)
@@ -44,6 +46,7 @@
 - sec.gov public; Day-0 CDP corroboration 권고
 ### (d) As-of date semantics (Rule 8 vendored asof)
 - NT filing_date → event window T+1; sort-stable on (CIK, filing_date)
+- **PIT acceptance-anchor (Phase 3 Step 1, 2026-06-11)** — `anchor_date = acceptance_et_date + (1d if after_16et else 0d)`. EDGAR `date_filed` 단독 사용 금지 (intraday look-ahead). `data/form_nt_pit.jsonl` + `data/form_nt_pit_oos.jsonl` 가 canonical PIT join.
 
 ## Skills imported
 @D:/vscode/meta-harness/skills/karpathy-guidelines/SKILL.md

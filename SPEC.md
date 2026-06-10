@@ -18,8 +18,9 @@
 - **V5-11 Data-validity HARD KILL**:
   - (a) Lock F + EDGAR Form NT bulk pull working + NT-firm CIK match ≥90% (BORDERLINE ≥63%)
   - (b) Bonferroni-12 ≥3/12 cells |t|>2.78 (BORDERLINE ≥2/12)
-  - (c) Net Sharpe post-15bps ≥0.30 (BORDERLINE ≥0.21)
+  - (c) Net Sharpe post-15bps ≥0.30 (BORDERLINE ≥0.21) — **Phase 1 PASS at 0.46 (90d); Phase 3 Step 1 PIT acceptance-anchor re-verification 0.59 (90d)**
   - (d) Anchor faithfulness ≥PARTIAL via Bartov-K 2017 AH + Stage 0 2018+ academic verify
+  - (e) **Phase 3 PIT-tradable lock** (added 2026-06-11): T=0 anchor must use SEC EDGAR `acceptanceDateTime` with after-hours (≥16:00 ET) reanchored to T+1. In-sample after-hours share **63.47%**, OOS **76.97%** — gate measured, V5-11(c) 90d Sharpe **STRENGTHENED** under PIT (0.46 → 0.59). See `audits/2026-06-11-V5-phase-3-step-1-pit-acceptance-anchor.md`.
 - WRDS 미사용 (EDGAR public) — Lock F US-data scope still applies (3-pattern §8 grep 의무)
 - LLM via `shared_utils.openrouter_client` 또는 claude-openai-proxy localhost:8787 only
 
@@ -88,6 +89,14 @@ Phase 0 코드에 CIK × 분기 cross-tab overlap audit 1회 실행 의무. ≥3
 8. Bonferroni-12 + Net Sharpe ledger
 9. V5-11 verdict commit + close-report on FAIL
 
+## §5b Phase 3 (added 2026-06-11)
+
+PIT-tradable lock + LLM vintage leakage + delisting/borrow proxy.
+
+1. **Step 1 (completed 2026-06-11)** — `extract-acceptance-datetime.py` + `compute-angle-2-forward-pit.py` + Net Sharpe re-run on PIT input. V5-11(c) 90d net Sharpe **0.59** (vs 0.46 pre-registered). `audits/2026-06-11-V5-phase-3-step-1-pit-acceptance-anchor.md`.
+2. **Step 2 (open)** — Vintage-controlled (pre-2024 cutoff) alt-LLM re-extraction on OOS 2024+ to test classifier-weight forward leakage. OpenRouter Claude avoidance.
+3. **Step 3 (open)** — CRSP delisting return + Russell 3000 / float-tier borrow-availability proxy + differentiated TC sweep ({15, 25, 50} bps × {full, large-cap-only} cohort).
+
 ## §6 LDS 5/7
 
 Axis 1 PASS (3,000/yr) / Axis 3 PASS (daily) / Axis 4 PASS (2,115) / Axis 5 PASS ($3/yr LLM + 15bps) / Axis 6 PASS (12b-25 stable) / Axis 2 unknown / Axis 7 BORDERLINE (Bartov-K 7y post-pub) → LIVE-DEPLOYABLE.
@@ -100,6 +109,7 @@ Axis 1 PASS (3,000/yr) / Axis 3 PASS (daily) / Axis 4 PASS (2,115) / Axis 5 PASS
 - Lock-V5-4: Net Sharpe ≥0.30 (BORDERLINE 0.21)
 - Lock-V5-5: EDGAR CIK match ≥90% (BORDERLINE 63%)
 - Lock-V5-6: LLM spend ceiling $50/yr
+- Lock-V5-7: **PIT acceptance-anchor** (added 2026-06-11) — `anchor_date = acceptance_et_date + (1d if after_16et else 0d)`; in-sample after-hours share 63.47%, Net Sharpe 90d 0.59 (PIT) vs 0.46 (date_filed). Lock-V5-4 deployment floor SATISFIED under PIT-clean.
 
 ## §8 Reviewer override
 
