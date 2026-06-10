@@ -1,0 +1,98 @@
+{
+  "n_filings_in_universe": 3970,
+  "n_results_with_cache": 3322,
+  "n_no_cache": 648,
+  "recurring_definition": ">= 2 NT filings (any form) per CIK per calendar year",
+  "cells": {
+    "4-1_pooled_90d": {
+      "form_filter": "pooled",
+      "window": "fwd_90d",
+      "recurring": {
+        "n": 1813,
+        "mean_pct": 8.0245,
+        "stdev_pct": 89.618,
+        "t_stat": 3.813
+      },
+      "non_recurring": {
+        "n": 959,
+        "mean_pct": 3.1894,
+        "stdev_pct": 58.8947,
+        "t_stat": 1.677
+      },
+      "diff_pct_recurring_minus_non": 4.8351,
+      "bonferroni12_critical": 2.78,
+      "bonferroni12_PASS_recurring_only": true
+    },
+    "4-2_pooled_252d": {
+      "form_filter": "pooled",
+      "window": "fwd_252d",
+      "recurring": {
+        "n": 1292,
+        "mean_pct": 68.8976,
+        "stdev_pct": 250.9104,
+        "t_stat": 9.87
+      },
+      "non_recurring": {
+        "n": 614,
+        "mean_pct": 24.866,
+        "stdev_pct": 156.899,
+        "t_stat": 3.927
+      },
+      "diff_pct_recurring_minus_non": 44.0316,
+      "bonferroni12_critical": 2.78,
+      "bonferroni12_PASS_recurring_only": true
+    },
+    "4-3_NT10Q_90d": {
+      "form_filter": "NT 10-Q",
+      "window": "fwd_90d",
+      "recurring": {
+        "n": 1200,
+        "mean_pct": 11.1374,
+        "stdev_pct": 99.0964,
+        "t_stat": 3.893
+      },
+      "non_recurring": {
+        "n": 444,
+        "mean_pct": 5.2239,
+        "stdev_pct": 67.8698,
+        "t_stat": 1.622
+      },
+      "diff_pct_recurring_minus_non": 5.9135,
+      "bonferroni12_critical": 2.78,
+      "bonferroni12_PASS_recurring_only": true
+    },
+    "4-4_NT10K_90d": {
+      "form_filter": "NT 10-K",
+      "window": "fwd_90d",
+      "recurring": {
+        "n": 588,
+        "mean_pct": 2.6314,
+        "stdev_pct": 75.4854,
+        "t_stat": 0.845
+      },
+      "non_recurring": {
+        "n": 512,
+        "mean_pct": 1.194,
+        "stdev_pct": 50.2934,
+        "t_stat": 0.537
+      },
+      "diff_pct_recurring_minus_non": 1.4374,
+      "bonferroni12_critical": 2.78,
+      "bonferroni12_PASS_recurring_only": false
+    }
+  },
+  "descriptive_30d": {
+    "recurring": {
+      "n": 1978,
+      "mean_pct": 1.9635,
+      "stdev_pct": 44.8984,
+      "t_stat": 1.945
+    },
+    "non_recurring": {
+      "n": 1330,
+      "mean_pct": -0.264,
+      "stdev_pct": 31.1654,
+      "t_stat": -0.309
+    }
+  }
+}
