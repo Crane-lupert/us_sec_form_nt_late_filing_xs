@@ -1,0 +1,28 @@
+Distinct CIKs to scan: 1106
+CIKs already processed: 0
+  [50/1106] events=493 fail=0
+  [100/1106] events=1022 fail=0
+  [150/1106] events=1610 fail=0
+  [200/1106] events=2013 fail=0
+  [250/1106] events=2431 fail=0
+  [300/1106] events=2889 fail=0
+  [350/1106] events=3376 fail=0
+  [400/1106] events=3780 fail=0
+  [450/1106] events=4088 fail=0
+  [500/1106] events=4365 fail=0
+  [550/1106] events=4624 fail=0
+  [600/1106] events=4929 fail=0
+  [650/1106] events=5206 fail=0
+  [700/1106] events=5468 fail=0
+  [750/1106] events=5747 fail=0
+  [800/1106] events=5932 fail=0
+  [850/1106] events=6063 fail=0
+  [900/1106] events=6537 fail=0
+  [950/1106] events=7003 fail=0
+  [1000/1106] events=7413 fail=0
+  [1050/1106] events=7811 fail=0
+  [1100/1106] events=8174 fail=0
+  [1106/1106] events=8202 fail=0
+
+DONE - 8202 restatement-class events written, 0 CIK fetches failed
+Output: D:\vscode\us_sec_form_nt_late_filing_xs\data\restatement_events.jsonl
