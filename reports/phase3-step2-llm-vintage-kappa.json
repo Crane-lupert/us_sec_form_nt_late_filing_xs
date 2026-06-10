@@ -1,0 +1,48 @@
+{
+  "cells": {
+    "gpt-4o-mini  vs gpt-3.5-turbo (vintage pre-2024)": {
+      "n": 50,
+      "kappa_3class": 0.6154,
+      "obs_agreement_3class_pct": 80.0,
+      "kappa_binary": 0.6154,
+      "dist_A": {
+        "accounting_issue": 30,
+        "other": 20
+      },
+      "dist_B": {
+        "accounting_issue": 20,
+        "other": 30
+      }
+    },
+    "gpt-4o-mini  vs Llama-3.3-70B (cross-vendor)": {
+      "n": 49,
+      "kappa_3class": 0.7066,
+      "obs_agreement_3class_pct": 85.71,
+      "kappa_binary": 0.7066,
+      "dist_A": {
+        "accounting_issue": 29,
+        "other": 20
+      },
+      "dist_B": {
+        "accounting_issue": 28,
+        "other": 21
+      }
+    },
+    "gpt-3.5-turbo vs Llama-3.3-70B (vintage x vendor)": {
+      "n": 49,
+      "kappa_3class": 0.565,
+      "obs_agreement_3class_pct": 77.55,
+      "kappa_binary": 0.565,
+      "dist_A": {
+        "accounting_issue": 19,
+        "other": 30
+      },
+      "dist_B": {
+        "accounting_issue": 28,
+        "other": 21
+      }
+    }
+  },
+  "vintage_lookahead_verdict": "VINTAGE-SENSITIVE",
+  "s0_3_floor": 0.7
+}

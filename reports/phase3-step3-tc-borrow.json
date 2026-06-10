@@ -1,0 +1,141 @@
+{
+  "cohort_price_summary": {
+    "All NT": {
+      "n": 1870,
+      "median": 5.1,
+      "mean": 15.3,
+      "sub_5_share_pct": 49.52,
+      "sub_1_share_pct": 14.71
+    },
+    "NT 10-K": {
+      "n": 797,
+      "median": 6.84,
+      "mean": 18.43,
+      "sub_5_share_pct": 42.53,
+      "sub_1_share_pct": 11.29
+    },
+    "NT 10-Q": {
+      "n": 1041,
+      "median": 3.97,
+      "mean": 13.07,
+      "sub_5_share_pct": 54.76,
+      "sub_1_share_pct": 17.1
+    },
+    "Recurring (>=2/yr)": {
+      "n": 985,
+      "median": 3.42,
+      "mean": 12.04,
+      "sub_5_share_pct": 60.0,
+      "sub_1_share_pct": 19.49
+    },
+    "Non-recurring": {
+      "n": 885,
+      "median": 8.03,
+      "mean": 18.92,
+      "sub_5_share_pct": 37.85,
+      "sub_1_share_pct": 9.38
+    },
+    "Recurring NT 10-K": {
+      "n": 303,
+      "median": 3.82,
+      "mean": 14.08,
+      "sub_5_share_pct": 56.44,
+      "sub_1_share_pct": 16.83
+    },
+    "Recurring NT 10-Q": {
+      "n": 654,
+      "median": 3.04,
+      "mean": 11.19,
+      "sub_5_share_pct": 62.08,
+      "sub_1_share_pct": 20.8
+    }
+  },
+  "tiered_tc_sweep_90d": {
+    "tc_15bp": {
+      "n_months": 31,
+      "ann_mean_pct": -28.5624,
+      "ann_vol_pct": 38.1547,
+      "sharpe": -0.7486,
+      "tc_bps_rt": 15
+    },
+    "tc_30bp": {
+      "n_months": 31,
+      "ann_mean_pct": -28.9824,
+      "ann_vol_pct": 38.1547,
+      "sharpe": -0.7596,
+      "tc_bps_rt": 30
+    },
+    "tc_50bp": {
+      "n_months": 31,
+      "ann_mean_pct": -29.5424,
+      "ann_vol_pct": 38.1547,
+      "sharpe": -0.7743,
+      "tc_bps_rt": 50
+    },
+    "tc_75bp": {
+      "n_months": 31,
+      "ann_mean_pct": -30.2424,
+      "ann_vol_pct": 38.1547,
+      "sharpe": -0.7926,
+      "tc_bps_rt": 75
+    },
+    "tc_100bp": {
+      "n_months": 31,
+      "ann_mean_pct": -30.9424,
+      "ann_vol_pct": 38.1547,
+      "sharpe": -0.811,
+      "tc_bps_rt": 100
+    },
+    "tc_200bp": {
+      "n_months": 31,
+      "ann_mean_pct": -33.7424,
+      "ann_vol_pct": 38.1547,
+      "sharpe": -0.8844,
+      "tc_bps_rt": 200
+    }
+  },
+  "tiered_tc_sweep_borrow_filtered_90d": {
+    "tc_15bp": {
+      "n_months": 17,
+      "ann_mean_pct": -18.9519,
+      "ann_vol_pct": 29.6646,
+      "sharpe": -0.6389,
+      "tc_bps_rt": 15
+    },
+    "tc_30bp": {
+      "n_months": 17,
+      "ann_mean_pct": -19.3719,
+      "ann_vol_pct": 29.6646,
+      "sharpe": -0.653,
+      "tc_bps_rt": 30
+    },
+    "tc_50bp": {
+      "n_months": 17,
+      "ann_mean_pct": -19.9319,
+      "ann_vol_pct": 29.6646,
+      "sharpe": -0.6719,
+      "tc_bps_rt": 50
+    },
+    "tc_75bp": {
+      "n_months": 17,
+      "ann_mean_pct": -20.6319,
+      "ann_vol_pct": 29.6646,
+      "sharpe": -0.6955,
+      "tc_bps_rt": 75
+    },
+    "tc_100bp": {
+      "n_months": 17,
+      "ann_mean_pct": -21.3319,
+      "ann_vol_pct": 29.6646,
+      "sharpe": -0.7191,
+      "tc_bps_rt": 100
+    },
+    "tc_200bp": {
+      "n_months": 17,
+      "ann_mean_pct": -24.1319,
+      "ann_vol_pct": 29.6646,
+      "sharpe": -0.8135,
+      "tc_bps_rt": 200
+    }
+  }
+}
