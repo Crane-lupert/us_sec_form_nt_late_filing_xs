@@ -1,0 +1,163 @@
+{
+  "cells": [
+    {
+      "id": "1-1",
+      "angle": 1,
+      "label": "NT 10-K event-CAR 5-day",
+      "mean_pct": -1.41,
+      "t_stat": 3.8,
+      "n": 1232,
+      "bartov_k_pub": -1.96,
+      "direction_v5_thesis": "negative",
+      "bonferroni12_PASS": true,
+      "v5_direction_PASS": true,
+      "replication_tier": "PARTIAL (gap 0.55pp)"
+    },
+    {
+      "id": "1-2",
+      "angle": 1,
+      "label": "NT 10-K event-CAR 3-day",
+      "mean_pct": -1.3,
+      "t_stat": 4.41,
+      "n": 1232,
+      "bartov_k_pub": null,
+      "direction_v5_thesis": "negative",
+      "bonferroni12_PASS": true,
+      "v5_direction_PASS": true,
+      "replication_tier": "ROBUSTNESS-OK"
+    },
+    {
+      "id": "1-3",
+      "angle": 1,
+      "label": "NT 10-Q event-CAR 5-day",
+      "mean_pct": -0.72,
+      "t_stat": 1.89,
+      "n": 1765,
+      "bartov_k_pub": -2.93,
+      "direction_v5_thesis": "negative",
+      "bonferroni12_PASS": false,
+      "v5_direction_PASS": false,
+      "replication_tier": "DIRECTIONAL (sign-only, gap 2.21pp)"
+    },
+    {
+      "id": "1-4",
+      "angle": 1,
+      "label": "NT 10-Q event-CAR 3-day",
+      "mean_pct": -1.06,
+      "t_stat": 3.69,
+      "n": 1765,
+      "bartov_k_pub": null,
+      "direction_v5_thesis": "negative",
+      "bonferroni12_PASS": true,
+      "v5_direction_PASS": true,
+      "replication_tier": "ROBUSTNESS-OK"
+    },
+    {
+      "id": "2-1",
+      "angle": 2,
+      "label": "Strategy D rate-diff 30d",
+      "diff_pct": 4.984,
+      "z_stat": 3.754,
+      "bonferroni12_PASS": true,
+      "v5_direction_PASS": true
+    },
+    {
+      "id": "2-2",
+      "angle": 2,
+      "label": "Strategy D rate-diff 90d",
+      "diff_pct": 9.0635,
+      "z_stat": 5.614,
+      "bonferroni12_PASS": true,
+      "v5_direction_PASS": true
+    },
+    {
+      "id": "2-3",
+      "angle": 2,
+      "label": "Strategy D CAR-diff 30d",
+      "ai_mean_pct": 0.1362,
+      "ai_t": 0.133,
+      "other_mean_pct": 0.7258,
+      "diff_pct_ai_minus_other": -0.5896,
+      "bonferroni12_PASS": false,
+      "v5_direction_PASS": false
+    },
+    {
+      "id": "2-4",
+      "angle": 2,
+      "label": "Strategy D CAR-diff 90d",
+      "ai_mean_pct": 1.8542,
+      "ai_t": 0.864,
+      "other_mean_pct": 11.0091,
+      "diff_pct_ai_minus_other": -9.1549,
+      "bonferroni12_PASS": false,
+      "v5_direction_PASS": false
+    },
+    {
+      "id": "4-1",
+      "angle": 4,
+      "label": "Recurring pooled_90d",
+      "recurring_mean_pct": 8.0245,
+      "recurring_t": 3.813,
+      "non_recurring_mean_pct": 3.1894,
+      "diff_pct": 4.8351,
+      "bonferroni12_PASS": true,
+      "v5_direction_PASS": false
+    },
+    {
+      "id": "4-2",
+      "angle": 4,
+      "label": "Recurring pooled_252d",
+      "recurring_mean_pct": 68.8976,
+      "recurring_t": 9.87,
+      "non_recurring_mean_pct": 24.866,
+      "diff_pct": 44.0316,
+      "bonferroni12_PASS": true,
+      "v5_direction_PASS": false
+    },
+    {
+      "id": "4-3",
+      "angle": 4,
+      "label": "Recurring NT10Q_90d",
+      "recurring_mean_pct": 11.1374,
+      "recurring_t": 3.893,
+      "non_recurring_mean_pct": 5.2239,
+      "diff_pct": 5.9135,
+      "bonferroni12_PASS": true,
+      "v5_direction_PASS": false
+    },
+    {
+      "id": "4-4",
+      "angle": 4,
+      "label": "Recurring NT10K_90d",
+      "recurring_mean_pct": 2.6314,
+      "recurring_t": 0.845,
+      "non_recurring_mean_pct": 1.194,
+      "diff_pct": 1.4374,
+      "bonferroni12_PASS": false,
+      "v5_direction_PASS": false
+    }
+  ],
+  "n_cells": 12,
+  "n_pending": 0,
+  "n_pass_mechanical": 8,
+  "n_pass_v5_direction_conditioned": 5,
+  "per_angle_mechanical": {
+    "1": 3,
+    "2": 2,
+    "4": 3
+  },
+  "per_angle_v5_direction_conditioned": {
+    "1": 3,
+    "2": 2,
+    "4": 0
+  },
+  "v5_11b_verdict_mechanical": "PASS",
+  "v5_11b_threshold": ">= 3/12 PASS = PASS; 2/12 BORDERLINE; <= 1/12 KILL",
+  "lock_c_3_angle_requirement_mechanical_OK": true,
+  "lock_c_3_angle_requirement_direction_OK": false,
+  "notes": [
+    "Mechanical PASS = |t| > 2.78 with no direction condition (literal launch SPEC).",
+    "V5 direction-conditioned PASS = mechanical PASS AND sign matches V5 thesis (Angle 1 negative event-CAR / Angle 2 positive rate-diff or negative CAR-diff / Angle 4 negative recurring CAR).",
+    "Per Lock C amendment 2026-06-10, free-tier active-exchange-only cohort is known to bias CAR magnitudes UP and 60-day drift sign positive (survivorship-recovery bias). Direction-conditioned reading reflects this limitation."
+  ]
+}

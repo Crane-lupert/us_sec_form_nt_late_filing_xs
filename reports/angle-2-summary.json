@@ -1,0 +1,97 @@
+{
+  "n_classified": 3232,
+  "n_joined": 3232,
+  "windows_days": [
+    14,
+    30,
+    90,
+    180
+  ],
+  "rate_diff_cells": {
+    "rate_14d": {
+      "p1_pct": 10.0225,
+      "p2_pct": 7.2753,
+      "diff_pct": 2.7472,
+      "z_stat": 2.713,
+      "n1": 1776,
+      "n2": 1402,
+      "bonferroni12_critical_z": 2.78,
+      "bonferroni12_PASS": false,
+      "v5_dir_PASS": false
+    },
+    "rate_30d": {
+      "p1_pct": 18.75,
+      "p2_pct": 13.766,
+      "diff_pct": 4.984,
+      "z_stat": 3.754,
+      "n1": 1776,
+      "n2": 1402,
+      "bonferroni12_critical_z": 2.78,
+      "bonferroni12_PASS": true,
+      "v5_dir_PASS": true
+    },
+    "rate_90d": {
+      "p1_pct": 32.6014,
+      "p2_pct": 23.5378,
+      "diff_pct": 9.0635,
+      "z_stat": 5.614,
+      "n1": 1776,
+      "n2": 1402,
+      "bonferroni12_critical_z": 2.78,
+      "bonferroni12_PASS": true,
+      "v5_dir_PASS": true
+    },
+    "rate_180d": {
+      "p1_pct": 45.1577,
+      "p2_pct": 34.6648,
+      "diff_pct": 10.4929,
+      "z_stat": 5.982,
+      "n1": 1776,
+      "n2": 1402,
+      "bonferroni12_critical_z": 2.78,
+      "bonferroni12_PASS": true,
+      "v5_dir_PASS": true
+    }
+  },
+  "car_diff_cells": {
+    "car_diff_30d": {
+      "accounting_issue": {
+        "n": 1413,
+        "mean_pct": 0.1362,
+        "stdev_pct": 38.5906,
+        "t_stat": 0.133
+      },
+      "other": {
+        "n": 1155,
+        "mean_pct": 0.7258,
+        "stdev_pct": 47.2103,
+        "t_stat": 0.523
+      },
+      "diff_pct_ai_minus_other": -0.5896,
+      "bonferroni12_critical": 2.78,
+      "bonferroni12_PASS_ai": false
+    },
+    "car_diff_90d": {
+      "accounting_issue": {
+        "n": 1163,
+        "mean_pct": 1.8542,
+        "stdev_pct": 73.2142,
+        "t_stat": 0.864
+      },
+      "other": {
+        "n": 1001,
+        "mean_pct": 11.0091,
+        "stdev_pct": 102.217,
+        "t_stat": 3.408
+      },
+      "diff_pct_ai_minus_other": -9.1549,
+      "bonferroni12_critical": 2.78,
+      "bonferroni12_PASS_ai": false
+    }
+  },
+  "label_distribution": {
+    "accounting_issue": 1776,
+    "unresolved_sec_comment": 54,
+    "other": 1402
+  }
+}
