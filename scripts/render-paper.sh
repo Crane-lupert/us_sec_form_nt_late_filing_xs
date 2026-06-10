@@ -19,17 +19,17 @@ REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 ANALYSIS_DIR="$REPO_ROOT/analysis"
 TARGET="${1:-en}"
 
-cd "$REPO_ROOT"
+cd "$REPO_ROOT/analysis"
 
 case "$TARGET" in
   en|EN)
-    INPUT="analysis/paper_v2_en.md"
-    OUTPUT="analysis/paper_v2_en.pdf"
+    INPUT="paper_v2_en.md"
+    OUTPUT="paper_v2_en.pdf"
     EXTRA_OPTS=()
     ;;
   kr|KR)
-    INPUT="analysis/README_KR.md"
-    OUTPUT="analysis/README_KR.pdf"
+    INPUT="README_KR.md"
+    OUTPUT="README_KR.pdf"
     # Korean rendering needs a CJK font that ships with the OS.
     EXTRA_OPTS=(
       -V mainfont="Malgun Gothic"
@@ -43,17 +43,15 @@ case "$TARGET" in
 esac
 
 [ -f "$INPUT" ] || { echo "Input not found: $INPUT" >&2; exit 1; }
-[ -f "analysis/refs.bib" ] || { echo "BibTeX not found: analysis/refs.bib" >&2; exit 1; }
+[ -f "refs.bib" ] || { echo "BibTeX not found: refs.bib" >&2; exit 1; }
 
-echo "Rendering $INPUT -> $OUTPUT..."
+echo "Rendering analysis/$INPUT -> analysis/$OUTPUT..."
 pandoc "$INPUT" \
   -o "$OUTPUT" \
   --pdf-engine=xelatex \
   --citeproc \
-  --bibliography=analysis/refs.bib \
+  --bibliography=refs.bib \
   --number-sections \
-  --toc \
-  --toc-depth=2 \
   -V geometry:margin=1in \
   -V fontsize=11pt \
   -V linkcolor=blue \
