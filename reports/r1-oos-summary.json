@@ -1,0 +1,82 @@
+{
+  "n_oos_filings": 912,
+  "n_in_scope_ai_ot": 903,
+  "label_distribution": {
+    "accounting_issue": 517,
+    "other": 386,
+    "unresolved_sec_comment": 9
+  },
+  "windows_days": [
+    14,
+    30,
+    90,
+    180
+  ],
+  "rate_diff_cells": {
+    "rate_14d": {
+      "p1_pct": 7.5435,
+      "p2_pct": 2.8497,
+      "diff_pct": 4.6938,
+      "z_stat": 3.051,
+      "n1": 517,
+      "n2": 386,
+      "bonferroni12_critical_z": 2.78,
+      "bonferroni12_PASS": true
+    },
+    "rate_30d": {
+      "p1_pct": 17.6015,
+      "p2_pct": 11.9171,
+      "diff_pct": 5.6844,
+      "z_stat": 2.3556,
+      "n1": 517,
+      "n2": 386,
+      "bonferroni12_critical_z": 2.78,
+      "bonferroni12_PASS": false
+    },
+    "rate_90d": {
+      "p1_pct": 29.5938,
+      "p2_pct": 21.2435,
+      "diff_pct": 8.3503,
+      "z_stat": 2.8292,
+      "n1": 517,
+      "n2": 386,
+      "bonferroni12_critical_z": 2.78,
+      "bonferroni12_PASS": true
+    },
+    "rate_180d": {
+      "p1_pct": 35.7834,
+      "p2_pct": 30.0518,
+      "diff_pct": 5.7316,
+      "z_stat": 1.8075,
+      "n1": 517,
+      "n2": 386,
+      "bonferroni12_critical_z": 2.78,
+      "bonferroni12_PASS": false
+    }
+  },
+  "net_sharpe_cells": {
+    "long_short_30d": {
+      "window_days": 30,
+      "n_months": 6,
+      "gross_ann_mean_pct": -51.0573,
+      "ann_vol_pct": 27.4889,
+      "gross_sharpe": -1.8574,
+      "net_sharpe": -1.9032,
+      "v5_11c_verdict": "KILL"
+    },
+    "long_short_90d": {
+      "window_days": 90,
+      "n_months": 5,
+      "gross_ann_mean_pct": -7.2666,
+      "ann_vol_pct": 18.5512,
+      "gross_sharpe": -0.3917,
+      "net_sharpe": -0.4143,
+      "v5_11c_verdict": "KILL"
+    }
+  },
+  "v5_11_OOS_verdict": {
+    "v5_11b_rate_diff": "PASS",
+    "v5_11c_net_sharpe": "KILL",
+    "n_rate_cells_pass": 2
+  }
+}

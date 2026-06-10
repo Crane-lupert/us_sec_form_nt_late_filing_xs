@@ -1,0 +1,52 @@
+{
+  "input_path": "data\\form_nt_index_oos.jsonl",
+  "n_filings_total": 2781,
+  "n_filings_matched": 2099,
+  "filing_level_match_pct": 75.48,
+  "n_distinct_cik": 1208,
+  "n_distinct_cik_matched": 908,
+  "cik_level_match_pct": 75.17,
+  "by_form_type": {
+    "NT 10-K": {
+      "n": 1199,
+      "n_matched": 923,
+      "match_pct": 76.98
+    },
+    "NT 10-K/A": {
+      "n": 17,
+      "n_matched": 10,
+      "match_pct": 58.82
+    },
+    "NT 10-Q": {
+      "n": 1537,
+      "n_matched": 1156,
+      "match_pct": 75.21
+    },
+    "NT 10-Q/A": {
+      "n": 28,
+      "n_matched": 10,
+      "match_pct": 35.71
+    }
+  },
+  "v5_11a_gate": {
+    "pass_threshold_pct": 90.0,
+    "borderline_min_pct": 63.0,
+    "verdict_filing_level": "BORDERLINE",
+    "verdict_cik_level": "BORDERLINE"
+  },
+  "bartov_k_comparable_cohort": {
+    "exchange_filter": [
+      "NYSE",
+      "Nasdaq"
+    ],
+    "n_filings": 912,
+    "n_distinct_cik": 470,
+    "vs_bartov_k_2017_base_2115": 22.22
+  },
+  "exchange_breakdown_of_matched": {
+    "Nasdaq": 768,
+    "OTC": 1167,
+    "NYSE": 144,
+    "Unknown": 20
+  }
+}

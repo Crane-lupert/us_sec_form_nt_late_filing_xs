@@ -1,0 +1,644 @@
+{
+  "subsamples": {
+    "year_2014": {
+      "n_rows": 194,
+      "n_accounting_issue": 104,
+      "n_other": 90,
+      "rate_diff_30d": {
+        "n_ai": 104,
+        "n_other": 90,
+        "p_ai_pct": 15.3846,
+        "p_other_pct": 15.5556,
+        "diff_pp": -0.1709,
+        "z_stat": -0.0328,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_90d": {
+        "n_ai": 104,
+        "n_other": 90,
+        "p_ai_pct": 27.8846,
+        "p_other_pct": 22.2222,
+        "diff_pp": 5.6624,
+        "z_stat": 0.9052,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_180d": {
+        "n_ai": 104,
+        "n_other": 90,
+        "p_ai_pct": 37.5,
+        "p_other_pct": 33.3333,
+        "diff_pp": 4.1667,
+        "z_stat": 0.6046,
+        "bonferroni12_PASS": false
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 5,
+        "gross_sharpe": 0.4548,
+        "net_sharpe": 0.4395,
+        "gross_ann_mean_pct": 12.4377,
+        "ann_vol_pct": 27.3468,
+        "v5_11c_verdict": "PASS"
+      }
+    },
+    "year_2015": {
+      "n_rows": 197,
+      "n_accounting_issue": 112,
+      "n_other": 85,
+      "rate_diff_30d": {
+        "n_ai": 112,
+        "n_other": 85,
+        "p_ai_pct": 15.1786,
+        "p_other_pct": 21.1765,
+        "diff_pp": -5.9979,
+        "z_stat": -1.0908,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_90d": {
+        "n_ai": 112,
+        "n_other": 85,
+        "p_ai_pct": 24.1071,
+        "p_other_pct": 27.0588,
+        "diff_pp": -2.9517,
+        "z_stat": -0.4715,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_180d": {
+        "n_ai": 112,
+        "n_other": 85,
+        "p_ai_pct": 37.5,
+        "p_other_pct": 40.0,
+        "diff_pp": -2.5,
+        "z_stat": -0.357,
+        "bonferroni12_PASS": false
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 5,
+        "gross_sharpe": 3.0788,
+        "net_sharpe": 3.0726,
+        "gross_ann_mean_pct": 207.9482,
+        "ann_vol_pct": 67.5413,
+        "v5_11c_verdict": "PASS"
+      }
+    },
+    "year_2016": {
+      "n_rows": 232,
+      "n_accounting_issue": 114,
+      "n_other": 118,
+      "rate_diff_30d": {
+        "n_ai": 114,
+        "n_other": 118,
+        "p_ai_pct": 18.4211,
+        "p_other_pct": 7.6271,
+        "diff_pp": 10.7939,
+        "z_stat": 2.4495,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_90d": {
+        "n_ai": 114,
+        "n_other": 118,
+        "p_ai_pct": 32.4561,
+        "p_other_pct": 12.7119,
+        "diff_pp": 19.7443,
+        "z_stat": 3.6053,
+        "bonferroni12_PASS": true
+      },
+      "rate_diff_180d": {
+        "n_ai": 114,
+        "n_other": 118,
+        "p_ai_pct": 48.2456,
+        "p_other_pct": 22.8814,
+        "diff_pp": 25.3643,
+        "z_stat": 4.0402,
+        "bonferroni12_PASS": true
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 4,
+        "gross_sharpe": 2.2422,
+        "net_sharpe": 2.228,
+        "gross_ann_mean_pct": 66.6406,
+        "ann_vol_pct": 29.7216,
+        "v5_11c_verdict": "PASS"
+      }
+    },
+    "year_2017": {
+      "n_rows": 254,
+      "n_accounting_issue": 116,
+      "n_other": 138,
+      "rate_diff_30d": {
+        "n_ai": 116,
+        "n_other": 138,
+        "p_ai_pct": 23.2759,
+        "p_other_pct": 10.8696,
+        "diff_pp": 12.4063,
+        "z_stat": 2.6512,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_90d": {
+        "n_ai": 116,
+        "n_other": 138,
+        "p_ai_pct": 33.6207,
+        "p_other_pct": 23.913,
+        "diff_pp": 9.7076,
+        "z_stat": 1.71,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_180d": {
+        "n_ai": 116,
+        "n_other": 138,
+        "p_ai_pct": 41.3793,
+        "p_other_pct": 36.9565,
+        "diff_pp": 4.4228,
+        "z_stat": 0.7199,
+        "bonferroni12_PASS": false
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 6,
+        "gross_sharpe": 1.1579,
+        "net_sharpe": 1.1453,
+        "gross_ann_mean_pct": 38.5696,
+        "ann_vol_pct": 33.3087,
+        "v5_11c_verdict": "PASS"
+      }
+    },
+    "year_2018": {
+      "n_rows": 225,
+      "n_accounting_issue": 126,
+      "n_other": 99,
+      "rate_diff_30d": {
+        "n_ai": 126,
+        "n_other": 99,
+        "p_ai_pct": 17.4603,
+        "p_other_pct": 10.101,
+        "diff_pp": 7.3593,
+        "z_stat": 1.5688,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_90d": {
+        "n_ai": 126,
+        "n_other": 99,
+        "p_ai_pct": 32.5397,
+        "p_other_pct": 21.2121,
+        "diff_pp": 11.3276,
+        "z_stat": 1.8877,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_180d": {
+        "n_ai": 126,
+        "n_other": 99,
+        "p_ai_pct": 42.8571,
+        "p_other_pct": 33.3333,
+        "diff_pp": 9.5238,
+        "z_stat": 1.4561,
+        "bonferroni12_PASS": false
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 6,
+        "gross_sharpe": -0.1505,
+        "net_sharpe": -0.1574,
+        "gross_ann_mean_pct": -9.2383,
+        "ann_vol_pct": 61.374,
+        "v5_11c_verdict": "KILL"
+      }
+    },
+    "year_2019": {
+      "n_rows": 241,
+      "n_accounting_issue": 131,
+      "n_other": 110,
+      "rate_diff_30d": {
+        "n_ai": 131,
+        "n_other": 110,
+        "p_ai_pct": 13.7405,
+        "p_other_pct": 13.6364,
+        "diff_pp": 0.1041,
+        "z_stat": 0.0234,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_90d": {
+        "n_ai": 131,
+        "n_other": 110,
+        "p_ai_pct": 22.1374,
+        "p_other_pct": 25.4545,
+        "diff_pp": -3.3171,
+        "z_stat": -0.6036,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_180d": {
+        "n_ai": 131,
+        "n_other": 110,
+        "p_ai_pct": 33.5878,
+        "p_other_pct": 34.5455,
+        "diff_pp": -0.9577,
+        "z_stat": -0.1563,
+        "bonferroni12_PASS": false
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 5,
+        "gross_sharpe": -1.1979,
+        "net_sharpe": -1.2115,
+        "gross_ann_mean_pct": -37.0807,
+        "ann_vol_pct": 30.954,
+        "v5_11c_verdict": "KILL"
+      }
+    },
+    "year_2020": {
+      "n_rows": 233,
+      "n_accounting_issue": 85,
+      "n_other": 148,
+      "rate_diff_30d": {
+        "n_ai": 85,
+        "n_other": 148,
+        "p_ai_pct": 16.4706,
+        "p_other_pct": 18.2432,
+        "diff_pp": -1.7727,
+        "z_stat": -0.3421,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_90d": {
+        "n_ai": 85,
+        "n_other": 148,
+        "p_ai_pct": 24.7059,
+        "p_other_pct": 24.3243,
+        "diff_pp": 0.3816,
+        "z_stat": 0.0652,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_180d": {
+        "n_ai": 85,
+        "n_other": 148,
+        "p_ai_pct": 36.4706,
+        "p_other_pct": 36.4865,
+        "diff_pp": -0.0159,
+        "z_stat": -0.0024,
+        "bonferroni12_PASS": false
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 4,
+        "gross_sharpe": 0.6991,
+        "net_sharpe": 0.6947,
+        "gross_ann_mean_pct": 67.3313,
+        "ann_vol_pct": 96.318,
+        "v5_11c_verdict": "PASS"
+      }
+    },
+    "year_2021": {
+      "n_rows": 320,
+      "n_accounting_issue": 201,
+      "n_other": 119,
+      "rate_diff_30d": {
+        "n_ai": 201,
+        "n_other": 119,
+        "p_ai_pct": 33.3333,
+        "p_other_pct": 10.9244,
+        "diff_pp": 22.409,
+        "z_stat": 4.4742,
+        "bonferroni12_PASS": true
+      },
+      "rate_diff_90d": {
+        "n_ai": 201,
+        "n_other": 119,
+        "p_ai_pct": 44.7761,
+        "p_other_pct": 21.8487,
+        "diff_pp": 22.9274,
+        "z_stat": 4.1234,
+        "bonferroni12_PASS": true
+      },
+      "rate_diff_180d": {
+        "n_ai": 201,
+        "n_other": 119,
+        "p_ai_pct": 56.7164,
+        "p_other_pct": 34.4538,
+        "diff_pp": 22.2626,
+        "z_stat": 3.8514,
+        "bonferroni12_PASS": true
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 4,
+        "gross_sharpe": 8.0601,
+        "net_sharpe": 7.9992,
+        "gross_ann_mean_pct": 55.5566,
+        "ann_vol_pct": 6.8928,
+        "v5_11c_verdict": "PASS"
+      }
+    },
+    "year_2022": {
+      "n_rows": 312,
+      "n_accounting_issue": 194,
+      "n_other": 118,
+      "rate_diff_30d": {
+        "n_ai": 194,
+        "n_other": 118,
+        "p_ai_pct": 15.9794,
+        "p_other_pct": 11.0169,
+        "diff_pp": 4.9624,
+        "z_stat": 1.2213,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_90d": {
+        "n_ai": 194,
+        "n_other": 118,
+        "p_ai_pct": 27.8351,
+        "p_other_pct": 19.4915,
+        "diff_pp": 8.3435,
+        "z_stat": 1.6576,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_180d": {
+        "n_ai": 194,
+        "n_other": 118,
+        "p_ai_pct": 40.2062,
+        "p_other_pct": 27.1186,
+        "diff_pp": 13.0875,
+        "z_stat": 2.3464,
+        "bonferroni12_PASS": false
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 5,
+        "gross_sharpe": 3.1767,
+        "net_sharpe": 3.1516,
+        "gross_ann_mean_pct": 53.0616,
+        "ann_vol_pct": 16.7033,
+        "v5_11c_verdict": "PASS"
+      }
+    },
+    "year_2023": {
+      "n_rows": 461,
+      "n_accounting_issue": 281,
+      "n_other": 180,
+      "rate_diff_30d": {
+        "n_ai": 281,
+        "n_other": 180,
+        "p_ai_pct": 16.726,
+        "p_other_pct": 11.6667,
+        "diff_pp": 5.0593,
+        "z_stat": 1.4944,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_90d": {
+        "n_ai": 281,
+        "n_other": 180,
+        "p_ai_pct": 35.9431,
+        "p_other_pct": 25.5556,
+        "diff_pp": 10.3875,
+        "z_stat": 2.3347,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_180d": {
+        "n_ai": 281,
+        "n_other": 180,
+        "p_ai_pct": 51.9573,
+        "p_other_pct": 34.4444,
+        "diff_pp": 17.5129,
+        "z_stat": 3.6864,
+        "bonferroni12_PASS": true
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 5,
+        "gross_sharpe": -2.0615,
+        "net_sharpe": -2.0833,
+        "gross_ann_mean_pct": -39.8154,
+        "ann_vol_pct": 19.3135,
+        "v5_11c_verdict": "KILL"
+      }
+    },
+    "year_2024": {
+      "n_rows": 509,
+      "n_accounting_issue": 312,
+      "n_other": 197,
+      "rate_diff_30d": {
+        "n_ai": 312,
+        "n_other": 197,
+        "p_ai_pct": 16.9872,
+        "p_other_pct": 19.2893,
+        "diff_pp": -2.3022,
+        "z_stat": -0.6602,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_90d": {
+        "n_ai": 312,
+        "n_other": 197,
+        "p_ai_pct": 35.5769,
+        "p_other_pct": 29.9492,
+        "diff_pp": 5.6277,
+        "z_stat": 1.3112,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_180d": {
+        "n_ai": 312,
+        "n_other": 197,
+        "p_ai_pct": 48.3974,
+        "p_other_pct": 42.6396,
+        "diff_pp": 5.7578,
+        "z_stat": 1.2692,
+        "bonferroni12_PASS": false
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 4,
+        "gross_sharpe": -1.9004,
+        "net_sharpe": -1.9109,
+        "gross_ann_mean_pct": -75.8023,
+        "ann_vol_pct": 39.8876,
+        "v5_11c_verdict": "KILL"
+      }
+    },
+    "pre_covid_2014_2019": {
+      "n_rows": 1343,
+      "n_accounting_issue": 703,
+      "n_other": 640,
+      "rate_diff_30d": {
+        "n_ai": 703,
+        "n_other": 640,
+        "p_ai_pct": 17.2119,
+        "p_other_pct": 12.6562,
+        "diff_pp": 4.5557,
+        "z_stat": 2.3326,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_90d": {
+        "n_ai": 703,
+        "n_other": 640,
+        "p_ai_pct": 28.734,
+        "p_other_pct": 21.875,
+        "diff_pp": 6.859,
+        "z_stat": 2.8816,
+        "bonferroni12_PASS": true
+      },
+      "rate_diff_180d": {
+        "n_ai": 703,
+        "n_other": 640,
+        "p_ai_pct": 40.1138,
+        "p_other_pct": 33.2812,
+        "diff_pp": 6.8325,
+        "z_stat": 2.5923,
+        "bonferroni12_PASS": false
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 31,
+        "gross_sharpe": 0.6386,
+        "net_sharpe": 0.6312,
+        "gross_ann_mean_pct": 36.588,
+        "ann_vol_pct": 57.2984,
+        "v5_11c_verdict": "PASS"
+      }
+    },
+    "post_covid_2020_2024": {
+      "n_rows": 1835,
+      "n_accounting_issue": 1073,
+      "n_other": 762,
+      "rate_diff_30d": {
+        "n_ai": 1073,
+        "n_other": 762,
+        "p_ai_pct": 19.7577,
+        "p_other_pct": 14.6982,
+        "diff_pp": 5.0595,
+        "z_stat": 2.8009,
+        "bonferroni12_PASS": true
+      },
+      "rate_diff_90d": {
+        "n_ai": 1073,
+        "n_other": 762,
+        "p_ai_pct": 35.1351,
+        "p_other_pct": 24.9344,
+        "diff_pp": 10.2008,
+        "z_stat": 4.6599,
+        "bonferroni12_PASS": true
+      },
+      "rate_diff_180d": {
+        "n_ai": 1073,
+        "n_other": 762,
+        "p_ai_pct": 48.4623,
+        "p_other_pct": 35.8268,
+        "diff_pp": 12.6355,
+        "z_stat": 5.3841,
+        "bonferroni12_PASS": true
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 22,
+        "gross_sharpe": 0.2554,
+        "net_sharpe": 0.2455,
+        "gross_ann_mean_pct": 10.8506,
+        "ann_vol_pct": 42.4904,
+        "v5_11c_verdict": "BORDERLINE"
+      }
+    },
+    "early_2014_2017": {
+      "n_rows": 877,
+      "n_accounting_issue": 446,
+      "n_other": 431,
+      "rate_diff_30d": {
+        "n_ai": 446,
+        "n_other": 431,
+        "p_ai_pct": 18.1614,
+        "p_other_pct": 12.993,
+        "diff_pp": 5.1684,
+        "z_stat": 2.1076,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_90d": {
+        "n_ai": 446,
+        "n_other": 431,
+        "p_ai_pct": 29.5964,
+        "p_other_pct": 21.1137,
+        "diff_pp": 8.4827,
+        "z_stat": 2.884,
+        "bonferroni12_PASS": true
+      },
+      "rate_diff_180d": {
+        "n_ai": 446,
+        "n_other": 431,
+        "p_ai_pct": 41.2556,
+        "p_other_pct": 32.9466,
+        "diff_pp": 8.309,
+        "z_stat": 2.5455,
+        "bonferroni12_PASS": false
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 20,
+        "gross_sharpe": 1.324,
+        "net_sharpe": 1.3155,
+        "gross_ann_mean_pct": 65.7481,
+        "ann_vol_pct": 49.6591,
+        "v5_11c_verdict": "PASS"
+      }
+    },
+    "mid_2018_2020": {
+      "n_rows": 699,
+      "n_accounting_issue": 342,
+      "n_other": 357,
+      "rate_diff_30d": {
+        "n_ai": 342,
+        "n_other": 357,
+        "p_ai_pct": 15.7895,
+        "p_other_pct": 14.5658,
+        "diff_pp": 1.2236,
+        "z_stat": 0.4509,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_90d": {
+        "n_ai": 342,
+        "n_other": 357,
+        "p_ai_pct": 26.6082,
+        "p_other_pct": 23.8095,
+        "diff_pp": 2.7987,
+        "z_stat": 0.8522,
+        "bonferroni12_PASS": false
+      },
+      "rate_diff_180d": {
+        "n_ai": 342,
+        "n_other": 357,
+        "p_ai_pct": 37.7193,
+        "p_other_pct": 35.014,
+        "diff_pp": 2.7053,
+        "z_stat": 0.7434,
+        "bonferroni12_PASS": false
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 15,
+        "gross_sharpe": 0.0316,
+        "net_sharpe": 0.0259,
+        "gross_ann_mean_pct": 2.3266,
+        "ann_vol_pct": 73.597,
+        "v5_11c_verdict": "KILL"
+      }
+    },
+    "late_2021_2024": {
+      "n_rows": 1602,
+      "n_accounting_issue": 988,
+      "n_other": 614,
+      "rate_diff_30d": {
+        "n_ai": 988,
+        "n_other": 614,
+        "p_ai_pct": 20.0405,
+        "p_other_pct": 13.8436,
+        "diff_pp": 6.1968,
+        "z_stat": 3.1619,
+        "bonferroni12_PASS": true
+      },
+      "rate_diff_90d": {
+        "n_ai": 988,
+        "n_other": 614,
+        "p_ai_pct": 36.0324,
+        "p_other_pct": 25.0814,
+        "diff_pp": 10.951,
+        "z_stat": 4.5746,
+        "bonferroni12_PASS": true
+      },
+      "rate_diff_180d": {
+        "n_ai": 988,
+        "n_other": 614,
+        "p_ai_pct": 49.4939,
+        "p_other_pct": 35.6678,
+        "diff_pp": 13.8262,
+        "z_stat": 5.4176,
+        "bonferroni12_PASS": true
+      },
+      "net_sharpe_90d": {
+        "n_usable_months": 18,
+        "gross_sharpe": 0.0228,
+        "net_sharpe": 0.0126,
+        "gross_ann_mean_pct": 0.9374,
+        "ann_vol_pct": 41.1479,
+        "v5_11c_verdict": "KILL"
+      }
+    }
+  }
+}

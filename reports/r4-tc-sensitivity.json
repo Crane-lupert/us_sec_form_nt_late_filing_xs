@@ -1,0 +1,196 @@
+{
+  "cells": {
+    "window_30d": {
+      "tc_0bps": {
+        "tc_bps_rt": 0,
+        "n_months": 58,
+        "net_ann_mean_pct": -5.0652,
+        "ann_vol_pct": 41.1105,
+        "net_sharpe": -0.1232,
+        "v5_11c_verdict": "KILL"
+      },
+      "tc_5bps": {
+        "tc_bps_rt": 5,
+        "n_months": 58,
+        "net_ann_mean_pct": -5.4852,
+        "ann_vol_pct": 41.1105,
+        "net_sharpe": -0.1334,
+        "v5_11c_verdict": "KILL"
+      },
+      "tc_10bps": {
+        "tc_bps_rt": 10,
+        "n_months": 58,
+        "net_ann_mean_pct": -5.9052,
+        "ann_vol_pct": 41.1105,
+        "net_sharpe": -0.1436,
+        "v5_11c_verdict": "KILL"
+      },
+      "tc_15bps": {
+        "tc_bps_rt": 15,
+        "n_months": 58,
+        "net_ann_mean_pct": -6.3252,
+        "ann_vol_pct": 41.1105,
+        "net_sharpe": -0.1539,
+        "v5_11c_verdict": "KILL"
+      },
+      "tc_20bps": {
+        "tc_bps_rt": 20,
+        "n_months": 58,
+        "net_ann_mean_pct": -6.7452,
+        "ann_vol_pct": 41.1105,
+        "net_sharpe": -0.1641,
+        "v5_11c_verdict": "KILL"
+      },
+      "tc_30bps": {
+        "tc_bps_rt": 30,
+        "n_months": 58,
+        "net_ann_mean_pct": -7.5852,
+        "ann_vol_pct": 41.1105,
+        "net_sharpe": -0.1845,
+        "v5_11c_verdict": "KILL"
+      },
+      "tc_50bps": {
+        "tc_bps_rt": 50,
+        "n_months": 58,
+        "net_ann_mean_pct": -9.2652,
+        "ann_vol_pct": 41.1105,
+        "net_sharpe": -0.2254,
+        "v5_11c_verdict": "KILL"
+      },
+      "tc_75bps": {
+        "tc_bps_rt": 75,
+        "n_months": 58,
+        "net_ann_mean_pct": -11.3652,
+        "ann_vol_pct": 41.1105,
+        "net_sharpe": -0.2765,
+        "v5_11c_verdict": "KILL"
+      },
+      "tc_100bps": {
+        "tc_bps_rt": 100,
+        "n_months": 58,
+        "net_ann_mean_pct": -13.4652,
+        "ann_vol_pct": 41.1105,
+        "net_sharpe": -0.3275,
+        "v5_11c_verdict": "KILL"
+      },
+      "tc_150bps": {
+        "tc_bps_rt": 150,
+        "n_months": 58,
+        "net_ann_mean_pct": -17.6652,
+        "ann_vol_pct": 41.1105,
+        "net_sharpe": -0.4297,
+        "v5_11c_verdict": "KILL"
+      },
+      "tc_200bps": {
+        "tc_bps_rt": 200,
+        "n_months": 58,
+        "net_ann_mean_pct": -21.8652,
+        "ann_vol_pct": 41.1105,
+        "net_sharpe": -0.5319,
+        "v5_11c_verdict": "KILL"
+      }
+    },
+    "window_90d": {
+      "tc_0bps": {
+        "tc_bps_rt": 0,
+        "n_months": 53,
+        "net_ann_mean_pct": 24.9132,
+        "ann_vol_pct": 53.1461,
+        "net_sharpe": 0.4688,
+        "v5_11c_verdict": "PASS"
+      },
+      "tc_5bps": {
+        "tc_bps_rt": 5,
+        "n_months": 53,
+        "net_ann_mean_pct": 24.7732,
+        "ann_vol_pct": 53.1461,
+        "net_sharpe": 0.4661,
+        "v5_11c_verdict": "PASS"
+      },
+      "tc_10bps": {
+        "tc_bps_rt": 10,
+        "n_months": 53,
+        "net_ann_mean_pct": 24.6332,
+        "ann_vol_pct": 53.1461,
+        "net_sharpe": 0.4635,
+        "v5_11c_verdict": "PASS"
+      },
+      "tc_15bps": {
+        "tc_bps_rt": 15,
+        "n_months": 53,
+        "net_ann_mean_pct": 24.4932,
+        "ann_vol_pct": 53.1461,
+        "net_sharpe": 0.4609,
+        "v5_11c_verdict": "PASS"
+      },
+      "tc_20bps": {
+        "tc_bps_rt": 20,
+        "n_months": 53,
+        "net_ann_mean_pct": 24.3532,
+        "ann_vol_pct": 53.1461,
+        "net_sharpe": 0.4582,
+        "v5_11c_verdict": "PASS"
+      },
+      "tc_30bps": {
+        "tc_bps_rt": 30,
+        "n_months": 53,
+        "net_ann_mean_pct": 24.0732,
+        "ann_vol_pct": 53.1461,
+        "net_sharpe": 0.453,
+        "v5_11c_verdict": "PASS"
+      },
+      "tc_50bps": {
+        "tc_bps_rt": 50,
+        "n_months": 53,
+        "net_ann_mean_pct": 23.5132,
+        "ann_vol_pct": 53.1461,
+        "net_sharpe": 0.4424,
+        "v5_11c_verdict": "PASS"
+      },
+      "tc_75bps": {
+        "tc_bps_rt": 75,
+        "n_months": 53,
+        "net_ann_mean_pct": 22.8132,
+        "ann_vol_pct": 53.1461,
+        "net_sharpe": 0.4293,
+        "v5_11c_verdict": "PASS"
+      },
+      "tc_100bps": {
+        "tc_bps_rt": 100,
+        "n_months": 53,
+        "net_ann_mean_pct": 22.1132,
+        "ann_vol_pct": 53.1461,
+        "net_sharpe": 0.4161,
+        "v5_11c_verdict": "PASS"
+      },
+      "tc_150bps": {
+        "tc_bps_rt": 150,
+        "n_months": 53,
+        "net_ann_mean_pct": 20.7132,
+        "ann_vol_pct": 53.1461,
+        "net_sharpe": 0.3897,
+        "v5_11c_verdict": "PASS"
+      },
+      "tc_200bps": {
+        "tc_bps_rt": 200,
+        "n_months": 53,
+        "net_ann_mean_pct": 19.3132,
+        "ann_vol_pct": 53.1461,
+        "net_sharpe": 0.3634,
+        "v5_11c_verdict": "PASS"
+      }
+    }
+  },
+  "break_even_bps": {
+    "window_30d": {
+      "pass_floor_0.30": null,
+      "borderline_floor_0.21": null,
+      "positive_sharpe_0.00": null
+    },
+    "window_90d": {
+      "pass_floor_0.30": 320.4,
+      "borderline_floor_0.21": 491.24,
+      "positive_sharpe_0.00": 889.86
+    }
+  }
+}

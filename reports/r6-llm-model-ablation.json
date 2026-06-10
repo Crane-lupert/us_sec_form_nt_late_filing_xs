@@ -1,0 +1,40 @@
+{
+  "n_common": 49,
+  "gpt_label_distribution": {
+    "accounting_issue": 29,
+    "other": 20
+  },
+  "llama_label_distribution": {
+    "accounting_issue": 28,
+    "other": 21
+  },
+  "kappa_3class": {
+    "n": 49,
+    "observed_agreement_pct": 85.71,
+    "expected_agreement_pct": 51.31,
+    "kappa": 0.7066
+  },
+  "kappa_binary": {
+    "n": 49,
+    "observed_agreement_pct": 85.71,
+    "expected_agreement_pct": 51.31,
+    "kappa": 0.7066
+  },
+  "stage_0_S0_3_threshold": 0.7,
+  "schema_decision": "3-CLASS_OK",
+  "confusion_matrix_gpt_rows_x_llama_cols": {
+    "accounting_issue": {
+      "accounting_issue": 25,
+      "other": 4
+    },
+    "other": {
+      "other": 17,
+      "accounting_issue": 3
+    }
+  },
+  "models": {
+    "primary": "openai/gpt-4o-mini (V5 default)",
+    "robustness": "meta-llama/llama-3.3-70b-instruct (alt-LLM)"
+  },
+  "claude_avoidance_note": "anthropic/claude-* not used per user directive 2026-06-10; Llama-3.3-70B is the robustness pair"
+}

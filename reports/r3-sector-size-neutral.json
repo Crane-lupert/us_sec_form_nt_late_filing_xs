@@ -1,0 +1,160 @@
+{
+  "n_ciks_fetched": 1284,
+  "n_sic2_sectors": 63,
+  "n_rows_with_sic": 3171,
+  "n_rows_total": 3178,
+  "variant_A_baseline_equal_weight": {
+    "n": 53,
+    "gross_sharpe": 0.4688,
+    "net_sharpe": 0.4609,
+    "ann_mean_pct": 24.9132,
+    "ann_vol_pct": 53.1461
+  },
+  "variant_B_sector_residualized": {
+    "n": 53,
+    "gross_sharpe": 0.6754,
+    "net_sharpe": 0.6651,
+    "ann_mean_pct": 27.5323,
+    "ann_vol_pct": 40.767
+  },
+  "by_sic2_basket": {
+    "10": {
+      "n_ai": 17,
+      "n_other": 11,
+      "ai_mean_pct": 3.4785,
+      "other_mean_pct": 10.6497,
+      "ls_pct": 7.1712
+    },
+    "14": {
+      "n_ai": 35,
+      "n_other": 14,
+      "ai_mean_pct": 77.329,
+      "other_mean_pct": 20.079,
+      "ls_pct": -57.25
+    },
+    "20": {
+      "n_ai": 19,
+      "n_other": 33,
+      "ai_mean_pct": 60.0642,
+      "other_mean_pct": 10.3308,
+      "ls_pct": -49.7335
+    },
+    "28": {
+      "n_ai": 140,
+      "n_other": 116,
+      "ai_mean_pct": -7.6812,
+      "other_mean_pct": 12.5442,
+      "ls_pct": 20.2254
+    },
+    "30": {
+      "n_ai": 11,
+      "n_other": 15,
+      "ai_mean_pct": -24.3593,
+      "other_mean_pct": 6.6636,
+      "ls_pct": 31.0229
+    },
+    "35": {
+      "n_ai": 48,
+      "n_other": 25,
+      "ai_mean_pct": 7.4036,
+      "other_mean_pct": 51.5796,
+      "ls_pct": 44.176
+    },
+    "36": {
+      "n_ai": 100,
+      "n_other": 78,
+      "ai_mean_pct": 8.9674,
+      "other_mean_pct": 19.8692,
+      "ls_pct": 10.9018
+    },
+    "38": {
+      "n_ai": 80,
+      "n_other": 69,
+      "ai_mean_pct": 6.6627,
+      "other_mean_pct": 5.8367,
+      "ls_pct": -0.826
+    },
+    "48": {
+      "n_ai": 46,
+      "n_other": 13,
+      "ai_mean_pct": 29.983,
+      "other_mean_pct": -54.4131,
+      "ls_pct": -84.3961
+    },
+    "49": {
+      "n_ai": 20,
+      "n_other": 30,
+      "ai_mean_pct": -7.815,
+      "other_mean_pct": -30.8186,
+      "ls_pct": -23.0037
+    },
+    "50": {
+      "n_ai": 17,
+      "n_other": 83,
+      "ai_mean_pct": -19.8671,
+      "other_mean_pct": -0.7963,
+      "ls_pct": 19.0708
+    },
+    "58": {
+      "n_ai": 22,
+      "n_other": 15,
+      "ai_mean_pct": -34.4049,
+      "other_mean_pct": -60.454,
+      "ls_pct": -26.0491
+    },
+    "60": {
+      "n_ai": 28,
+      "n_other": 21,
+      "ai_mean_pct": -5.3731,
+      "other_mean_pct": -8.8649,
+      "ls_pct": -3.4918
+    },
+    "61": {
+      "n_ai": 53,
+      "n_other": 58,
+      "ai_mean_pct": -3.1266,
+      "other_mean_pct": 18.3341,
+      "ls_pct": 21.4607
+    },
+    "65": {
+      "n_ai": 11,
+      "n_other": 13,
+      "ai_mean_pct": 6.1307,
+      "other_mean_pct": 5.8564,
+      "ls_pct": -0.2743
+    },
+    "67": {
+      "n_ai": 18,
+      "n_other": 22,
+      "ai_mean_pct": -31.9163,
+      "other_mean_pct": 1.114,
+      "ls_pct": 33.0303
+    },
+    "72": {
+      "n_ai": 15,
+      "n_other": 10,
+      "ai_mean_pct": -2.7215,
+      "other_mean_pct": -8.5414,
+      "ls_pct": -5.8199
+    },
+    "73": {
+      "n_ai": 216,
+      "n_other": 146,
+      "ai_mean_pct": -10.77,
+      "other_mean_pct": 22.9142,
+      "ls_pct": 33.6842
+    }
+  },
+  "sic2_distribution_top10": {
+    "28": 197,
+    "73": 156,
+    "36": 101,
+    "38": 92,
+    "67": 82,
+    "60": 76,
+    "61": 58,
+    "35": 46,
+    "37": 30,
+    "80": 30
+  }
+}

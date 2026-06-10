@@ -1,0 +1,5138 @@
+{
+  "1000209": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1000228": {
+    "sic": "5047",
+    "sicDescription": "Wholesale-Medical, Dental & Hospital Equipment & Supplies"
+  },
+  "1000694": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1001115": {
+    "sic": "3829",
+    "sicDescription": "Measuring & Controlling Devices, NEC"
+  },
+  "1001171": {
+    "sic": "6035",
+    "sicDescription": "Savings Institution, Federally Chartered"
+  },
+  "1001385": {
+    "sic": "3317",
+    "sicDescription": "Steel Pipe & Tubes"
+  },
+  "1001838": {
+    "sic": "1000",
+    "sicDescription": "Metal Mining"
+  },
+  "1001907": {
+    "sic": "3826",
+    "sicDescription": "Laboratory Analytical Instruments"
+  },
+  "100378": {
+    "sic": "3560",
+    "sicDescription": "General Industrial Machinery & Equipment"
+  },
+  "1004702": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "10048": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "1004989": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1005101": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1005286": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1005731": {
+    "sic": "4813",
+    "sicDescription": "Telephone Communications (No Radiotelephone)"
+  },
+  "1006045": {
+    "sic": "3845",
+    "sicDescription": "Electromedical & Electrotherapeutic Apparatus"
+  },
+  "1006655": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "1006837": {
+    "sic": "3440",
+    "sicDescription": "Fabricated Structural Metal Products"
+  },
+  "1007019": {
+    "sic": "2090",
+    "sicDescription": "Miscellaneous Food Preparations & Kindred Products"
+  },
+  "1007587": {
+    "sic": "4899",
+    "sicDescription": "Communications Services, NEC"
+  },
+  "1009829": {
+    "sic": "3944",
+    "sicDescription": "Games, Toys & Children's Vehicles (No Dolls & Bicycles)"
+  },
+  "1009891": {
+    "sic": "3728",
+    "sicDescription": "Aircraft Parts & Auxiliary Equipment, NEC"
+  },
+  "1013880": {
+    "sic": "7363",
+    "sicDescription": "Services-Help Supply Services"
+  },
+  "1014739": {
+    "sic": "8082",
+    "sicDescription": "Services-Home Health Care Services"
+  },
+  "1014763": {
+    "sic": "3577",
+    "sicDescription": "Computer Peripheral Equipment, NEC"
+  },
+  "101538": {
+    "sic": "3330",
+    "sicDescription": "Primary Smelting & Refining of  Nonferrous Metals"
+  },
+  "1015383": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "101594": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "1017303": {
+    "sic": "3577",
+    "sicDescription": "Computer Peripheral Equipment, NEC"
+  },
+  "1018164": {
+    "sic": "5080",
+    "sicDescription": "Wholesale-Machinery, Equipment & Supplies"
+  },
+  "102037": {
+    "sic": "5150",
+    "sicDescription": "Wholesale-Farm Product Raw Materials"
+  },
+  "1020710": {
+    "sic": "5084",
+    "sicDescription": "Wholesale-Industrial Machinery & Equipment"
+  },
+  "102109": {
+    "sic": "5065",
+    "sicDescription": "Wholesale-Electronic Parts & Equipment, NEC"
+  },
+  "1021561": {
+    "sic": "5122",
+    "sicDescription": "Wholesale-Drugs, Proprietaries & Druggists' Sundries"
+  },
+  "1022652": {
+    "sic": "3669",
+    "sicDescription": "Communications Equipment, NEC"
+  },
+  "1023994": {
+    "sic": "5030",
+    "sicDescription": "Wholesale-Lumber & Other Construction Materials"
+  },
+  "1025378": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1026655": {
+    "sic": "3089",
+    "sicDescription": "Plastics Products, NEC"
+  },
+  "1030469": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1031296": {
+    "sic": "4911",
+    "sicDescription": "Electric Services"
+  },
+  "1032975": {
+    "sic": "3577",
+    "sicDescription": "Computer Peripheral Equipment, NEC"
+  },
+  "1034760": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "1036044": {
+    "sic": "3577",
+    "sicDescription": "Computer Peripheral Equipment, NEC"
+  },
+  "1036262": {
+    "sic": "3825",
+    "sicDescription": "Instruments For Meas & Testing of  Electricity & Elec Signals"
+  },
+  "1039065": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1039280": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1039828": {
+    "sic": "6311",
+    "sicDescription": "Life Insurance"
+  },
+  "1040130": {
+    "sic": "5912",
+    "sicDescription": "Retail-Drug Stores and Proprietary Stores"
+  },
+  "1040896": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1041024": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1041514": {
+    "sic": "6099",
+    "sicDescription": "Functions Related To Depository Banking, NEC"
+  },
+  "1041657": {
+    "sic": "4832",
+    "sicDescription": "Radio Broadcasting Stations"
+  },
+  "1041859": {
+    "sic": "5651",
+    "sicDescription": "Retail-Family Clothing Stores"
+  },
+  "1042187": {
+    "sic": "3060",
+    "sicDescription": "Fabricated Rubber Products, NEC"
+  },
+  "1043000": {
+    "sic": "8050",
+    "sicDescription": "Services-Nursing & Personal Care Facilities"
+  },
+  "1043186": {
+    "sic": "4924",
+    "sicDescription": "Natural Gas Distribution"
+  },
+  "1043337": {
+    "sic": "3714",
+    "sicDescription": "Motor Vehicle Parts & Accessories"
+  },
+  "1043961": {
+    "sic": "3826",
+    "sicDescription": "Laboratory Analytical Instruments"
+  },
+  "1044777": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "10456": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1045742": {
+    "sic": "5900",
+    "sicDescription": "Retail-Miscellaneous Retail"
+  },
+  "1049502": {
+    "sic": "3823",
+    "sicDescription": "Industrial Instruments For Measurement, Display, and Control"
+  },
+  "1050743": {
+    "sic": "6029",
+    "sicDescription": "Commercial Banks, NEC"
+  },
+  "1051470": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1053691": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "105418": {
+    "sic": "5411",
+    "sicDescription": "Retail-Grocery Stores"
+  },
+  "1056358": {
+    "sic": "2833",
+    "sicDescription": "Medicinal Chemicals & Botanical Products"
+  },
+  "1056943": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "105744": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "1057706": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1058307": {
+    "sic": "4813",
+    "sicDescription": "Telephone Communications (No Radiotelephone)"
+  },
+  "1058811": {
+    "sic": "3577",
+    "sicDescription": "Computer Peripheral Equipment, NEC"
+  },
+  "106040": {
+    "sic": "3572",
+    "sicDescription": "Computer Storage Devices"
+  },
+  "1064728": {
+    "sic": "1221",
+    "sicDescription": "Bituminous Coal & Lignite Surface Mining"
+  },
+  "1065078": {
+    "sic": "6794",
+    "sicDescription": "Patent Owners & Lessors"
+  },
+  "1065088": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1066764": {
+    "sic": "4911",
+    "sicDescription": "Electric Services"
+  },
+  "1066923": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1068851": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1069183": {
+    "sic": "3480",
+    "sicDescription": "Ordnance & Accessories, (No Vehicles/Guided Missiles)"
+  },
+  "1069394": {
+    "sic": "2890",
+    "sicDescription": "Miscellaneous Chemical Products"
+  },
+  "107140": {
+    "sic": "2731",
+    "sicDescription": "Books: Publishing or  Publishing & Printing"
+  },
+  "1072627": {
+    "sic": "6331",
+    "sicDescription": "Fire, Marine & Casualty Insurance"
+  },
+  "1074828": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1074871": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1077183": {
+    "sic": "8734",
+    "sicDescription": "Services-Testing Laboratories"
+  },
+  "1080657": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1081745": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1082324": {
+    "sic": "6794",
+    "sicDescription": "Patent Owners & Lessors"
+  },
+  "108312": {
+    "sic": "3620",
+    "sicDescription": "Electrical Industrial Apparatus"
+  },
+  "1083220": {
+    "sic": "6794",
+    "sicDescription": "Patent Owners & Lessors"
+  },
+  "1083301": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1083446": {
+    "sic": "8742",
+    "sicDescription": "Services-Management Consulting Services"
+  },
+  "1083743": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "108385": {
+    "sic": "6141",
+    "sicDescription": "Personal Credit Institutions"
+  },
+  "1084048": {
+    "sic": "4822",
+    "sicDescription": "Telegraph & Other Message Communications"
+  },
+  "1084554": {
+    "sic": "2810",
+    "sicDescription": "Industrial Inorganic Chemicals"
+  },
+  "1084765": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1084991": {
+    "sic": "1389",
+    "sicDescription": "Oil & Gas Field Services, NEC"
+  },
+  "1085243": {
+    "sic": "3990",
+    "sicDescription": "Miscellaneous Manufacturing Industries"
+  },
+  "1086745": {
+    "sic": "4899",
+    "sicDescription": "Communications Services, NEC"
+  },
+  "1088034": {
+    "sic": "6099",
+    "sicDescription": "Functions Related To Depository Banking, NEC"
+  },
+  "1089872": {
+    "sic": "7812",
+    "sicDescription": "Services-Motion Picture & Video Tape Production"
+  },
+  "1089907": {
+    "sic": "6159",
+    "sicDescription": "Miscellaneous Business Credit Institution"
+  },
+  "1093691": {
+    "sic": "3620",
+    "sicDescription": "Electrical Industrial Apparatus"
+  },
+  "1094038": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1095981": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1096275": {
+    "sic": "3714",
+    "sicDescription": "Motor Vehicle Parts & Accessories"
+  },
+  "109657": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1098146": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "1099160": {
+    "sic": "4832",
+    "sicDescription": "Radio Broadcasting Stations"
+  },
+  "1102993": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1104038": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "110621": {
+    "sic": "2851",
+    "sicDescription": "Paints, Varnishes, Lacquers, Enamels & Allied Prods"
+  },
+  "1106644": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1107421": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1109116": {
+    "sic": "4833",
+    "sicDescription": "Television Broadcasting Stations"
+  },
+  "1109242": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "1109354": {
+    "sic": "3826",
+    "sicDescription": "Laboratory Analytical Instruments"
+  },
+  "1114995": {
+    "sic": "3679",
+    "sicDescription": "Electronic Components, NEC"
+  },
+  "1117057": {
+    "sic": "2030",
+    "sicDescription": "Canned, Frozen & Preservd Fruit, Veg & Food Specialties"
+  },
+  "1117171": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1120970": {
+    "sic": "2860",
+    "sicDescription": "Industrial Organic Chemicals"
+  },
+  "1123494": {
+    "sic": "3826",
+    "sicDescription": "Laboratory Analytical Instruments"
+  },
+  "1124198": {
+    "sic": "1600",
+    "sicDescription": "Heavy Construction Other Than Bldg Const - Contractors"
+  },
+  "1124524": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1126741": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1127371": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1128361": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "1130144": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1130598": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1133311": {
+    "sic": "7310",
+    "sicDescription": "Services-Advertising"
+  },
+  "1133416": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1137091": {
+    "sic": "3510",
+    "sicDescription": "Engines & Turbines"
+  },
+  "1138723": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1139685": {
+    "sic": "8734",
+    "sicDescription": "Services-Testing Laboratories"
+  },
+  "1140102": {
+    "sic": "7363",
+    "sicDescription": "Services-Help Supply Services"
+  },
+  "1140215": {
+    "sic": "2086",
+    "sicDescription": "Bottled & Canned Soft Drinks & Carbonated Waters"
+  },
+  "1141197": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "1141688": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "1144879": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1145197": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1156041": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "1157075": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1158172": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1158449": {
+    "sic": "5531",
+    "sicDescription": "Retail-Auto & Home Supply Stores"
+  },
+  "1158463": {
+    "sic": "4512",
+    "sicDescription": "Air Transportation, Scheduled"
+  },
+  "1160791": {
+    "sic": "1040",
+    "sicDescription": "Gold and Silver Ores"
+  },
+  "1162194": {
+    "sic": "3826",
+    "sicDescription": "Laboratory Analytical Instruments"
+  },
+  "1162896": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "1164863": {
+    "sic": "3050",
+    "sicDescription": "Gaskets, Packg & Sealg Devices & Rubber & Plastics Hose"
+  },
+  "1167419": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1169445": {
+    "sic": "7371",
+    "sicDescription": "Services-Computer Programming Services"
+  },
+  "1169770": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "1171155": {
+    "sic": "4731",
+    "sicDescription": "Arrangement of  Transportation of  Freight & Cargo"
+  },
+  "1173204": {
+    "sic": "7841",
+    "sicDescription": "Services-Video Tape Rental"
+  },
+  "1173313": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1174940": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1176309": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1177648": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1178253": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1178697": {
+    "sic": "3661",
+    "sicDescription": "Telephone & Telegraph Apparatus"
+  },
+  "1185348": {
+    "sic": "6153",
+    "sicDescription": "Short-Term Business Credit Institutions"
+  },
+  "1187953": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1191070": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1196298": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1201792": {
+    "sic": "8200",
+    "sicDescription": "Services-Educational Services"
+  },
+  "12040": {
+    "sic": "5812",
+    "sicDescription": "Retail-Eating  Places"
+  },
+  "1210708": {
+    "sic": "7363",
+    "sicDescription": "Services-Help Supply Services"
+  },
+  "1211805": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1217234": {
+    "sic": "8071",
+    "sicDescription": "Services-Medical Laboratories"
+  },
+  "1218683": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "12208": {
+    "sic": "3826",
+    "sicDescription": "Laboratory Analytical Instruments"
+  },
+  "12239": {
+    "sic": "6211",
+    "sicDescription": "Security Brokers, Dealers & Flotation Companies"
+  },
+  "1227500": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1227654": {
+    "sic": "1400",
+    "sicDescription": "Mining & Quarrying of  Nonmetallic Minerals (No Fuels)"
+  },
+  "1237831": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1262104": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1265131": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1269026": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1274737": {
+    "sic": "8071",
+    "sicDescription": "Services-Medical Laboratories"
+  },
+  "1275014": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1275101": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1275187": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1279704": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1282224": {
+    "sic": "7200",
+    "sicDescription": "Services-Personal Services"
+  },
+  "1282648": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "1285785": {
+    "sic": "2870",
+    "sicDescription": "Agricultural Chemicals"
+  },
+  "1287032": {
+    "sic": "",
+    "sicDescription": ""
+  },
+  "1287865": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1288855": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "1294133": {
+    "sic": "3842",
+    "sicDescription": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+  },
+  "1295401": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "1296445": {
+    "sic": "4911",
+    "sicDescription": "Electric Services"
+  },
+  "1297341": {
+    "sic": "6035",
+    "sicDescription": "Savings Institution, Federally Chartered"
+  },
+  "1297989": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1299709": {
+    "sic": "6035",
+    "sicDescription": "Savings Institution, Federally Chartered"
+  },
+  "1299969": {
+    "sic": "6500",
+    "sicDescription": "Real Estate"
+  },
+  "1304492": {
+    "sic": "4813",
+    "sicDescription": "Telephone Communications (No Radiotelephone)"
+  },
+  "1309108": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1314052": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1314102": {
+    "sic": "3826",
+    "sicDescription": "Laboratory Analytical Instruments"
+  },
+  "1314196": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1320760": {
+    "sic": "8742",
+    "sicDescription": "Services-Management Consulting Services"
+  },
+  "1320854": {
+    "sic": "3743",
+    "sicDescription": "Railroad Equipment"
+  },
+  "1321834": {
+    "sic": "2835",
+    "sicDescription": "In Vitro & In Vivo Diagnostic Substances"
+  },
+  "1323468": {
+    "sic": "5171",
+    "sicDescription": "Wholesale-Petroleum Bulk Stations & Terminals"
+  },
+  "1325670": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1325702": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1326190": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1326200": {
+    "sic": "4412",
+    "sicDescription": "Deep Sea Foreign Transportation of  Freight"
+  },
+  "1326205": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1326706": {
+    "sic": "3842",
+    "sicDescription": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+  },
+  "1328792": {
+    "sic": "3440",
+    "sicDescription": "Fabricated Structural Metal Products"
+  },
+  "1329606": {
+    "sic": "4924",
+    "sicDescription": "Natural Gas Distribution"
+  },
+  "1331875": {
+    "sic": "6361",
+    "sicDescription": "Title Insurance"
+  },
+  "1332551": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1333493": {
+    "sic": "6411",
+    "sicDescription": "Insurance Agents, Brokers & Service"
+  },
+  "1333822": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1334325": {
+    "sic": "3812",
+    "sicDescription": "Search, Detection, Navigation, Guidance, Aeronautical Sys"
+  },
+  "1334933": {
+    "sic": "1090",
+    "sicDescription": "Miscellaneous Metal Ores"
+  },
+  "1334978": {
+    "sic": "7310",
+    "sicDescription": "Services-Advertising"
+  },
+  "1337013": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1337298": {
+    "sic": "2860",
+    "sicDescription": "Industrial Organic Chemicals"
+  },
+  "1341766": {
+    "sic": "2086",
+    "sicDescription": "Bottled & Canned Soft Drinks & Carbonated Waters"
+  },
+  "1342958": {
+    "sic": "3663",
+    "sicDescription": "Radio & Tv Broadcasting & Communications Equipment"
+  },
+  "1345126": {
+    "sic": "2510",
+    "sicDescription": "Household Furniture"
+  },
+  "1348362": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1348911": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1349436": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "1350102": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1350593": {
+    "sic": "3490",
+    "sicDescription": "Miscellaneous Fabricated Metal Products"
+  },
+  "1350653": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1351636": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1354866": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1355848": {
+    "sic": "7812",
+    "sicDescription": "Services-Motion Picture & Video Tape Production"
+  },
+  "1356090": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1356093": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "1356576": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1357459": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1357615": {
+    "sic": "1600",
+    "sicDescription": "Heavy Construction Other Than Bldg Const - Contractors"
+  },
+  "1357971": {
+    "sic": "1623",
+    "sicDescription": "Water, Sewer, Pipeline, Comm & Power Line Construction"
+  },
+  "1358190": {
+    "sic": "2670",
+    "sicDescription": "Converted Paper & Paperboard Prods (No Contaners/Boxes)"
+  },
+  "1360214": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1361538": {
+    "sic": "1623",
+    "sicDescription": "Water, Sewer, Pipeline, Comm & Power Line Construction"
+  },
+  "1362190": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1364479": {
+    "sic": "7350",
+    "sicDescription": "Services-Miscellaneous Equipment Rental & Leasing"
+  },
+  "1367083": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1367644": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1368514": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1372299": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1372807": {
+    "sic": "",
+    "sicDescription": ""
+  },
+  "1373670": {
+    "sic": "1531",
+    "sicDescription": "Operative Builders"
+  },
+  "1374328": {
+    "sic": "2833",
+    "sicDescription": "Medicinal Chemicals & Botanical Products"
+  },
+  "1375205": {
+    "sic": "1040",
+    "sicDescription": "Gold and Silver Ores"
+  },
+  "1375365": {
+    "sic": "3571",
+    "sicDescription": "Electronic Computers"
+  },
+  "1376321": {
+    "sic": "7370",
+    "sicDescription": "Services-Computer Programming, Data Processing, Etc."
+  },
+  "1376339": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1377630": {
+    "sic": "7310",
+    "sicDescription": "Services-Advertising"
+  },
+  "1377789": {
+    "sic": "3663",
+    "sicDescription": "Radio & Tv Broadcasting & Communications Equipment"
+  },
+  "1379006": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1382574": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1384195": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "1385818": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1385849": {
+    "sic": "1400",
+    "sicDescription": "Mining & Quarrying of  Nonmetallic Minerals (No Fuels)"
+  },
+  "1386570": {
+    "sic": "2833",
+    "sicDescription": "Medicinal Chemicals & Botanical Products"
+  },
+  "1387467": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1388320": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1388658": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1389050": {
+    "sic": "4922",
+    "sicDescription": "Natural Gas Transmission"
+  },
+  "1389545": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1390478": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1392380": {
+    "sic": "2860",
+    "sicDescription": "Industrial Organic Chemicals"
+  },
+  "1392694": {
+    "sic": "4813",
+    "sicDescription": "Telephone Communications (No Radiotelephone)"
+  },
+  "1393726": {
+    "sic": "6331",
+    "sicDescription": "Fire, Marine & Casualty Insurance"
+  },
+  "1395942": {
+    "sic": "5500",
+    "sicDescription": "Retail-Auto Dealers & Gasoline Stations"
+  },
+  "1396536": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1397016": {
+    "sic": "3827",
+    "sicDescription": "Optical Instruments & Lenses"
+  },
+  "1397183": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1398805": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1399520": {
+    "sic": "5812",
+    "sicDescription": "Retail-Eating  Places"
+  },
+  "1401521": {
+    "sic": "6331",
+    "sicDescription": "Fire, Marine & Casualty Insurance"
+  },
+  "1401667": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1402328": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1402829": {
+    "sic": "1600",
+    "sicDescription": "Heavy Construction Other Than Bldg Const - Contractors"
+  },
+  "1404281": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1404644": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1408534": {
+    "sic": "6035",
+    "sicDescription": "Savings Institution, Federally Chartered"
+  },
+  "1408710": {
+    "sic": "3661",
+    "sicDescription": "Telephone & Telegraph Apparatus"
+  },
+  "1409493": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1409970": {
+    "sic": "6141",
+    "sicDescription": "Personal Credit Institutions"
+  },
+  "1410428": {
+    "sic": "7200",
+    "sicDescription": "Services-Personal Services"
+  },
+  "1411685": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1412100": {
+    "sic": "6331",
+    "sicDescription": "Fire, Marine & Casualty Insurance"
+  },
+  "1412486": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1414767": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1414932": {
+    "sic": "",
+    "sicDescription": ""
+  },
+  "1415311": {
+    "sic": "6221",
+    "sicDescription": "Commodity Contracts Brokers & Dealers"
+  },
+  "1417663": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "14177": {
+    "sic": "2013",
+    "sicDescription": "Sausages & Other Prepared Meat Products"
+  },
+  "1417926": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1419275": {
+    "sic": "8742",
+    "sicDescription": "Services-Management Consulting Services"
+  },
+  "1419536": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "1419554": {
+    "sic": "3842",
+    "sicDescription": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+  },
+  "1419951": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1420565": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1420720": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1422892": {
+    "sic": "4731",
+    "sicDescription": "Arrangement of  Transportation of  Freight & Cargo"
+  },
+  "1423869": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1425287": {
+    "sic": "3711",
+    "sicDescription": "Motor Vehicles & Passenger Car Bodies"
+  },
+  "1425355": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1425627": {
+    "sic": "2721",
+    "sicDescription": "Periodicals: Publishing or  Publishing & Printing"
+  },
+  "1426800": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1427570": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1428205": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1429764": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1430306": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1430723": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1434524": {
+    "sic": "3823",
+    "sicDescription": "Industrial Instruments For Measurement, Display, and Control"
+  },
+  "1434647": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1434868": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1436126": {
+    "sic": "8711",
+    "sicDescription": "Services-Engineering Services"
+  },
+  "1436208": {
+    "sic": "2451",
+    "sicDescription": "Mobile Homes"
+  },
+  "1436229": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1437071": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1437925": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1438423": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1446159": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1446847": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1447028": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1448431": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1449792": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1450704": {
+    "sic": "4953",
+    "sicDescription": "Refuse Systems"
+  },
+  "1451505": {
+    "sic": "1381",
+    "sicDescription": "Drilling Oil & Gas Wells"
+  },
+  "1453593": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1453687": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1460329": {
+    "sic": "7310",
+    "sicDescription": "Services-Advertising"
+  },
+  "1460702": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1462120": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1462223": {
+    "sic": "7371",
+    "sicDescription": "Services-Computer Programming Services"
+  },
+  "1462418": {
+    "sic": "7380",
+    "sicDescription": "Services-Miscellaneous Business Services"
+  },
+  "1463972": {
+    "sic": "3663",
+    "sicDescription": "Radio & Tv Broadcasting & Communications Equipment"
+  },
+  "1464343": {
+    "sic": "6141",
+    "sicDescription": "Personal Credit Institutions"
+  },
+  "1464790": {
+    "sic": "6282",
+    "sicDescription": "Investment Advice"
+  },
+  "1466026": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1467761": {
+    "sic": "3661",
+    "sicDescription": "Telephone & Telegraph Apparatus"
+  },
+  "1468328": {
+    "sic": "8082",
+    "sicDescription": "Services-Home Health Care Services"
+  },
+  "1468929": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1471727": {
+    "sic": "2080",
+    "sicDescription": "Beverages"
+  },
+  "1471824": {
+    "sic": "6221",
+    "sicDescription": "Commodity Contracts Brokers & Dealers"
+  },
+  "1473334": {
+    "sic": "2510",
+    "sicDescription": "Household Furniture"
+  },
+  "1474167": {
+    "sic": "5122",
+    "sicDescription": "Wholesale-Drugs, Proprietaries & Druggists' Sundries"
+  },
+  "1474903": {
+    "sic": "7363",
+    "sicDescription": "Services-Help Supply Services"
+  },
+  "1476840": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1479419": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1479681": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1482541": {
+    "sic": "0700",
+    "sicDescription": "Agricultural Services"
+  },
+  "14846": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1484769": {
+    "sic": "7812",
+    "sicDescription": "Services-Motion Picture & Video Tape Production"
+  },
+  "1486159": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "1487197": {
+    "sic": "2030",
+    "sicDescription": "Canned, Frozen & Preservd Fruit, Veg & Food Specialties"
+  },
+  "1487952": {
+    "sic": "3670",
+    "sicDescription": "Electronic Components & Accessories"
+  },
+  "1488813": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1489096": {
+    "sic": "3620",
+    "sicDescription": "Electrical Industrial Apparatus"
+  },
+  "1490161": {
+    "sic": "2000",
+    "sicDescription": "Food and Kindred Products"
+  },
+  "1491419": {
+    "sic": "5812",
+    "sicDescription": "Retail-Eating  Places"
+  },
+  "1493761": {
+    "sic": "3669",
+    "sicDescription": "Communications Equipment, NEC"
+  },
+  "1494582": {
+    "sic": "6510",
+    "sicDescription": "Real Estate Operators (No Developers) & Lessors"
+  },
+  "1495231": {
+    "sic": "7310",
+    "sicDescription": "Services-Advertising"
+  },
+  "1495932": {
+    "sic": "6531",
+    "sicDescription": "Real Estate Agents & Managers (For Others)"
+  },
+  "1496443": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1497253": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1497645": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1498382": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1499422": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1499832": {
+    "sic": "4832",
+    "sicDescription": "Radio Broadcasting Stations"
+  },
+  "1500198": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1500375": {
+    "sic": "6035",
+    "sicDescription": "Savings Institution, Federally Chartered"
+  },
+  "1502377": {
+    "sic": "1040",
+    "sicDescription": "Gold and Silver Ores"
+  },
+  "1503274": {
+    "sic": "3826",
+    "sicDescription": "Laboratory Analytical Instruments"
+  },
+  "1504678": {
+    "sic": "2800",
+    "sicDescription": "Chemicals & Allied Products"
+  },
+  "1505497": {
+    "sic": "8090",
+    "sicDescription": "Services-Misc Health & Allied Services, NEC"
+  },
+  "1505732": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1506251": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1506983": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1507605": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1507957": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1509261": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1509470": {
+    "sic": "",
+    "sicDescription": ""
+  },
+  "1512228": {
+    "sic": "1000",
+    "sicDescription": "Metal Mining"
+  },
+  "1513525": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1514183": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1515156": {
+    "sic": "2890",
+    "sicDescription": "Miscellaneous Chemical Products"
+  },
+  "1517022": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1517175": {
+    "sic": "5141",
+    "sicDescription": "Wholesale-Groceries, General Line"
+  },
+  "1517681": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1518461": {
+    "sic": "3669",
+    "sicDescription": "Communications Equipment, NEC"
+  },
+  "1518715": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1519472": {
+    "sic": "1700",
+    "sicDescription": "Construction - Special Trade Contractors"
+  },
+  "1520358": {
+    "sic": "2013",
+    "sicDescription": "Sausages & Other Prepared Meat Products"
+  },
+  "1524025": {
+    "sic": "5600",
+    "sicDescription": "Retail-Apparel & Accessory Stores"
+  },
+  "1526113": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1527590": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1527702": {
+    "sic": "4813",
+    "sicDescription": "Telephone Communications (No Radiotelephone)"
+  },
+  "1527728": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1528356": {
+    "sic": "4931",
+    "sicDescription": "Electric & Other Services Combined"
+  },
+  "1529113": {
+    "sic": "7371",
+    "sicDescription": "Services-Computer Programming Services"
+  },
+  "1530721": {
+    "sic": "3100",
+    "sicDescription": "Leather & Leather Products"
+  },
+  "1530766": {
+    "sic": "3845",
+    "sicDescription": "Electromedical & Electrotherapeutic Apparatus"
+  },
+  "1530804": {
+    "sic": "2810",
+    "sicDescription": "Industrial Inorganic Chemicals"
+  },
+  "1532619": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1533615": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1533743": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1533924": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "1534154": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1534525": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1534675": {
+    "sic": "3211",
+    "sicDescription": "Flat Glass"
+  },
+  "1534708": {
+    "sic": "6162",
+    "sicDescription": "Mortgage Bankers & Loan Correspondents"
+  },
+  "1537054": {
+    "sic": "4899",
+    "sicDescription": "Communications Services, NEC"
+  },
+  "1540684": {
+    "sic": "1400",
+    "sicDescription": "Mining & Quarrying of  Nonmetallic Minerals (No Fuels)"
+  },
+  "1541157": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1541401": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1546296": {
+    "sic": "7370",
+    "sicDescription": "Services-Computer Programming, Data Processing, Etc."
+  },
+  "1547546": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1549084": {
+    "sic": "3569",
+    "sicDescription": "General Industrial Machinery & Equipment, NEC"
+  },
+  "1550913": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1553079": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1553643": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1554818": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1556593": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1556739": {
+    "sic": "7310",
+    "sicDescription": "Services-Advertising"
+  },
+  "1557798": {
+    "sic": "3576",
+    "sicDescription": "Computer Communications Equipment"
+  },
+  "1558569": {
+    "sic": "8731",
+    "sicDescription": "Services-Commercial Physical & Biological Research"
+  },
+  "1559865": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1561032": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "15615": {
+    "sic": "1623",
+    "sicDescription": "Water, Sewer, Pipeline, Comm & Power Line Construction"
+  },
+  "1562528": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1562733": {
+    "sic": "2833",
+    "sicDescription": "Medicinal Chemicals & Botanical Products"
+  },
+  "1563568": {
+    "sic": "3714",
+    "sicDescription": "Motor Vehicle Parts & Accessories"
+  },
+  "1564902": {
+    "sic": "7990",
+    "sicDescription": "Services-Miscellaneous Amusement & Recreation"
+  },
+  "1566610": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1567900": {
+    "sic": "1000",
+    "sicDescription": "Metal Mining"
+  },
+  "1569994": {
+    "sic": "6035",
+    "sicDescription": "Savings Institution, Federally Chartered"
+  },
+  "1574094": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1575793": {
+    "sic": "3663",
+    "sicDescription": "Radio & Tv Broadcasting & Communications Equipment"
+  },
+  "1575828": {
+    "sic": "1389",
+    "sicDescription": "Oil & Gas Field Services, NEC"
+  },
+  "1576873": {
+    "sic": "1400",
+    "sicDescription": "Mining & Quarrying of  Nonmetallic Minerals (No Fuels)"
+  },
+  "1577445": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "1578348": {
+    "sic": "",
+    "sicDescription": ""
+  },
+  "1579157": {
+    "sic": "5600",
+    "sicDescription": "Retail-Apparel & Accessory Stores"
+  },
+  "1580149": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1580560": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1580808": {
+    "sic": "3576",
+    "sicDescription": "Computer Communications Equipment"
+  },
+  "1581091": {
+    "sic": "6531",
+    "sicDescription": "Real Estate Agents & Managers (For Others)"
+  },
+  "1582554": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1582961": {
+    "sic": "7370",
+    "sicDescription": "Services-Computer Programming, Data Processing, Etc."
+  },
+  "1584207": {
+    "sic": "6141",
+    "sicDescription": "Personal Credit Institutions"
+  },
+  "1584831": {
+    "sic": "6331",
+    "sicDescription": "Fire, Marine & Casualty Insurance"
+  },
+  "1585364": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1585608": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1587987": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "1589061": {
+    "sic": "6512",
+    "sicDescription": "Opeators of  Nonresidential Buildings"
+  },
+  "1589149": {
+    "sic": "5051",
+    "sicDescription": "Wholesale-Metals Service Centers & of fices"
+  },
+  "1589526": {
+    "sic": "3713",
+    "sicDescription": "Truck & Bus Bodies"
+  },
+  "1590418": {
+    "sic": "3823",
+    "sicDescription": "Industrial Instruments For Measurement, Display, and Control"
+  },
+  "1590714": {
+    "sic": "2890",
+    "sicDescription": "Miscellaneous Chemical Products"
+  },
+  "1590715": {
+    "sic": "1220",
+    "sicDescription": "Silver Ores"
+  },
+  "1590717": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1590895": {
+    "sic": "7011",
+    "sicDescription": "Hotels & Motels"
+  },
+  "1591890": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1595248": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1595527": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1596961": {
+    "sic": "7371",
+    "sicDescription": "Services-Computer Programming Services"
+  },
+  "1596993": {
+    "sic": "4412",
+    "sicDescription": "Deep Sea Foreign Transportation of  Freight"
+  },
+  "1597846": {
+    "sic": "8742",
+    "sicDescription": "Services-Management Consulting Services"
+  },
+  "1600983": {
+    "sic": "3669",
+    "sicDescription": "Communications Equipment, NEC"
+  },
+  "1602409": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1604028": {
+    "sic": "3086",
+    "sicDescription": "Plastics Foam Products"
+  },
+  "1604191": {
+    "sic": "4931",
+    "sicDescription": "Electric & Other Services Combined"
+  },
+  "1604868": {
+    "sic": "5200",
+    "sicDescription": "Retail-Building Materials, Hardware, Garden Supply"
+  },
+  "1605301": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1606163": {
+    "sic": "1700",
+    "sicDescription": "Construction - Special Trade Contractors"
+  },
+  "1606268": {
+    "sic": "4931",
+    "sicDescription": "Electric & Other Services Combined"
+  },
+  "1606909": {
+    "sic": "4412",
+    "sicDescription": "Deep Sea Foreign Transportation of  Freight"
+  },
+  "1607962": {
+    "sic": "3842",
+    "sicDescription": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+  },
+  "1610853": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1610940": {
+    "sic": "6221",
+    "sicDescription": "Commodity Contracts Brokers & Dealers"
+  },
+  "1611747": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1612630": {
+    "sic": "6794",
+    "sicDescription": "Patent Owners & Lessors"
+  },
+  "1612720": {
+    "sic": "4923",
+    "sicDescription": "Natural Gas Transmisison & Distribution"
+  },
+  "1615063": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1615165": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1616000": {
+    "sic": "7011",
+    "sicDescription": "Hotels & Motels"
+  },
+  "1616262": {
+    "sic": "2060",
+    "sicDescription": "Sugar & Confectionery Products"
+  },
+  "1617640": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1618732": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1620459": {
+    "sic": "6331",
+    "sicDescription": "Fire, Marine & Casualty Insurance"
+  },
+  "1620533": {
+    "sic": "5810",
+    "sicDescription": "Retail-Eating & Drinking Places"
+  },
+  "1621221": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1621672": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "1621832": {
+    "sic": "3341",
+    "sicDescription": "Secondary Smelting & Refining of  Nonferrous Metals"
+  },
+  "1622345": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1624326": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1624512": {
+    "sic": "8200",
+    "sicDescription": "Services-Educational Services"
+  },
+  "1625101": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1627223": {
+    "sic": "2800",
+    "sicDescription": "Chemicals & Allied Products"
+  },
+  "1627282": {
+    "sic": "6500",
+    "sicDescription": "Real Estate"
+  },
+  "1628063": {
+    "sic": "6500",
+    "sicDescription": "Real Estate"
+  },
+  "1629210": {
+    "sic": "1000",
+    "sicDescription": "Metal Mining"
+  },
+  "1630212": {
+    "sic": "7371",
+    "sicDescription": "Services-Computer Programming Services"
+  },
+  "1630805": {
+    "sic": "3433",
+    "sicDescription": "Heating Equipment, Except Electric & Warm Air Furnaces"
+  },
+  "1633978": {
+    "sic": "3669",
+    "sicDescription": "Communications Equipment, NEC"
+  },
+  "1634117": {
+    "sic": "5940",
+    "sicDescription": "Retail-Miscellaneous Shopping Goods Stores"
+  },
+  "1635077": {
+    "sic": "8071",
+    "sicDescription": "Services-Medical Laboratories"
+  },
+  "1635282": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1637459": {
+    "sic": "2030",
+    "sicDescription": "Canned, Frozen & Preservd Fruit, Veg & Food Specialties"
+  },
+  "1638287": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1638833": {
+    "sic": "8062",
+    "sicDescription": "Services-General Medical & Surgical Hospitals, NEC"
+  },
+  "1638911": {
+    "sic": "3721",
+    "sicDescription": "Aircraft"
+  },
+  "1639691": {
+    "sic": "3845",
+    "sicDescription": "Electromedical & Electrotherapeutic Apparatus"
+  },
+  "1639825": {
+    "sic": "3949",
+    "sicDescription": "Sporting & Athletic Goods, NEC"
+  },
+  "1640384": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1641398": {
+    "sic": "5050",
+    "sicDescription": "Wholesale-Metals & Minerals (No Petroleum)"
+  },
+  "1641631": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1642380": {
+    "sic": "2835",
+    "sicDescription": "In Vitro & In Vivo Diagnostic Substances"
+  },
+  "1643303": {
+    "sic": "3672",
+    "sicDescription": "Printed Circuit Boards"
+  },
+  "1643953": {
+    "sic": "2510",
+    "sicDescription": "Household Furniture"
+  },
+  "1645873": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1646188": {
+    "sic": "3663",
+    "sicDescription": "Radio & Tv Broadcasting & Communications Equipment"
+  },
+  "1650101": {
+    "sic": "7330",
+    "sicDescription": "Services-Mailing, Reproduction, Commercial Art & Photography"
+  },
+  "1651721": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1653482": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1655210": {
+    "sic": "2000",
+    "sicDescription": "Food and Kindred Products"
+  },
+  "1656472": {
+    "sic": "2833",
+    "sicDescription": "Medicinal Chemicals & Botanical Products"
+  },
+  "1657573": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1659617": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1661053": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1662684": {
+    "sic": "3670",
+    "sicDescription": "Electronic Components & Accessories"
+  },
+  "1662774": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1664703": {
+    "sic": "3620",
+    "sicDescription": "Electrical Industrial Apparatus"
+  },
+  "1665300": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1665988": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1667313": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1668010": {
+    "sic": "5600",
+    "sicDescription": "Retail-Apparel & Accessory Stores"
+  },
+  "1669779": {
+    "sic": "5500",
+    "sicDescription": "Retail-Auto Dealers & Gasoline Stations"
+  },
+  "1673481": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1674356": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1674440": {
+    "sic": "7370",
+    "sicDescription": "Services-Computer Programming, Data Processing, Etc."
+  },
+  "1675644": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1676047": {
+    "sic": "3842",
+    "sicDescription": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+  },
+  "1676163": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1677077": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1679628": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1680062": {
+    "sic": "3559",
+    "sicDescription": "Special Industry Machinery, NEC"
+  },
+  "1680247": {
+    "sic": "1389",
+    "sicDescription": "Oil & Gas Field Services, NEC"
+  },
+  "1680873": {
+    "sic": "5140",
+    "sicDescription": "Wholesale-Groceries & Related Products"
+  },
+  "1681206": {
+    "sic": "6331",
+    "sicDescription": "Fire, Marine & Casualty Insurance"
+  },
+  "1681459": {
+    "sic": "3533",
+    "sicDescription": "Oil & Gas Field Machinery & Equipment"
+  },
+  "1681622": {
+    "sic": "3679",
+    "sicDescription": "Electronic Components, NEC"
+  },
+  "1681682": {
+    "sic": "3845",
+    "sicDescription": "Electromedical & Electrotherapeutic Apparatus"
+  },
+  "1682149": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1682220": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1682639": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1682745": {
+    "sic": "4700",
+    "sicDescription": "Transportation Services"
+  },
+  "1683553": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1687187": {
+    "sic": "1220",
+    "sicDescription": "Silver Ores"
+  },
+  "1687542": {
+    "sic": "4731",
+    "sicDescription": "Arrangement of  Transportation of  Freight & Cargo"
+  },
+  "1688568": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1688757": {
+    "sic": "3842",
+    "sicDescription": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+  },
+  "1690080": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1690680": {
+    "sic": "6531",
+    "sicDescription": "Real Estate Agents & Managers (For Others)"
+  },
+  "1691421": {
+    "sic": "6331",
+    "sicDescription": "Fire, Marine & Casualty Insurance"
+  },
+  "1692376": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1697851": {
+    "sic": "3669",
+    "sicDescription": "Communications Equipment, NEC"
+  },
+  "1698530": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1701756": {
+    "sic": "5810",
+    "sicDescription": "Retail-Eating & Drinking Places"
+  },
+  "1701758": {
+    "sic": "5712",
+    "sicDescription": "Retail-Furniture Stores"
+  },
+  "1701963": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1702924": {
+    "sic": "3480",
+    "sicDescription": "Ordnance & Accessories, (No Vehicles/Guided Missiles)"
+  },
+  "1703956": {
+    "sic": "1700",
+    "sicDescription": "Construction - Special Trade Contractors"
+  },
+  "1704715": {
+    "sic": "1221",
+    "sicDescription": "Bituminous Coal & Lignite Surface Mining"
+  },
+  "1704720": {
+    "sic": "5810",
+    "sicDescription": "Retail-Eating & Drinking Places"
+  },
+  "1706524": {
+    "sic": "5080",
+    "sicDescription": "Wholesale-Machinery, Equipment & Supplies"
+  },
+  "1706946": {
+    "sic": "4700",
+    "sicDescription": "Transportation Services"
+  },
+  "1707910": {
+    "sic": "5812",
+    "sicDescription": "Retail-Eating  Places"
+  },
+  "1707919": {
+    "sic": "3711",
+    "sicDescription": "Motor Vehicles & Passenger Car Bodies"
+  },
+  "1707925": {
+    "sic": "2810",
+    "sicDescription": "Industrial Inorganic Chemicals"
+  },
+  "1708035": {
+    "sic": "2800",
+    "sicDescription": "Chemicals & Allied Products"
+  },
+  "1708055": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "1708341": {
+    "sic": "7900",
+    "sicDescription": "Services-Amusement & Recreation Services"
+  },
+  "1709164": {
+    "sic": "3634",
+    "sicDescription": "Electric Housewares & Fans"
+  },
+  "1709628": {
+    "sic": "7370",
+    "sicDescription": "Services-Computer Programming, Data Processing, Etc."
+  },
+  "1710340": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1711012": {
+    "sic": "7510",
+    "sicDescription": "Services-Auto Rental & Leasing (No Drivers)"
+  },
+  "1712189": {
+    "sic": "7000",
+    "sicDescription": "Hotels, Rooming Houses, Camps & Other Lodging Places"
+  },
+  "1712463": {
+    "sic": "2670",
+    "sicDescription": "Converted Paper & Paperboard Prods (No Contaners/Boxes)"
+  },
+  "1713210": {
+    "sic": "8000",
+    "sicDescription": "Services-Health Services"
+  },
+  "1713539": {
+    "sic": "5500",
+    "sicDescription": "Retail-Auto Dealers & Gasoline Stations"
+  },
+  "1713863": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1714562": {
+    "sic": "7900",
+    "sicDescription": "Services-Amusement & Recreation Services"
+  },
+  "1716166": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1716621": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1718224": {
+    "sic": "5812",
+    "sicDescription": "Retail-Eating  Places"
+  },
+  "1718939": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1719406": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1720424": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1720592": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1722010": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1726711": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1728328": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1730463": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1734342": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "1734750": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1735041": {
+    "sic": "3560",
+    "sicDescription": "General Industrial Machinery & Equipment"
+  },
+  "1737523": {
+    "sic": "8071",
+    "sicDescription": "Services-Medical Laboratories"
+  },
+  "1737927": {
+    "sic": "2833",
+    "sicDescription": "Medicinal Chemicals & Botanical Products"
+  },
+  "1738758": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1739174": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1743745": {
+    "sic": "5099",
+    "sicDescription": "Wholesale-Durable Goods, NEC"
+  },
+  "1746129": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1747079": {
+    "sic": "7011",
+    "sicDescription": "Hotels & Motels"
+  },
+  "1749723": {
+    "sic": "4924",
+    "sicDescription": "Natural Gas Distribution"
+  },
+  "1750106": {
+    "sic": "6500",
+    "sicDescription": "Real Estate"
+  },
+  "1750735": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "1752828": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1753162": {
+    "sic": "6531",
+    "sicDescription": "Real Estate Agents & Managers (For Others)"
+  },
+  "1753539": {
+    "sic": "3663",
+    "sicDescription": "Radio & Tv Broadcasting & Communications Equipment"
+  },
+  "1755058": {
+    "sic": "8742",
+    "sicDescription": "Services-Management Consulting Services"
+  },
+  "1755953": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1756180": {
+    "sic": "0200",
+    "sicDescription": "Agricultural Prod-Livestock & Animal Specialties"
+  },
+  "1757499": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1757715": {
+    "sic": "3634",
+    "sicDescription": "Electric Housewares & Fans"
+  },
+  "1758009": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1758488": {
+    "sic": "7997",
+    "sicDescription": "Services-Membership Sports & Recreation Clubs"
+  },
+  "1759186": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1759425": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1759824": {
+    "sic": "5084",
+    "sicDescription": "Wholesale-Industrial Machinery & Equipment"
+  },
+  "1760233": {
+    "sic": "5961",
+    "sicDescription": "Retail-Catalog & Mail-Order Houses"
+  },
+  "1760689": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1760903": {
+    "sic": "2844",
+    "sicDescription": "Perfumes, Cosmetics & Other Toilet Preparations"
+  },
+  "1761312": {
+    "sic": "6331",
+    "sicDescription": "Fire, Marine & Casualty Insurance"
+  },
+  "1764046": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1766140": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1767057": {
+    "sic": "6221",
+    "sicDescription": "Commodity Contracts Brokers & Dealers"
+  },
+  "1768224": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1769624": {
+    "sic": "6282",
+    "sicDescription": "Investment Advice"
+  },
+  "1769663": {
+    "sic": "6036",
+    "sicDescription": "Savings Institutions, Not Federally Chartered"
+  },
+  "1770236": {
+    "sic": "3861",
+    "sicDescription": "Photographic Equipment & Supplies"
+  },
+  "1770450": {
+    "sic": "3577",
+    "sicDescription": "Computer Peripheral Equipment, NEC"
+  },
+  "1772720": {
+    "sic": "4911",
+    "sicDescription": "Electric Services"
+  },
+  "1772921": {
+    "sic": "5531",
+    "sicDescription": "Retail-Auto & Home Supply Stores"
+  },
+  "1774170": {
+    "sic": "3669",
+    "sicDescription": "Communications Equipment, NEC"
+  },
+  "1775194": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1775734": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1776661": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1777319": {
+    "sic": "8742",
+    "sicDescription": "Services-Management Consulting Services"
+  },
+  "1777393": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1777835": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1777921": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1779128": {
+    "sic": "8000",
+    "sicDescription": "Services-Health Services"
+  },
+  "1780312": {
+    "sic": "4899",
+    "sicDescription": "Communications Services, NEC"
+  },
+  "1781162": {
+    "sic": "3760",
+    "sicDescription": "Guided Missiles & Space Vehicles & Parts"
+  },
+  "1782107": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1784254": {
+    "sic": "4832",
+    "sicDescription": "Radio Broadcasting Stations"
+  },
+  "17843": {
+    "sic": "3312",
+    "sicDescription": "Steel Works, Blast Furnaces & Rolling Mills (Coke Ovens)"
+  },
+  "1784535": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1784970": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1785056": {
+    "sic": "3600",
+    "sicDescription": "Electronic & Other Electrical Equipment (No Computer Equip)"
+  },
+  "1785424": {
+    "sic": "7359",
+    "sicDescription": "Services-Equipment Rental & Leasing, NEC"
+  },
+  "1786108": {
+    "sic": "",
+    "sicDescription": ""
+  },
+  "1786352": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1787518": {
+    "sic": "8742",
+    "sicDescription": "Services-Management Consulting Services"
+  },
+  "1788028": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1788230": {
+    "sic": "2080",
+    "sicDescription": "Beverages"
+  },
+  "1789029": {
+    "sic": "3714",
+    "sicDescription": "Motor Vehicle Parts & Accessories"
+  },
+  "1789192": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1794783": {
+    "sic": "6411",
+    "sicDescription": "Insurance Agents, Brokers & Service"
+  },
+  "1795091": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1795815": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "1796514": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1798562": {
+    "sic": "1000",
+    "sicDescription": "Metal Mining"
+  },
+  "1799011": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1799191": {
+    "sic": "8011",
+    "sicDescription": "Services-Offices & Clinics of  Doctors of  Medicine"
+  },
+  "1799788": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1800637": {
+    "sic": "0700",
+    "sicDescription": "Agricultural Services"
+  },
+  "1801661": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1802457": {
+    "sic": "2860",
+    "sicDescription": "Industrial Organic Chemicals"
+  },
+  "1803901": {
+    "sic": "8000",
+    "sicDescription": "Services-Health Services"
+  },
+  "1803914": {
+    "sic": "5900",
+    "sicDescription": "Retail-Miscellaneous Retail"
+  },
+  "1804745": {
+    "sic": "7500",
+    "sicDescription": "Services-Automotive Repair, Services & Parking"
+  },
+  "1805284": {
+    "sic": "6162",
+    "sicDescription": "Mortgage Bankers & Loan Correspondents"
+  },
+  "1805385": {
+    "sic": "3577",
+    "sicDescription": "Computer Peripheral Equipment, NEC"
+  },
+  "1805521": {
+    "sic": "3711",
+    "sicDescription": "Motor Vehicles & Passenger Car Bodies"
+  },
+  "1805651": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1806201": {
+    "sic": "6141",
+    "sicDescription": "Personal Credit Institutions"
+  },
+  "1807166": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1807887": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1808220": {
+    "sic": "6411",
+    "sicDescription": "Insurance Agents, Brokers & Service"
+  },
+  "1809104": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1809750": {
+    "sic": "0100",
+    "sicDescription": "Agricultural Production-Crops"
+  },
+  "1810019": {
+    "sic": "7370",
+    "sicDescription": "Services-Computer Programming, Data Processing, Etc."
+  },
+  "1810560": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1811210": {
+    "sic": "3711",
+    "sicDescription": "Motor Vehicles & Passenger Car Bodies"
+  },
+  "1812727": {
+    "sic": "6411",
+    "sicDescription": "Insurance Agents, Brokers & Service"
+  },
+  "1814287": {
+    "sic": "6282",
+    "sicDescription": "Investment Advice"
+  },
+  "1816017": {
+    "sic": "4899",
+    "sicDescription": "Communications Services, NEC"
+  },
+  "1816431": {
+    "sic": "3829",
+    "sicDescription": "Measuring & Controlling Devices, NEC"
+  },
+  "1817004": {
+    "sic": "5500",
+    "sicDescription": "Retail-Auto Dealers & Gasoline Stations"
+  },
+  "1817760": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1818093": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1818201": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1818274": {
+    "sic": "7340",
+    "sicDescription": "Services-To Dwellings & Other Buildings"
+  },
+  "1818331": {
+    "sic": "8000",
+    "sicDescription": "Services-Health Services"
+  },
+  "1818874": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1819142": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1819253": {
+    "sic": "2833",
+    "sicDescription": "Medicinal Chemicals & Botanical Products"
+  },
+  "1819438": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1819493": {
+    "sic": "3714",
+    "sicDescription": "Motor Vehicle Parts & Accessories"
+  },
+  "1819810": {
+    "sic": "3760",
+    "sicDescription": "Guided Missiles & Space Vehicles & Parts"
+  },
+  "1819974": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1819994": {
+    "sic": "3760",
+    "sicDescription": "Guided Missiles & Space Vehicles & Parts"
+  },
+  "1820144": {
+    "sic": "7370",
+    "sicDescription": "Services-Computer Programming, Data Processing, Etc."
+  },
+  "1820190": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1820302": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1820721": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1820872": {
+    "sic": "4700",
+    "sicDescription": "Transportation Services"
+  },
+  "1820875": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1821159": {
+    "sic": "7500",
+    "sicDescription": "Services-Automotive Repair, Services & Parking"
+  },
+  "1821175": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1821586": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1821769": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1822359": {
+    "sic": "8000",
+    "sicDescription": "Services-Health Services"
+  },
+  "1822928": {
+    "sic": "3714",
+    "sicDescription": "Motor Vehicle Parts & Accessories"
+  },
+  "1822966": {
+    "sic": "3443",
+    "sicDescription": "Fabricated Plate Work (Boiler Shops)"
+  },
+  "1823144": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1823239": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1823406": {
+    "sic": "6036",
+    "sicDescription": "Savings Institutions, Not Federally Chartered"
+  },
+  "1823584": {
+    "sic": "5099",
+    "sicDescription": "Wholesale-Durable Goods, NEC"
+  },
+  "1823587": {
+    "sic": "6500",
+    "sicDescription": "Real Estate"
+  },
+  "1823652": {
+    "sic": "3721",
+    "sicDescription": "Aircraft"
+  },
+  "1824403": {
+    "sic": "7900",
+    "sicDescription": "Services-Amusement & Recreation Services"
+  },
+  "1824502": {
+    "sic": "3721",
+    "sicDescription": "Aircraft"
+  },
+  "1824893": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1824920": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "1825452": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1826011": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1826397": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1826660": {
+    "sic": "3577",
+    "sicDescription": "Computer Peripheral Equipment, NEC"
+  },
+  "1826667": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1826681": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1828318": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1828536": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1828588": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1828673": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1828805": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1828937": {
+    "sic": "6162",
+    "sicDescription": "Mortgage Bankers & Loan Correspondents"
+  },
+  "1828972": {
+    "sic": "4899",
+    "sicDescription": "Communications Services, NEC"
+  },
+  "1829247": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1829311": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1829635": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1830033": {
+    "sic": "2821",
+    "sicDescription": "Plastic Materials, Synth Resins & Nonvulcan Elastomers"
+  },
+  "1830043": {
+    "sic": "7370",
+    "sicDescription": "Services-Computer Programming, Data Processing, Etc."
+  },
+  "1830072": {
+    "sic": "5200",
+    "sicDescription": "Retail-Building Materials, Hardware, Garden Supply"
+  },
+  "1831481": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "1831651": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1831868": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1831915": {
+    "sic": "3826",
+    "sicDescription": "Laboratory Analytical Instruments"
+  },
+  "1831979": {
+    "sic": "3330",
+    "sicDescription": "Primary Smelting & Refining of  Nonferrous Metals"
+  },
+  "1832483": {
+    "sic": "3569",
+    "sicDescription": "General Industrial Machinery & Equipment, NEC"
+  },
+  "1832511": {
+    "sic": "8000",
+    "sicDescription": "Services-Health Services"
+  },
+  "1833214": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1833498": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1833769": {
+    "sic": "3845",
+    "sicDescription": "Electromedical & Electrotherapeutic Apparatus"
+  },
+  "1834488": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1835856": {
+    "sic": "6163",
+    "sicDescription": "Loan Brokers"
+  },
+  "1836754": {
+    "sic": "8200",
+    "sicDescription": "Services-Educational Services"
+  },
+  "1836833": {
+    "sic": "3663",
+    "sicDescription": "Radio & Tv Broadcasting & Communications Equipment"
+  },
+  "1836875": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1836981": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1837240": {
+    "sic": "3569",
+    "sicDescription": "General Industrial Machinery & Equipment, NEC"
+  },
+  "1837607": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1838163": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "1838359": {
+    "sic": "7371",
+    "sicDescription": "Services-Computer Programming Services"
+  },
+  "1838615": {
+    "sic": "6282",
+    "sicDescription": "Investment Advice"
+  },
+  "1838987": {
+    "sic": "1700",
+    "sicDescription": "Construction - Special Trade Contractors"
+  },
+  "1839285": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "1839341": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1839839": {
+    "sic": "3442",
+    "sicDescription": "Metal Doors, Sash, Frames, Moldings & Trim"
+  },
+  "1840199": {
+    "sic": "2844",
+    "sicDescription": "Perfumes, Cosmetics & Other Toilet Preparations"
+  },
+  "1840317": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "1840416": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1840425": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1840572": {
+    "sic": "7900",
+    "sicDescription": "Services-Amusement & Recreation Services"
+  },
+  "1840856": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1840877": {
+    "sic": "3842",
+    "sicDescription": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+  },
+  "1841330": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1841408": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1841425": {
+    "sic": "2860",
+    "sicDescription": "Industrial Organic Chemicals"
+  },
+  "1841925": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1842279": {
+    "sic": "4932",
+    "sicDescription": "Gas & Other Services Combined"
+  },
+  "1842556": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "1842566": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1843165": {
+    "sic": "2080",
+    "sicDescription": "Beverages"
+  },
+  "1843656": {
+    "sic": "6794",
+    "sicDescription": "Patent Owners & Lessors"
+  },
+  "1843724": {
+    "sic": "2860",
+    "sicDescription": "Industrial Organic Chemicals"
+  },
+  "1843973": {
+    "sic": "4522",
+    "sicDescription": "Air Transportation, Nonscheduled"
+  },
+  "1844417": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1844450": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1844452": {
+    "sic": "3812",
+    "sicDescription": "Search, Detection, Navigation, Guidance, Aeronautical Sys"
+  },
+  "1844862": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1844971": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1845123": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "1846069": {
+    "sic": "7370",
+    "sicDescription": "Services-Computer Programming, Data Processing, Etc."
+  },
+  "1846253": {
+    "sic": "8731",
+    "sicDescription": "Services-Commercial Physical & Biological Research"
+  },
+  "1847075": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1847345": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1847846": {
+    "sic": "8000",
+    "sicDescription": "Services-Health Services"
+  },
+  "1847874": {
+    "sic": "6500",
+    "sicDescription": "Real Estate"
+  },
+  "1847986": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1849056": {
+    "sic": "4911",
+    "sicDescription": "Electric Services"
+  },
+  "1849380": {
+    "sic": "8731",
+    "sicDescription": "Services-Commercial Physical & Biological Research"
+  },
+  "1849635": {
+    "sic": "7370",
+    "sicDescription": "Services-Computer Programming, Data Processing, Etc."
+  },
+  "1849820": {
+    "sic": "3569",
+    "sicDescription": "General Industrial Machinery & Equipment, NEC"
+  },
+  "1850059": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "1851484": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1852767": {
+    "sic": "7510",
+    "sicDescription": "Services-Auto Rental & Leasing (No Drivers)"
+  },
+  "1852973": {
+    "sic": "2000",
+    "sicDescription": "Food and Kindred Products"
+  },
+  "1853044": {
+    "sic": "8742",
+    "sicDescription": "Services-Management Consulting Services"
+  },
+  "1853825": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1853962": {
+    "sic": "1040",
+    "sicDescription": "Gold and Silver Ores"
+  },
+  "1854480": {
+    "sic": "6799",
+    "sicDescription": "Investors, NEC"
+  },
+  "1854963": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1855447": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1855467": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1855474": {
+    "sic": "3585",
+    "sicDescription": "Air-Cond & Warm Air Heatg Equip & Comm & Indl Refrig Equip"
+  },
+  "1855644": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1856314": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1856365": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "1856725": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1857086": {
+    "sic": "3949",
+    "sicDescription": "Sporting & Athletic Goods, NEC"
+  },
+  "1857816": {
+    "sic": "5961",
+    "sicDescription": "Retail-Catalog & Mail-Order Houses"
+  },
+  "1858685": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1859199": {
+    "sic": "6500",
+    "sicDescription": "Real Estate"
+  },
+  "1860657": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1860871": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1861622": {
+    "sic": "4522",
+    "sicDescription": "Air Transportation, Nonscheduled"
+  },
+  "1861657": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1861795": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1862150": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1862463": {
+    "sic": "6794",
+    "sicDescription": "Patent Owners & Lessors"
+  },
+  "1862935": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1863990": {
+    "sic": "3827",
+    "sicDescription": "Optical Instruments & Lenses"
+  },
+  "1864531": {
+    "sic": "8000",
+    "sicDescription": "Services-Health Services"
+  },
+  "1864943": {
+    "sic": "3430",
+    "sicDescription": "Heating Equip, Except Elec & Warm Air; & Plumbing Fixtures"
+  },
+  "1865200": {
+    "sic": "7812",
+    "sicDescription": "Services-Motion Picture & Video Tape Production"
+  },
+  "1865506": {
+    "sic": "1700",
+    "sicDescription": "Construction - Special Trade Contractors"
+  },
+  "1866226": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1866633": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1866816": {
+    "sic": "3827",
+    "sicDescription": "Optical Instruments & Lenses"
+  },
+  "1867066": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1867072": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "1867949": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "1868419": {
+    "sic": "7371",
+    "sicDescription": "Services-Computer Programming Services"
+  },
+  "1868640": {
+    "sic": "6411",
+    "sicDescription": "Insurance Agents, Brokers & Service"
+  },
+  "1870940": {
+    "sic": "8011",
+    "sicDescription": "Services-Offices & Clinics of  Doctors of  Medicine"
+  },
+  "1871638": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1872525": {
+    "sic": "7311",
+    "sicDescription": "Services-Advertising Agencies"
+  },
+  "1872789": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "1874097": {
+    "sic": "7371",
+    "sicDescription": "Services-Computer Programming Services"
+  },
+  "1874875": {
+    "sic": "5961",
+    "sicDescription": "Retail-Catalog & Mail-Order Houses"
+  },
+  "1878897": {
+    "sic": "6531",
+    "sicDescription": "Real Estate Agents & Managers (For Others)"
+  },
+  "1879403": {
+    "sic": "6531",
+    "sicDescription": "Real Estate Agents & Managers (For Others)"
+  },
+  "1879726": {
+    "sic": "4812",
+    "sicDescription": "Radiotelephone Communications"
+  },
+  "1880343": {
+    "sic": "5961",
+    "sicDescription": "Retail-Catalog & Mail-Order Houses"
+  },
+  "1880613": {
+    "sic": "7310",
+    "sicDescription": "Services-Advertising"
+  },
+  "1881551": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1884046": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "1884516": {
+    "sic": "3533",
+    "sicDescription": "Oil & Gas Field Machinery & Equipment"
+  },
+  "1886894": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "1887944": {
+    "sic": "1600",
+    "sicDescription": "Heavy Construction Other Than Bldg Const - Contractors"
+  },
+  "1888886": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1892292": {
+    "sic": "5411",
+    "sicDescription": "Retail-Grocery Stores"
+  },
+  "1892322": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1892492": {
+    "sic": "6153",
+    "sicDescription": "Short-Term Business Credit Institutions"
+  },
+  "18926": {
+    "sic": "4813",
+    "sicDescription": "Telephone Communications (No Radiotelephone)"
+  },
+  "1894525": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1895262": {
+    "sic": "1381",
+    "sicDescription": "Drilling Oil & Gas Wells"
+  },
+  "1896212": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1897463": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "1898496": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1898604": {
+    "sic": "5812",
+    "sicDescription": "Retail-Eating  Places"
+  },
+  "1899287": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "1899883": {
+    "sic": "4011",
+    "sicDescription": "Railroads, Line-Haul Operating"
+  },
+  "1901203": {
+    "sic": "2000",
+    "sicDescription": "Food and Kindred Products"
+  },
+  "1903595": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1905956": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "1907223": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1907982": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "1911545": {
+    "sic": "7370",
+    "sicDescription": "Services-Computer Programming, Data Processing, Etc."
+  },
+  "1919246": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1920406": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1921865": {
+    "sic": "2890",
+    "sicDescription": "Miscellaneous Chemical Products"
+  },
+  "1923780": {
+    "sic": "3089",
+    "sicDescription": "Plastics Products, NEC"
+  },
+  "1930021": {
+    "sic": "3721",
+    "sicDescription": "Aircraft"
+  },
+  "1930313": {
+    "sic": "8011",
+    "sicDescription": "Services-Offices & Clinics of  Doctors of  Medicine"
+  },
+  "1933567": {
+    "sic": "3845",
+    "sicDescription": "Electromedical & Electrotherapeutic Apparatus"
+  },
+  "1934245": {
+    "sic": "3949",
+    "sicDescription": "Sporting & Athletic Goods, NEC"
+  },
+  "1937891": {
+    "sic": "5700",
+    "sicDescription": "Retail-Home Furniture, Furnishings & Equipment Stores"
+  },
+  "1937926": {
+    "sic": "6282",
+    "sicDescription": "Investment Advice"
+  },
+  "1937987": {
+    "sic": "7990",
+    "sicDescription": "Services-Miscellaneous Amusement & Recreation"
+  },
+  "1938046": {
+    "sic": "8090",
+    "sicDescription": "Services-Misc Health & Allied Services, NEC"
+  },
+  "1938109": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1940177": {
+    "sic": "7370",
+    "sicDescription": "Services-Computer Programming, Data Processing, Etc."
+  },
+  "1941029": {
+    "sic": "8071",
+    "sicDescription": "Services-Medical Laboratories"
+  },
+  "1946563": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1947016": {
+    "sic": "4512",
+    "sicDescription": "Air Transportation, Scheduled"
+  },
+  "1948455": {
+    "sic": "2111",
+    "sicDescription": "Cigarettes"
+  },
+  "1951276": {
+    "sic": "6036",
+    "sicDescription": "Savings Institutions, Not Federally Chartered"
+  },
+  "1952853": {
+    "sic": "3790",
+    "sicDescription": "Miscellaneous Transportation Equipment"
+  },
+  "1953984": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1956744": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1958086": {
+    "sic": "1389",
+    "sicDescription": "Oil & Gas Field Services, NEC"
+  },
+  "1959023": {
+    "sic": "4953",
+    "sicDescription": "Refuse Systems"
+  },
+  "1959994": {
+    "sic": "2070",
+    "sicDescription": "Fats & Oils"
+  },
+  "1960847": {
+    "sic": "4210",
+    "sicDescription": "Trucking & Courier Services (No Air)"
+  },
+  "1961847": {
+    "sic": "3317",
+    "sicDescription": "Steel Pipe & Tubes"
+  },
+  "1962011": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1962481": {
+    "sic": "2000",
+    "sicDescription": "Food and Kindred Products"
+  },
+  "1963685": {
+    "sic": "3569",
+    "sicDescription": "General Industrial Machinery & Equipment, NEC"
+  },
+  "1965040": {
+    "sic": "8071",
+    "sicDescription": "Services-Medical Laboratories"
+  },
+  "1969475": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "1970622": {
+    "sic": "1000",
+    "sicDescription": "Metal Mining"
+  },
+  "1971387": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "1972234": {
+    "sic": "3590",
+    "sicDescription": "Misc Industrial & Commercial Machinery & Equipment"
+  },
+  "1975940": {
+    "sic": "3711",
+    "sicDescription": "Motor Vehicles & Passenger Car Bodies"
+  },
+  "1978528": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "1979005": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "1979414": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "1981535": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "1983736": {
+    "sic": "7370",
+    "sicDescription": "Services-Computer Programming, Data Processing, Etc."
+  },
+  "1992243": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "1996192": {
+    "sic": "4731",
+    "sicDescription": "Arrangement of  Transportation of  Freight & Cargo"
+  },
+  "2000775": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "2001184": {
+    "sic": "8051",
+    "sicDescription": "Services-Skilled Nursing Care Facilities"
+  },
+  "2006468": {
+    "sic": "4700",
+    "sicDescription": "Transportation Services"
+  },
+  "2006815": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "2009183": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2013807": {
+    "sic": "3576",
+    "sicDescription": "Computer Communications Equipment"
+  },
+  "2017758": {
+    "sic": "6531",
+    "sicDescription": "Real Estate Agents & Managers (For Others)"
+  },
+  "2018064": {
+    "sic": "4822",
+    "sicDescription": "Telegraph & Other Message Communications"
+  },
+  "2019793": {
+    "sic": "2860",
+    "sicDescription": "Industrial Organic Chemicals"
+  },
+  "2019804": {
+    "sic": "3443",
+    "sicDescription": "Fabricated Plate Work (Boiler Shops)"
+  },
+  "2022308": {
+    "sic": "8200",
+    "sicDescription": "Services-Educational Services"
+  },
+  "2024459": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2024460": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2025942": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "2026353": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "2026478": {
+    "sic": "4833",
+    "sicDescription": "Television Broadcasting Stations"
+  },
+  "2028293": {
+    "sic": "3590",
+    "sicDescription": "Misc Industrial & Commercial Machinery & Equipment"
+  },
+  "2028355": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2028614": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2029471": {
+    "sic": "4412",
+    "sicDescription": "Deep Sea Foreign Transportation of  Freight"
+  },
+  "2030522": {
+    "sic": "5141",
+    "sicDescription": "Wholesale-Groceries, General Line"
+  },
+  "2030763": {
+    "sic": "5122",
+    "sicDescription": "Wholesale-Drugs, Proprietaries & Druggists' Sundries"
+  },
+  "2030829": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2030954": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "2031069": {
+    "sic": "6221",
+    "sicDescription": "Commodity Contracts Brokers & Dealers"
+  },
+  "2032528": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2032950": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2033383": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "2033770": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "2033991": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2034313": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2035016": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2035173": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2036973": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2038439": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "2040127": {
+    "sic": "3728",
+    "sicDescription": "Aircraft Parts & Auxiliary Equipment, NEC"
+  },
+  "2040475": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2043699": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2043766": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2045473": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2047455": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2049662": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "2050501": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2052161": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2052162": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "2055116": {
+    "sic": "6331",
+    "sicDescription": "Fire, Marine & Casualty Insurance"
+  },
+  "2055879": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2058873": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "2059165": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2059654": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2061379": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2067627": {
+    "sic": "3443",
+    "sicDescription": "Fabricated Plate Work (Boiler Shops)"
+  },
+  "2070887": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2070900": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2076192": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2077033": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2079013": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2082526": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2083493": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2086263": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2089283": {
+    "sic": "1090",
+    "sicDescription": "Miscellaneous Metal Ores"
+  },
+  "2090646": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "2091484": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2095161": {
+    "sic": "6770",
+    "sicDescription": "Blank Checks"
+  },
+  "2098": {
+    "sic": "3420",
+    "sicDescription": "Cutlery, Handtools & General Hardware"
+  },
+  "2186": {
+    "sic": "3663",
+    "sicDescription": "Radio & Tv Broadcasting & Communications Equipment"
+  },
+  "22701": {
+    "sic": "1700",
+    "sicDescription": "Construction - Special Trade Contractors"
+  },
+  "23197": {
+    "sic": "3663",
+    "sicDescription": "Radio & Tv Broadcasting & Communications Equipment"
+  },
+  "24090": {
+    "sic": "6311",
+    "sicDescription": "Life Insurance"
+  },
+  "25743": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "26780": {
+    "sic": "3714",
+    "sicDescription": "Motor Vehicle Parts & Accessories"
+  },
+  "27093": {
+    "sic": "1000",
+    "sicDescription": "Metal Mining"
+  },
+  "276720": {
+    "sic": "4941",
+    "sicDescription": "Water Supply"
+  },
+  "278166": {
+    "sic": "2451",
+    "sicDescription": "Mobile Homes"
+  },
+  "28823": {
+    "sic": "3578",
+    "sicDescription": "Calculating & Accounting Machines (No Electronic Computers)"
+  },
+  "29002": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "29644": {
+    "sic": "3564",
+    "sicDescription": "Industrial & Commercial Fans & Blowers & Air Purifing Equip"
+  },
+  "30305": {
+    "sic": "3728",
+    "sicDescription": "Aircraft Parts & Auxiliary Equipment, NEC"
+  },
+  "30625": {
+    "sic": "3561",
+    "sicDescription": "Pumps & Pumping Equipment"
+  },
+  "31235": {
+    "sic": "3861",
+    "sicDescription": "Photographic Equipment & Supplies"
+  },
+  "314203": {
+    "sic": "1040",
+    "sicDescription": "Gold and Silver Ores"
+  },
+  "314227": {
+    "sic": "2860",
+    "sicDescription": "Industrial Organic Chemicals"
+  },
+  "31667": {
+    "sic": "5190",
+    "sicDescription": "Wholesale-Miscellaneous Nondurable Goods"
+  },
+  "317788": {
+    "sic": "6794",
+    "sicDescription": "Patent Owners & Lessors"
+  },
+  "318673": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "318833": {
+    "sic": "7600",
+    "sicDescription": "Services-Miscellaneous Repair Services"
+  },
+  "3197": {
+    "sic": "3564",
+    "sicDescription": "Industrial & Commercial Fans & Blowers & Air Purifing Equip"
+  },
+  "320121": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "32621": {
+    "sic": "3651",
+    "sicDescription": "Household Audio & Video Equipment"
+  },
+  "33002": {
+    "sic": "2761",
+    "sicDescription": "Manifold Business Forms"
+  },
+  "33488": {
+    "sic": "3949",
+    "sicDescription": "Sporting & Athletic Goods, NEC"
+  },
+  "33992": {
+    "sic": "6331",
+    "sicDescription": "Fire, Marine & Casualty Insurance"
+  },
+  "3453": {
+    "sic": "4400",
+    "sicDescription": "Water Transportation"
+  },
+  "351569": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "351998": {
+    "sic": "3825",
+    "sicDescription": "Instruments For Meas & Testing of  Electricity & Elec Signals"
+  },
+  "353184": {
+    "sic": "4513",
+    "sicDescription": "Air Courier Services"
+  },
+  "354707": {
+    "sic": "4911",
+    "sicDescription": "Electric Services"
+  },
+  "354963": {
+    "sic": "4813",
+    "sicDescription": "Telephone Communications (No Radiotelephone)"
+  },
+  "355019": {
+    "sic": "3845",
+    "sicDescription": "Electromedical & Electrotherapeutic Apparatus"
+  },
+  "356037": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "38264": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "39020": {
+    "sic": "3825",
+    "sicDescription": "Instruments For Meas & Testing of  Electricity & Elec Signals"
+  },
+  "39092": {
+    "sic": "3310",
+    "sicDescription": "Steel Works, Blast Furnaces & Rolling & Finishing Mills"
+  },
+  "40570": {
+    "sic": "7361",
+    "sicDescription": "Services-Employment Agencies"
+  },
+  "43920": {
+    "sic": "3412",
+    "sicDescription": "Metal Shipping Barrels, Drums, Kegs & Pails"
+  },
+  "4457": {
+    "sic": "7510",
+    "sicDescription": "Services-Auto Rental & Leasing (No Drivers)"
+  },
+  "45919": {
+    "sic": "7331",
+    "sicDescription": "Services-Direct Mail Advertising Services"
+  },
+  "46080": {
+    "sic": "3944",
+    "sicDescription": "Games, Toys & Children's Vehicles (No Dolls & Bicycles)"
+  },
+  "50493": {
+    "sic": "5411",
+    "sicDescription": "Retail-Grocery Stores"
+  },
+  "55529": {
+    "sic": "3821",
+    "sicDescription": "Laboratory Apparatus & Furniture"
+  },
+  "56868": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "56978": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "58361": {
+    "sic": "2711",
+    "sicDescription": "Newspapers: Publishing or  Publishing & Printing"
+  },
+  "5981": {
+    "sic": "2870",
+    "sicDescription": "Agricultural Chemicals"
+  },
+  "61004": {
+    "sic": "3679",
+    "sicDescription": "Electronic Components, NEC"
+  },
+  "63276": {
+    "sic": "3942",
+    "sicDescription": "Dolls & Stuffed Toys"
+  },
+  "63330": {
+    "sic": "6500",
+    "sicDescription": "Real Estate"
+  },
+  "64472": {
+    "sic": "3531",
+    "sicDescription": "Construction Machinery & Equip"
+  },
+  "65312": {
+    "sic": "7200",
+    "sicDescription": "Services-Personal Services"
+  },
+  "65596": {
+    "sic": "6211",
+    "sicDescription": "Security Brokers, Dealers & Flotation Companies"
+  },
+  "65770": {
+    "sic": "3679",
+    "sicDescription": "Electronic Components, NEC"
+  },
+  "69422": {
+    "sic": "6513",
+    "sicDescription": "Operators of  Apartment Buildings"
+  },
+  "69488": {
+    "sic": "3089",
+    "sicDescription": "Plastics Products, NEC"
+  },
+  "69633": {
+    "sic": "3669",
+    "sicDescription": "Communications Equipment, NEC"
+  },
+  "700564": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "700841": {
+    "sic": "7363",
+    "sicDescription": "Services-Help Supply Services"
+  },
+  "701719": {
+    "sic": "5944",
+    "sicDescription": "Retail-Jewelry Stores"
+  },
+  "706129": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "7084": {
+    "sic": "2070",
+    "sicDescription": "Fats & Oils"
+  },
+  "708821": {
+    "sic": "3578",
+    "sicDescription": "Calculating & Accounting Machines (No Electronic Computers)"
+  },
+  "709283": {
+    "sic": "3572",
+    "sicDescription": "Computer Storage Devices"
+  },
+  "711377": {
+    "sic": "2835",
+    "sicDescription": "In Vitro & In Vivo Diagnostic Substances"
+  },
+  "711669": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "712537": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "714256": {
+    "sic": "3842",
+    "sicDescription": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+  },
+  "714310": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "716634": {
+    "sic": "7830",
+    "sicDescription": "Services-Motion Picture Theaters"
+  },
+  "717538": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "717954": {
+    "sic": "7200",
+    "sicDescription": "Services-Personal Services"
+  },
+  "71829": {
+    "sic": "7350",
+    "sicDescription": "Services-Miscellaneous Equipment Rental & Leasing"
+  },
+  "719135": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "719733": {
+    "sic": "3672",
+    "sicDescription": "Printed Circuit Boards"
+  },
+  "720154": {
+    "sic": "8731",
+    "sicDescription": "Services-Commercial Physical & Biological Research"
+  },
+  "720672": {
+    "sic": "6211",
+    "sicDescription": "Security Brokers, Dealers & Flotation Companies"
+  },
+  "721693": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "724004": {
+    "sic": "3823",
+    "sicDescription": "Industrial Instruments For Measurement, Display, and Control"
+  },
+  "725363": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "726601": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "726854": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "728385": {
+    "sic": "3829",
+    "sicDescription": "Measuring & Controlling Devices, NEC"
+  },
+  "730272": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "731012": {
+    "sic": "8050",
+    "sicDescription": "Services-Nursing & Personal Care Facilities"
+  },
+  "732026": {
+    "sic": "3559",
+    "sicDescription": "Special Industry Machinery, NEC"
+  },
+  "738214": {
+    "sic": "2860",
+    "sicDescription": "Industrial Organic Chemicals"
+  },
+  "740664": {
+    "sic": "3678",
+    "sicDescription": "Electronic Connectors"
+  },
+  "744825": {
+    "sic": "8071",
+    "sicDescription": "Services-Medical Laboratories"
+  },
+  "746210": {
+    "sic": "7370",
+    "sicDescription": "Services-Computer Programming, Data Processing, Etc."
+  },
+  "746514": {
+    "sic": "6513",
+    "sicDescription": "Operators of  Apartment Buildings"
+  },
+  "746515": {
+    "sic": "4731",
+    "sicDescription": "Arrangement of  Transportation of  Freight & Cargo"
+  },
+  "746838": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "748268": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "748592": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "75252": {
+    "sic": "5047",
+    "sicDescription": "Wholesale-Medical, Dental & Hospital Equipment & Supplies"
+  },
+  "754811": {
+    "sic": "6282",
+    "sicDescription": "Investment Advice"
+  },
+  "76267": {
+    "sic": "3728",
+    "sicDescription": "Aircraft Parts & Auxiliary Equipment, NEC"
+  },
+  "763563": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "763907": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "764038": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "769397": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "771266": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "771999": {
+    "sic": "2650",
+    "sicDescription": "Paperboard Containers & Boxes"
+  },
+  "77543": {
+    "sic": "1540",
+    "sicDescription": "General Bldg Contractors - Nonresidential Bldgs"
+  },
+  "779152": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "780571": {
+    "sic": "3825",
+    "sicDescription": "Instruments For Meas & Testing of  Electricity & Elec Signals"
+  },
+  "783412": {
+    "sic": "2711",
+    "sicDescription": "Newspapers: Publishing or  Publishing & Printing"
+  },
+  "787253": {
+    "sic": "2833",
+    "sicDescription": "Medicinal Chemicals & Botanical Products"
+  },
+  "788329": {
+    "sic": "3949",
+    "sicDescription": "Sporting & Athletic Goods, NEC"
+  },
+  "788611": {
+    "sic": "4700",
+    "sicDescription": "Transportation Services"
+  },
+  "78890": {
+    "sic": "4731",
+    "sicDescription": "Arrangement of  Transportation of  Freight & Cargo"
+  },
+  "788920": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "788965": {
+    "sic": "4911",
+    "sicDescription": "Electric Services"
+  },
+  "790526": {
+    "sic": "8071",
+    "sicDescription": "Services-Medical Laboratories"
+  },
+  "792987": {
+    "sic": "3531",
+    "sicDescription": "Construction Machinery & Equip"
+  },
+  "795800": {
+    "sic": "1000",
+    "sicDescription": "Metal Mining"
+  },
+  "797542": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "798081": {
+    "sic": "3842",
+    "sicDescription": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+  },
+  "798528": {
+    "sic": "4400",
+    "sicDescription": "Water Transportation"
+  },
+  "79879": {
+    "sic": "2851",
+    "sicDescription": "Paints, Varnishes, Lacquers, Enamels & Allied Prods"
+  },
+  "799165": {
+    "sic": "1382",
+    "sicDescription": "Oil & Gas Field Exploration Services"
+  },
+  "799850": {
+    "sic": "5500",
+    "sicDescription": "Retail-Auto Dealers & Gasoline Stations"
+  },
+  "800457": {
+    "sic": "6331",
+    "sicDescription": "Fire, Marine & Casualty Insurance"
+  },
+  "801337": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "80172": {
+    "sic": "3480",
+    "sicDescription": "Ordnance & Accessories, (No Vehicles/Guided Missiles)"
+  },
+  "802481": {
+    "sic": "2015",
+    "sicDescription": "Poultry Slaughtering and Processing"
+  },
+  "803164": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "803578": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "807863": {
+    "sic": "3577",
+    "sicDescription": "Computer Peripheral Equipment, NEC"
+  },
+  "810136": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "810332": {
+    "sic": "4512",
+    "sicDescription": "Air Transportation, Scheduled"
+  },
+  "811641": {
+    "sic": "2835",
+    "sicDescription": "In Vitro & In Vivo Diagnostic Substances"
+  },
+  "812074": {
+    "sic": "3221",
+    "sicDescription": "Glass Containers"
+  },
+  "812796": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "81362": {
+    "sic": "2990",
+    "sicDescription": "Miscellaneous Products of  Petroleum & Coal"
+  },
+  "814453": {
+    "sic": "3089",
+    "sicDescription": "Plastics Products, NEC"
+  },
+  "814586": {
+    "sic": "2020",
+    "sicDescription": "Dairy Products"
+  },
+  "8146": {
+    "sic": "3577",
+    "sicDescription": "Computer Peripheral Equipment, NEC"
+  },
+  "8177": {
+    "sic": "6311",
+    "sicDescription": "Life Insurance"
+  },
+  "817720": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "818479": {
+    "sic": "3843",
+    "sicDescription": "Dental Equipment & Supplies"
+  },
+  "819793": {
+    "sic": "2221",
+    "sicDescription": "Broadwoven Fabric Mills, Man Made Fiber & Silk"
+  },
+  "821483": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "822663": {
+    "sic": "2844",
+    "sicDescription": "Perfumes, Cosmetics & Other Toilet Preparations"
+  },
+  "823277": {
+    "sic": "5150",
+    "sicDescription": "Wholesale-Farm Product Raw Materials"
+  },
+  "82473": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "826154": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "827876": {
+    "sic": "6199",
+    "sicDescription": "Finance Services"
+  },
+  "832489": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "833444": {
+    "sic": "3585",
+    "sicDescription": "Air-Cond & Warm Air Heatg Equip & Comm & Indl Refrig Equip"
+  },
+  "834365": {
+    "sic": "3845",
+    "sicDescription": "Electromedical & Electrotherapeutic Apparatus"
+  },
+  "835324": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "836157": {
+    "sic": "3523",
+    "sicDescription": "Farm Machinery & Equipment"
+  },
+  "836690": {
+    "sic": "7371",
+    "sicDescription": "Services-Computer Programming Services"
+  },
+  "840715": {
+    "sic": "3661",
+    "sicDescription": "Telephone & Telegraph Apparatus"
+  },
+  "842023": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "842717": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "844059": {
+    "sic": "6500",
+    "sicDescription": "Real Estate"
+  },
+  "849146": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "849399": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "8504": {
+    "sic": "3721",
+    "sicDescription": "Aircraft"
+  },
+  "851310": {
+    "sic": "3663",
+    "sicDescription": "Radio & Tv Broadcasting & Communications Equipment"
+  },
+  "853816": {
+    "sic": "4213",
+    "sicDescription": "Trucking (No Local)"
+  },
+  "855658": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "855683": {
+    "sic": "3842",
+    "sicDescription": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+  },
+  "861459": {
+    "sic": "1600",
+    "sicDescription": "Heavy Construction Other Than Bldg Const - Contractors"
+  },
+  "861842": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "862692": {
+    "sic": "8090",
+    "sicDescription": "Services-Misc Health & Allied Services, NEC"
+  },
+  "862861": {
+    "sic": "6221",
+    "sicDescription": "Commodity Contracts Brokers & Dealers"
+  },
+  "863894": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "864749": {
+    "sic": "3829",
+    "sicDescription": "Measuring & Controlling Devices, NEC"
+  },
+  "866273": {
+    "sic": "1700",
+    "sicDescription": "Construction - Special Trade Contractors"
+  },
+  "866374": {
+    "sic": "3672",
+    "sicDescription": "Printed Circuit Boards"
+  },
+  "867840": {
+    "sic": "3845",
+    "sicDescription": "Electromedical & Electrotherapeutic Apparatus"
+  },
+  "872912": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "873860": {
+    "sic": "6162",
+    "sicDescription": "Mortgage Bankers & Loan Correspondents"
+  },
+  "874501": {
+    "sic": "6351",
+    "sicDescription": "Surety Insurance"
+  },
+  "874761": {
+    "sic": "4991",
+    "sicDescription": "Cogeneration Services & Small Power Producers"
+  },
+  "874866": {
+    "sic": "6411",
+    "sicDescription": "Insurance Agents, Brokers & Service"
+  },
+  "875355": {
+    "sic": "0100",
+    "sicDescription": "Agricultural Production-Crops"
+  },
+  "875657": {
+    "sic": "3690",
+    "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies"
+  },
+  "876523": {
+    "sic": "5900",
+    "sicDescription": "Retail-Miscellaneous Retail"
+  },
+  "876883": {
+    "sic": "7311",
+    "sicDescription": "Services-Advertising Agencies"
+  },
+  "877212": {
+    "sic": "3560",
+    "sicDescription": "General Industrial Machinery & Equipment"
+  },
+  "878932": {
+    "sic": "",
+    "sicDescription": ""
+  },
+  "879635": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "881787": {
+    "sic": "6792",
+    "sicDescription": "Oil Royalty Traders"
+  },
+  "882291": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "883107": {
+    "sic": "2844",
+    "sicDescription": "Perfumes, Cosmetics & Other Toilet Preparations"
+  },
+  "883975": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "883984": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "884144": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "884624": {
+    "sic": "3841",
+    "sicDescription": "Surgical & Medical Instruments & Apparatus"
+  },
+  "885307": {
+    "sic": "5211",
+    "sicDescription": "Retail-Lumber & Other Building Materials Dealers"
+  },
+  "885462": {
+    "sic": "2800",
+    "sicDescription": "Chemicals & Allied Products"
+  },
+  "885590": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "885978": {
+    "sic": "8000",
+    "sicDescription": "Services-Health Services"
+  },
+  "886136": {
+    "sic": "4832",
+    "sicDescription": "Radio Broadcasting Stations"
+  },
+  "887151": {
+    "sic": "5030",
+    "sicDescription": "Wholesale-Lumber & Other Construction Materials"
+  },
+  "887396": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "887596": {
+    "sic": "5812",
+    "sicDescription": "Retail-Eating  Places"
+  },
+  "889331": {
+    "sic": "3613",
+    "sicDescription": "Switchgear & Switchboard Apparatus"
+  },
+  "889348": {
+    "sic": "3728",
+    "sicDescription": "Aircraft Parts & Auxiliary Equipment, NEC"
+  },
+  "88941": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "889971": {
+    "sic": "3674",
+    "sicDescription": "Semiconductors & Related Devices"
+  },
+  "890821": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "891532": {
+    "sic": "4955",
+    "sicDescription": "Hazardous Waste Management"
+  },
+  "894556": {
+    "sic": "2800",
+    "sicDescription": "Chemicals & Allied Products"
+  },
+  "894627": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "894671": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "8947": {
+    "sic": "3470",
+    "sicDescription": "Coating, Engraving & Allied Services"
+  },
+  "894871": {
+    "sic": "4841",
+    "sicDescription": "Cable & Other Pay Television Services"
+  },
+  "895126": {
+    "sic": "1311",
+    "sicDescription": "Crude Petroleum & Natural Gas"
+  },
+  "896493": {
+    "sic": "3533",
+    "sicDescription": "Oil & Gas Field Machinery & Equipment"
+  },
+  "897723": {
+    "sic": "3672",
+    "sicDescription": "Printed Circuit Boards"
+  },
+  "899460": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "899923": {
+    "sic": "2835",
+    "sicDescription": "In Vitro & In Vivo Diagnostic Substances"
+  },
+  "901491": {
+    "sic": "5812",
+    "sicDescription": "Retail-Eating  Places"
+  },
+  "90168": {
+    "sic": "3724",
+    "sicDescription": "Aircraft Engines & Engine Parts"
+  },
+  "902791": {
+    "sic": "7363",
+    "sicDescription": "Services-Help Supply Services"
+  },
+  "906465": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "907471": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "909494": {
+    "sic": "7374",
+    "sicDescription": "Services-Computer Processing & Data Preparation"
+  },
+  "909724": {
+    "sic": "3100",
+    "sicDescription": "Leather & Leather Products"
+  },
+  "910073": {
+    "sic": "6036",
+    "sicDescription": "Savings Institutions, Not Federally Chartered"
+  },
+  "910108": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "910406": {
+    "sic": "2000",
+    "sicDescription": "Food and Kindred Products"
+  },
+  "910612": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "910638": {
+    "sic": "7372",
+    "sicDescription": "Services-Prepackaged Software"
+  },
+  "911147": {
+    "sic": "7011",
+    "sicDescription": "Hotels & Motels"
+  },
+  "912061": {
+    "sic": "5190",
+    "sicDescription": "Wholesale-Miscellaneous Nondurable Goods"
+  },
+  "912728": {
+    "sic": "4731",
+    "sicDescription": "Arrangement of  Transportation of  Freight & Cargo"
+  },
+  "912767": {
+    "sic": "2421",
+    "sicDescription": "Sawmills & Planting Mills, General"
+  },
+  "913241": {
+    "sic": "3140",
+    "sicDescription": "Footwear, (No Rubber)"
+  },
+  "914122": {
+    "sic": "3564",
+    "sicDescription": "Industrial & Commercial Fans & Blowers & Air Purifing Equip"
+  },
+  "915779": {
+    "sic": "3990",
+    "sicDescription": "Miscellaneous Manufacturing Industries"
+  },
+  "91767": {
+    "sic": "2650",
+    "sicDescription": "Paperboard Containers & Boxes"
+  },
+  "918251": {
+    "sic": "3714",
+    "sicDescription": "Motor Vehicle Parts & Accessories"
+  },
+  "918541": {
+    "sic": "3540",
+    "sicDescription": "Metalworkg Machinery & Equipment"
+  },
+  "920371": {
+    "sic": "3420",
+    "sicDescription": "Cutlery, Handtools & General Hardware"
+  },
+  "921114": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "921738": {
+    "sic": "7011",
+    "sicDescription": "Hotels & Motels"
+  },
+  "92230": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "922864": {
+    "sic": "6798",
+    "sicDescription": "Real Estate Investment Trusts"
+  },
+  "923601": {
+    "sic": "7373",
+    "sicDescription": "Services-Computer Integrated Systems Design"
+  },
+  "924168": {
+    "sic": "3640",
+    "sicDescription": "Electric Lighting & Wiring Equipment"
+  },
+  "924383": {
+    "sic": "3651",
+    "sicDescription": "Household Audio & Video Equipment"
+  },
+  "924719": {
+    "sic": "3272",
+    "sicDescription": "Concrete Products, Except Block & Brick"
+  },
+  "924805": {
+    "sic": "6211",
+    "sicDescription": "Security Brokers, Dealers & Flotation Companies"
+  },
+  "925528": {
+    "sic": "5080",
+    "sicDescription": "Wholesale-Machinery, Equipment & Supplies"
+  },
+  "925741": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "926282": {
+    "sic": "3661",
+    "sicDescription": "Telephone & Telegraph Apparatus"
+  },
+  "926326": {
+    "sic": "3571",
+    "sicDescription": "Electronic Computers"
+  },
+  "926423": {
+    "sic": "3812",
+    "sicDescription": "Search, Detection, Navigation, Guidance, Aeronautical Sys"
+  },
+  "927003": {
+    "sic": "3679",
+    "sicDescription": "Electronic Components, NEC"
+  },
+  "928054": {
+    "sic": "2890",
+    "sicDescription": "Miscellaneous Chemical Products"
+  },
+  "929008": {
+    "sic": "5063",
+    "sicDescription": "Wholesale-Electrical Apparatus & Equipment, Wiring Supplies "
+  },
+  "931148": {
+    "sic": "3620",
+    "sicDescription": "Electrical Industrial Apparatus"
+  },
+  "932696": {
+    "sic": "5961",
+    "sicDescription": "Retail-Catalog & Mail-Order Houses"
+  },
+  "933972": {
+    "sic": "3621",
+    "sicDescription": "Motors & Generators"
+  },
+  "933974": {
+    "sic": "3559",
+    "sicDescription": "Special Industry Machinery, NEC"
+  },
+  "934549": {
+    "sic": "6794",
+    "sicDescription": "Patent Owners & Lessors"
+  },
+  "935419": {
+    "sic": "5812",
+    "sicDescription": "Retail-Eating  Places"
+  },
+  "936528": {
+    "sic": "6021",
+    "sicDescription": "National Commercial Banks"
+  },
+  "937098": {
+    "sic": "7389",
+    "sicDescription": "Services-Business Services, NEC"
+  },
+  "9389": {
+    "sic": "3411",
+    "sicDescription": "Metal Cans"
+  },
+  "940942": {
+    "sic": "4731",
+    "sicDescription": "Arrangement of  Transportation of  Freight & Cargo"
+  },
+  "944809": {
+    "sic": "2834",
+    "sicDescription": "Pharmaceutical Preparations"
+  },
+  "946644": {
+    "sic": "2836",
+    "sicDescription": "Biological Products, (No Diagnostic Substances)"
+  },
+  "946673": {
+    "sic": "6022",
+    "sicDescription": "State Commercial Banks"
+  },
+  "948320": {
+    "sic": "8011",
+    "sicDescription": "Services-Offices & Clinics of  Doctors of  Medicine"
+  },
+  "949157": {
+    "sic": "3334",
+    "sicDescription": "Primary Production of  Aluminum"
+  },
+  "95574": {
+    "sic": "2300",
+    "sicDescription": "Apparel & Other Finishd Prods of  Fabrics & Similar Matl"
+  },
+  "95953": {
+    "sic": "2800",
+    "sicDescription": "Chemicals & Allied Products"
+  }
+}
