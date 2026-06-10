@@ -29,7 +29,7 @@
 1. **Lock F US-data deterministic violation** → KILL
 2. **Lock C pre-reg sign / Bonferroni-12 / angle-lock post-hoc change** → KILL
 3. **Data-validity HARD KILL** (graduated 3-tier):
-   - **V5-11(a)** Lock F clean + EDGAR Form NT bulk + NT-firm CIK matching ≥90% → binary clean / fire
+   - **V5-11(a)** Lock F clean + EDGAR Form NT bulk + NT-firm CIK matching ≥90% **against Bartov-K 2017 comparable cohort (US-major-exchange-listed)** → binary clean / fire. Free-tier proxy via SEC `company_tickers.json` measured 84.4% (1,784/2,115) on 2026-06-10 → **PASS-CONDITIONAL** pending CRSP-historical confirmation. See `audits/2026-06-10-V5-lock-c-amendment-v5-11a-denominator.md` for full canonical language.
    - **V5-11(b)** Bonferroni-12 cells ≥3/12 |t|>2.78 (3 angle [event-CAR / restatement-prob LLM / recurring filer XS] × 2 cohort × 2 forward): PASS ≥3 / BORDERLINE 2 / KILL ≤1
    - **V5-11(c)** Net Sharpe post-15bps ≥0.30: PASS / BORDERLINE 0.21-0.29 / KILL <0.21
    - **V5-11(d)** Anchor faithfulness ≥PARTIAL via Bartov-K 2017 AH + Stage 0 2018+ verify
