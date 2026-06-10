@@ -45,29 +45,34 @@ plt.rcParams.update({
 # Figure 1: cumulative long-short PnL, PIT acceptance anchor, 90d
 # =================================================================
 
-def _spy_monthly_return_series(months: list[str]) -> np.ndarray:
-    """Return SPY monthly buy-and-hold return aligned to the given month list.
-
-    For each calendar month, the return is computed from the SPY closing
-    prices on the first and last trading day in that month (auto-adjusted
-    close from the yfinance cache). The series has the same length as the
-    months list; a NaN is returned for any month with no SPY observations.
+def _spy_horizon_return_series(months: list[str], horizon_trading_days: int = 90) -> np.ndarray:
+    """For each strategy month-end entry, compute the SPY return over the same
+    forward holding horizon used by the strategy basket. This is the natural
+    market benchmark for a strategy with monthly entries and a ninety-trading-
+    day holding period: at the same entry-date cadence the SPY position is
+    bought, held for ninety trading days, and the realized total return is
+    recorded as the benchmark observation for that month.
     """
     spy_rows = [json.loads(l) for l in (DATA / "yfinance_cache" / "SPY.jsonl").open(encoding="utf-8")]
     spy_rows.sort(key=lambda r: r["date"])
-    by_month: dict[str, list[tuple[str, float]]] = {}
-    for r in spy_rows:
-        ym = r["date"][:7]
-        by_month.setdefault(ym, []).append((r["date"], r["close"]))
+    dates = [r["date"] for r in spy_rows]
+    closes = [r["close"] for r in spy_rows]
+    by_month_last_idx: dict[str, int] = {}
+    for i, d in enumerate(dates):
+        by_month_last_idx[d[:7]] = i
+
     out = []
     for ym in months:
-        ticks = by_month.get(ym)
-        if not ticks or len(ticks) < 2:
+        entry_idx = by_month_last_idx.get(ym)
+        if entry_idx is None:
             out.append(0.0)
             continue
-        first_close = ticks[0][1]
-        last_close = ticks[-1][1]
-        out.append(last_close / first_close - 1.0 if first_close > 0 else 0.0)
+        exit_idx = entry_idx + horizon_trading_days
+        if exit_idx >= len(closes):
+            out.append(np.nan)
+            continue
+        c0, c1 = closes[entry_idx], closes[exit_idx]
+        out.append(c1 / c0 - 1.0 if c0 > 0 else 0.0)
     return np.array(out)
 
 
@@ -94,9 +99,11 @@ def make_fig1():
     cum_net = 100.0 * np.cumsum(net_monthly)
     cum_gross = 100.0 * np.cumsum(gross_monthly)
 
-    # SPY benchmark: monthly buy-and-hold return summed over the same months
-    spy_monthly = _spy_monthly_return_series(months)
-    cum_spy = 100.0 * np.cumsum(spy_monthly)
+    # SPY benchmark: same-cadence monthly entry, 90-day forward holding period
+    spy_90d = _spy_horizon_return_series(months, horizon_trading_days=90)
+    # Replace any NaN (entry too close to end of available SPY data) with 0
+    spy_90d = np.nan_to_num(spy_90d, nan=0.0)
+    cum_spy = 100.0 * np.cumsum(spy_90d)
 
     x = np.arange(len(months))
     fig, ax = plt.subplots(figsize=(7.2, 4.2))
@@ -106,7 +113,7 @@ def make_fig1():
     ax.plot(x, cum_gross, color="C0", linewidth=1.0, linestyle=":", alpha=0.7,
             label="Long–short basket, gross")
     ax.plot(x, cum_spy, color="C3", linewidth=1.3, linestyle="--",
-            label="SPY buy-and-hold (benchmark)")
+            label="SPY benchmark (same monthly entry, 90-day hold)")
     ax.axhline(0.0, color="black", linewidth=0.6, alpha=0.4)
 
     # X-axis: one tick per calendar year
@@ -125,18 +132,21 @@ def make_fig1():
     ax.set_xlabel("Year")
     ax.set_ylabel("Cumulative return (\\%, additive)")
     ax.set_title("Long–short basket on Form NT body-narrative classification\n"
-                 "vs SPDR S\\&P 500 ETF (SPY) benchmark, 2014–2024")
+                 "vs same-horizon SPDR S\\&P 500 ETF (SPY) benchmark, 2014–2024")
     ax.legend(loc="upper left", framealpha=0.9)
     ax.grid(True, alpha=0.25)
 
-    ax.annotate(f"Strategy: Net Sharpe = 0.59,\nAnn. mean = 25.8\\%",
-                xy=(x[-1], cum_net[-1]),
-                xytext=(x[-1] - 22, cum_net[-1] + 80),
+    # Annotation placement: keep both labels readable
+    strategy_end = cum_net[-1]
+    spy_end = cum_spy[-1]
+    ax.annotate(f"Strategy: terminal = {strategy_end:.0f}\\%\nNet Sharpe = 0.59",
+                xy=(x[-1], strategy_end),
+                xytext=(x[-1] - 22, strategy_end + 30),
                 fontsize=9, ha="left",
                 arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.8))
-    ax.annotate(f"SPY: terminal = {cum_spy[-1]:.0f}\\%",
-                xy=(x[-1], cum_spy[-1]),
-                xytext=(x[-1] - 22, cum_spy[-1] - 80),
+    ax.annotate(f"SPY: terminal = {spy_end:.0f}\\%",
+                xy=(x[-1], spy_end),
+                xytext=(x[-1] - 22, spy_end - 80),
                 fontsize=9, ha="left",
                 arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.8))
 
