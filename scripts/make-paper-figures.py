@@ -45,16 +45,44 @@ plt.rcParams.update({
 # Figure 1: cumulative long-short PnL, PIT acceptance anchor, 90d
 # =================================================================
 
+def _spy_monthly_return_series(months: list[str]) -> np.ndarray:
+    """Return SPY monthly buy-and-hold return aligned to the given month list.
+
+    For each calendar month, the return is computed from the SPY closing
+    prices on the first and last trading day in that month (auto-adjusted
+    close from the yfinance cache). The series has the same length as the
+    months list; a NaN is returned for any month with no SPY observations.
+    """
+    spy_rows = [json.loads(l) for l in (DATA / "yfinance_cache" / "SPY.jsonl").open(encoding="utf-8")]
+    spy_rows.sort(key=lambda r: r["date"])
+    by_month: dict[str, list[tuple[str, float]]] = {}
+    for r in spy_rows:
+        ym = r["date"][:7]
+        by_month.setdefault(ym, []).append((r["date"], r["close"]))
+    out = []
+    for ym in months:
+        ticks = by_month.get(ym)
+        if not ticks or len(ticks) < 2:
+            out.append(0.0)
+            continue
+        first_close = ticks[0][1]
+        last_close = ticks[-1][1]
+        out.append(last_close / first_close - 1.0 if first_close > 0 else 0.0)
+    return np.array(out)
+
+
 def make_fig1():
-    """Cumulative excess-return chart. Each month-end we record the realized
-    ninety-trading-day excess return of the long–short basket; the chart
-    plots the running sum of those monthly excess returns, in percentage
-    points. The chart therefore reflects the strategy's monthly excess
-    earnings on a per-position-dollar basis, without rebalancing-frequency
-    overlap distortions that would arise from compounding monthly entries
-    whose holding period extends ninety days. The annualized mean and
-    annualized standard deviation in the title are computed at the
-    correct 252 / 90 ≈ 2.8 periods-per-year factor.
+    """Cumulative additive excess-return chart, strategy vs SPY benchmark.
+
+    Each month-end the realized ninety-trading-day excess return of the
+    long–short basket is recorded; the strategy line plots the running sum
+    of those monthly excess returns, in percentage points. For comparison,
+    SPY (buy-and-hold) monthly returns over the same months are summed in
+    the same additive convention. The strategy's returns are already
+    market-neutral by construction (each long–short observation is a
+    firm-minus-SPY excess), so the SPY line serves as the directional
+    "long-only equity" reference point against which the strategy's
+    cumulative profile can be visually compared at the same scale.
     """
     rows = [json.loads(l) for l in (DATA / "net_sharpe_strategy_d_pit.jsonl").open(encoding="utf-8")]
     rows_90 = sorted([r for r in rows if r["window_days"] == 90], key=lambda r: r["year_month"])
@@ -63,19 +91,25 @@ def make_fig1():
     tc = 15 / 10000  # 15 bps round-trip per entry
     net_monthly = gross_monthly - tc
 
-    cum_net = 100.0 * np.cumsum(net_monthly)        # cumulative percentage points
+    cum_net = 100.0 * np.cumsum(net_monthly)
     cum_gross = 100.0 * np.cumsum(gross_monthly)
 
+    # SPY benchmark: monthly buy-and-hold return summed over the same months
+    spy_monthly = _spy_monthly_return_series(months)
+    cum_spy = 100.0 * np.cumsum(spy_monthly)
+
     x = np.arange(len(months))
-    fig, ax = plt.subplots(figsize=(7.2, 4.0))
+    fig, ax = plt.subplots(figsize=(7.2, 4.2))
     ax.fill_between(x, 0, cum_net, color="C0", alpha=0.15)
     ax.plot(x, cum_net, color="C0", linewidth=1.8,
             label="Long–short basket, net of 15 bp round-trip")
     ax.plot(x, cum_gross, color="C0", linewidth=1.0, linestyle=":", alpha=0.7,
             label="Long–short basket, gross")
+    ax.plot(x, cum_spy, color="C3", linewidth=1.3, linestyle="--",
+            label="SPY buy-and-hold (benchmark)")
     ax.axhline(0.0, color="black", linewidth=0.6, alpha=0.4)
 
-    # X-axis: one tick per calendar year (the first month appearing in that year)
+    # X-axis: one tick per calendar year
     seen_years = set()
     tick_idx = []
     tick_lbl = []
@@ -89,16 +123,20 @@ def make_fig1():
     ax.set_xticklabels(tick_lbl, rotation=0)
 
     ax.set_xlabel("Year")
-    ax.set_ylabel("Cumulative excess return (\\%)")
+    ax.set_ylabel("Cumulative return (\\%, additive)")
     ax.set_title("Long–short basket on Form NT body-narrative classification\n"
-                 "Acceptance-tradable anchor, 90-day holding horizon, 2014–2024")
+                 "vs SPDR S\\&P 500 ETF (SPY) benchmark, 2014–2024")
     ax.legend(loc="upper left", framealpha=0.9)
     ax.grid(True, alpha=0.25)
 
-    # Annotation: net Sharpe summary, anchored on the last point
-    ax.annotate(f"Net Sharpe = 0.59\nAnn. mean = 25.8\\%",
+    ax.annotate(f"Strategy: Net Sharpe = 0.59,\nAnn. mean = 25.8\\%",
                 xy=(x[-1], cum_net[-1]),
-                xytext=(x[-1] - 18, cum_net[-1] + 80),
+                xytext=(x[-1] - 22, cum_net[-1] + 80),
+                fontsize=9, ha="left",
+                arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.8))
+    ax.annotate(f"SPY: terminal = {cum_spy[-1]:.0f}\\%",
+                xy=(x[-1], cum_spy[-1]),
+                xytext=(x[-1] - 22, cum_spy[-1] - 80),
                 fontsize=9, ha="left",
                 arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.8))
 
