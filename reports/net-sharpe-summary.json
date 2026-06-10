@@ -1,0 +1,83 @@
+{
+  "n_rows_in_scope": 3178,
+  "transaction_cost_bps_roundtrip": 15,
+  "cells": {
+    "long_short_30d": {
+      "window_days": 30,
+      "n_usable_months": 58,
+      "periods_per_year": 8.4,
+      "gross": {
+        "n_periods": 58,
+        "ann_mean_pct": -5.0652,
+        "ann_vol_pct": 41.1105,
+        "sharpe": -0.1232,
+        "period_mean_pct": -0.603,
+        "period_vol_pct": 14.1845
+      },
+      "net_after_15bps_roundtrip": {
+        "n_periods": 58,
+        "ann_mean_pct": -6.3252,
+        "ann_vol_pct": 41.1105,
+        "sharpe": -0.1539,
+        "period_mean_pct": -0.753,
+        "period_vol_pct": 14.1845
+      },
+      "long_only_basket": {
+        "n_periods": 58,
+        "ann_mean_pct": -8.5377,
+        "ann_vol_pct": 43.2044,
+        "sharpe": -0.1976,
+        "period_mean_pct": -1.0164,
+        "period_vol_pct": 14.9069
+      },
+      "short_only_basket": {
+        "n_periods": 58,
+        "ann_mean_pct": 3.4725,
+        "ann_vol_pct": 27.4014,
+        "sharpe": 0.1267,
+        "period_mean_pct": 0.4134,
+        "period_vol_pct": 9.4544
+      },
+      "v5_11c_verdict": "KILL"
+    },
+    "long_short_90d": {
+      "window_days": 90,
+      "n_usable_months": 53,
+      "periods_per_year": 2.8,
+      "gross": {
+        "n_periods": 53,
+        "ann_mean_pct": 24.9132,
+        "ann_vol_pct": 53.1461,
+        "sharpe": 0.4688,
+        "period_mean_pct": 8.8976,
+        "period_vol_pct": 31.7609
+      },
+      "net_after_15bps_roundtrip": {
+        "n_periods": 53,
+        "ann_mean_pct": 24.4932,
+        "ann_vol_pct": 53.1461,
+        "sharpe": 0.4609,
+        "period_mean_pct": 8.7476,
+        "period_vol_pct": 31.7609
+      },
+      "long_only_basket": {
+        "n_periods": 53,
+        "ann_mean_pct": 26.2316,
+        "ann_vol_pct": 48.5439,
+        "sharpe": 0.5404,
+        "period_mean_pct": 9.3684,
+        "period_vol_pct": 29.0105
+      },
+      "short_only_basket": {
+        "n_periods": 53,
+        "ann_mean_pct": -1.3185,
+        "ann_vol_pct": 38.5266,
+        "sharpe": -0.0342,
+        "period_mean_pct": -0.4709,
+        "period_vol_pct": 23.024
+      },
+      "v5_11c_verdict": "PASS"
+    }
+  },
+  "v5_11c_threshold": ">= 0.30 PASS; 0.21-0.29 BORDERLINE; < 0.21 KILL"
+}
