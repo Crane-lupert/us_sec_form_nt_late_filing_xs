@@ -33,17 +33,39 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 USER_AGENT = "us_sec_form_nt_late_filing_xs research fawkes4700@gmail.com"
 TICKERS_URL = "https://www.sec.gov/files/company_tickers.json"
+TICKERS_EXCHANGE_URL = "https://www.sec.gov/files/company_tickers_exchange.json"
 
 
 def fetch_tickers() -> dict[str, dict]:
+    """Combine the two SEC tickers JSONs so we get (ticker + exchange).
+
+    company_tickers.json:           {idx: {cik_str, ticker, title}}
+    company_tickers_exchange.json:  {fields, data: [[cik, name, ticker, exchange]]}
+
+    Exchange is the additional field — values {Nasdaq, NYSE, OTC, CBOE, None}.
+    Used to filter for Bartov-K 2017 comparable cohort (NYSE/Nasdaq/AMEX).
+    """
     req = urllib.request.Request(TICKERS_URL, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(req, timeout=60) as resp:
         raw = json.loads(resp.read().decode("utf-8"))
-    # raw is dict{idx_str: {cik_str: int, ticker: str, title: str}}
     by_cik: dict[str, dict] = {}
     for row in raw.values():
         cik = str(row["cik_str"]).lstrip("0") or "0"
-        by_cik[cik] = {"ticker": row["ticker"], "title": row["title"]}
+        by_cik[cik] = {"ticker": row["ticker"], "title": row["title"], "exchange": None}
+    # Layer in exchange info
+    try:
+        req2 = urllib.request.Request(TICKERS_EXCHANGE_URL, headers={"User-Agent": USER_AGENT})
+        with urllib.request.urlopen(req2, timeout=60) as resp:
+            exc = json.loads(resp.read().decode("utf-8"))
+        fields = exc["fields"]
+        i_cik = fields.index("cik")
+        i_exch = fields.index("exchange")
+        for row in exc["data"]:
+            cik = str(row[i_cik]).lstrip("0") or "0"
+            if cik in by_cik:
+                by_cik[cik]["exchange"] = row[i_exch]
+    except Exception as e:
+        print(f"WARNING: cannot fetch {TICKERS_EXCHANGE_URL}: {e}", file=sys.stderr)
     return by_cik
 
 
@@ -84,10 +106,20 @@ def main() -> int:
         info = tickers.get(cik)
         if info:
             matched_cik_set.add(cik)
-            matched_rows.append({**r, "ticker": info["ticker"], "matched_title": info["title"]})
+            matched_rows.append({
+                **r,
+                "ticker": info["ticker"],
+                "matched_title": info["title"],
+                "exchange": info.get("exchange"),
+            })
         else:
             unmatched_cik_set.add(cik)
-            matched_rows.append({**r, "ticker": None, "matched_title": None})
+            matched_rows.append({
+                **r,
+                "ticker": None,
+                "matched_title": None,
+                "exchange": None,
+            })
 
     n_filings = len(nt_rows)
     n_matched_filings = sum(1 for r in matched_rows if r["ticker"])
@@ -102,6 +134,19 @@ def main() -> int:
         by_form_filings[ft] += 1
         if r["ticker"]:
             by_form_matched_filings[ft] += 1
+
+    # Per-exchange breakdown for Bartov-K-comparable cohort sizing
+    exchange_counter: Counter = Counter()
+    bartov_k_ciks: set[str] = set()  # NYSE + Nasdaq matched CIKs
+    bartov_k_filings = 0
+    for r in matched_rows:
+        if not r["ticker"]:
+            continue
+        ex = r["exchange"] or "Unknown"
+        exchange_counter[ex] += 1
+        if ex in ("NYSE", "Nasdaq"):
+            bartov_k_ciks.add(r["cik"].lstrip("0") or "0")
+            bartov_k_filings += 1
 
     summary = {
         "input_path": str(in_path),
@@ -135,6 +180,13 @@ def main() -> int:
                 else "KILL"
             ),
         },
+        "bartov_k_comparable_cohort": {
+            "exchange_filter": ["NYSE", "Nasdaq"],
+            "n_filings": bartov_k_filings,
+            "n_distinct_cik": len(bartov_k_ciks),
+            "vs_bartov_k_2017_base_2115": round(100 * len(bartov_k_ciks) / 2115, 2),
+        },
+        "exchange_breakdown_of_matched": dict(exchange_counter),
     }
 
     out_path = Path(args.output)
@@ -153,6 +205,11 @@ def main() -> int:
     print(f"Distinct CIKs matched: {n_matched_cik}/{n_distinct_cik} = {summary['cik_level_match_pct']}%")
     print(f"V5-11(a) filing-level verdict: {summary['v5_11a_gate']['verdict_filing_level']}")
     print(f"V5-11(a) CIK-level verdict:    {summary['v5_11a_gate']['verdict_cik_level']}")
+    print()
+    print("Bartov-K-comparable cohort (NYSE + Nasdaq only):")
+    print(f"  Filings: {bartov_k_filings}")
+    print(f"  Distinct CIKs: {len(bartov_k_ciks)} ({summary['bartov_k_comparable_cohort']['vs_bartov_k_2017_base_2115']}% of Bartov-K 2,115 base)")
+    print(f"  Exchange breakdown: {dict(exchange_counter)}")
     print(f"Summary: {out_path}")
     print(f"Per-filing matched: {matched_out}")
     return 0

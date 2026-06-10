@@ -7,6 +7,7 @@ venv/
 .env
 .envrc
 data/cache/
+data/yfinance_cache/
 *.parquet
 *.csv.gz
 *.feather

@@ -33,5 +33,21 @@
     "borderline_min_pct": 63.0,
     "verdict_filing_level": "KILL",
     "verdict_cik_level": "KILL"
+  },
+  "bartov_k_comparable_cohort": {
+    "exchange_filter": [
+      "NYSE",
+      "Nasdaq"
+    ],
+    "n_filings": 3970,
+    "n_distinct_cik": 1106,
+    "vs_bartov_k_2017_base_2115": 52.29
+  },
+  "exchange_breakdown_of_matched": {
+    "OTC": 5821,
+    "Nasdaq": 3101,
+    "NYSE": 869,
+    "Unknown": 56,
+    "CBOE": 3
   }
 }
