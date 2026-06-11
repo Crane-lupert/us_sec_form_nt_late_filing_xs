@@ -30,7 +30,7 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-PORTFOLIO_ENV = Path("D:/vscode/portfolio-coordination/.env")
+PORTFOLIO_ENV = Path(os.environ.get("PORTFOLIO_COORD_ROOT", "D:/vscode/portfolio-coordination")) / ".env"
 
 
 def load_portfolio_env() -> None:
