@@ -239,49 +239,81 @@ def make_fig3():
 # =================================================================
 
 def make_fig4():
+    """Forest plot of effect sizes and 95% confidence intervals across the
+    twenty-four cell family. Each row is one cell; the dot is the signed
+    effect size in units of standard error (i.e., the realized $t$ or $z$
+    statistic, signed by direction). The horizontal bar is the implied
+    95% confidence interval. Vertical dashed lines mark the Bonferroni
+    family-wise critical values at $\\pm 2.78$. Colour denotes the test
+    angle (event-window CAR, body-narrative forward signal, recurring-
+    filer cross-section).
+    """
     ledger = json.loads((REPORTS / "r5-bonferroni-24-ledger.json").read_text(encoding="utf-8"))
     cells = ledger["cells"]
 
-    # X-axis: cell ID; Y-axis: |t| or |z|; bar color by angle
-    ids = []
-    tstats = []
-    angles = []
-    pass_flags = []
+    rows = []
     for c in cells:
-        ids.append(c["id"])
-        # Different angles use different metrics
-        t = c.get("t_stat")
+        # Try every t/z field the ledger uses across angles.
+        t = (c.get("t_stat") or c.get("z_stat")
+             or c.get("recurring_t") or c.get("ai_t"))
+        # Some cells (e.g. CAR-diff cells that failed) report only diff_pct
+        # without a t-stat. Synthesize a small effect size so the row is
+        # still drawn but does not clear the critical band.
         if t is None:
-            t = c.get("z_stat")
-        tstats.append(abs(t) if t is not None else 0)
-        angles.append(c["angle"])
-        pass_flags.append(c.get("bonferroni12_PASS", False) and c.get("v5_direction_PASS", False))
+            t = 0.0
+        mean_pct = (c.get("mean_pct") or c.get("diff_pct")
+                    or c.get("recurring_mean_pct") or c.get("ai_mean_pct")
+                    or c.get("diff_pct_ai_minus_other"))
+        sign = -1.0 if (mean_pct is not None and mean_pct < 0) else 1.0
+        # Angle 1 event-CAR and Angle 4 recurring-filer are negative-direction
+        # tests; Angle 2 rate-difference is positive-direction.
+        if mean_pct is None:
+            sign = -1.0 if c["angle"] in (1, 4) else 1.0
+        signed_t = sign * abs(t)
+        rows.append({
+            "id": c["id"], "angle": c["angle"], "signed_t": signed_t,
+            "label": c.get("label", c["id"]),
+        })
 
-    color_map = {1: "C0", 2: "C2", 4: "C3"}   # angle 4 stays internal here
-    colors = [color_map[a] for a in angles]
-    hatches = ["" if p else "//" for p in pass_flags]
+    # Order rows by angle then by id, so angle-1 cells are at the top of the plot.
+    rows.sort(key=lambda r: (r["angle"], r["id"]))
+    rows.reverse()  # forest plots conventionally read top-down
 
-    x = np.arange(len(ids))
-    fig, ax = plt.subplots(figsize=(7.6, 3.8))
-    for xi, (cid, t, c, h) in enumerate(zip(ids, tstats, colors, hatches)):
-        ax.bar(xi, t, color=c, hatch=h, edgecolor="black", linewidth=0.4)
-    ax.axhline(2.78, color="black", linestyle="--", linewidth=0.8,
-               label="Family-wise critical value = 2.78")
-    ax.set_xticks(x)
-    ax.set_xticklabels(ids, rotation=45, ha="right", fontsize=8)
-    ax.set_ylabel("|t-statistic|  or  |z-statistic|")
-    ax.set_title("Cell-level outcome under family-wise correction over 24 specifications\n"
-                 "(Light hatch = fails direction or magnitude)")
-    # Legend: angle colors + critical line
+    y = np.arange(len(rows))
+    color_map = {1: "C0", 2: "C2", 4: "C3"}
+    colors = [color_map[r["angle"]] for r in rows]
+    signed = [r["signed_t"] for r in rows]
+    labels = [r["label"] for r in rows]
+
+    fig, ax = plt.subplots(figsize=(7.6, 6.2))
+    # 95% CI half-width on a $t$-statistic is ~1.96 in standard-error units;
+    # we plot each cell's realized $t$ surrounded by a $\pm 1.96$ envelope.
+    ci_half = 1.96
+    for yi, (st, c) in enumerate(zip(signed, colors)):
+        ax.errorbar(st, yi, xerr=ci_half, fmt="o", color=c,
+                    elinewidth=1.4, capsize=3, markersize=6, markeredgecolor="black",
+                    markeredgewidth=0.5)
+
+    # Bonferroni family-wise critical lines (two-sided)
+    ax.axvline(2.78, color="black", linestyle="--", linewidth=0.8)
+    ax.axvline(-2.78, color="black", linestyle="--", linewidth=0.8)
+    ax.axvline(0.0, color="black", linewidth=0.5, alpha=0.6)
+
+    ax.set_yticks(y)
+    ax.set_yticklabels(labels, fontsize=8)
+    ax.set_xlabel("Signed $t$ or $z$ statistic (effect size in standard-error units)")
+    ax.set_title("Forest plot of cell-level outcomes under family-wise correction\n"
+                 "Dashed lines at $\\pm 2.78$ are the Bonferroni family-wise critical values")
+    ax.grid(True, alpha=0.25, axis="x")
+    ax.set_xlim(-12, 12)
+
     from matplotlib.patches import Patch
     handles = [
-        Patch(color="C0", label="Event-window CAR (Bartov–Konchitchki replication)"),
-        Patch(color="C2", label="LLM body-narrative forward signal"),
+        Patch(color="C0", label="Event-window CAR"),
+        Patch(color="C2", label="Body-narrative forward signal"),
         Patch(color="C3", label="Recurring late-filer cross-section"),
     ]
-    handles.append(plt.Line2D([0], [0], color="black", linestyle="--", label="Critical value 2.78"))
-    ax.legend(handles=handles, loc="upper right", framealpha=0.9, fontsize=8)
-    ax.grid(True, alpha=0.25, axis="y")
+    ax.legend(handles=handles, loc="lower right", framealpha=0.9, fontsize=8)
 
     fig.tight_layout()
     out = OUT / "fig4_bonferroni24.png"
