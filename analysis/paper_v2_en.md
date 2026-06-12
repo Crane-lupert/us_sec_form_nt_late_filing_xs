@@ -32,6 +32,10 @@ header-includes: |
 
 \clearpage
 
+\tableofcontents
+
+\clearpage
+
 # Introduction
 
 The U.S. Securities and Exchange Commission's Rule 12b-25 requires that a registrant unable to file its periodic report on Form 10-K or Form 10-Q on time submit, no later than the next business day, a Form NT 10-K or Form NT 10-Q together with a written explanation of the delay in Part III of Form 12b-25. The short-window return reaction is established: @bartovkonchitchki2017 report a cumulative abnormal return of $-1.96\%$ around the Form NT 10-K filing and $-2.93\%$ around the Form NT 10-Q filing over the five-day $(-2,+2)$ window on a hand-collected 2003--2011 sample, with the largest economic magnitude in firms whose disclosed reason for the delay involves accounting issues. What is *not* established is whether the *content* of the body narrative --- the sentences the registrant writes to justify the delay --- carries a tractable forward signal for the firm's subsequent disclosure outcome, and what that signal implies for a tradeable cross-section. Across a broad sweep of the SEC text-mining literature [@johnstonpetacchi2017; @ryans2021; @cassellsdrehermyers2013; @lopezliratang2023; @chenkellyxiu2024] I am not aware of prior work that scores the Form NT body narrative under a structured taxonomy and links the resulting class to forward restatement-class disclosures.
@@ -49,8 +53,6 @@ Finding 4. The short-window cumulative abnormal return on free-tier ticker-keyed
 A fifth, secondary contribution is reproducibility: the full pipeline, from raw SEC EDGAR Form NT bulk download through body-narrative extraction, language-model classification, CRSP return join, and event-window construction, runs from a single shell entry point, and a two-vendor cross-rater agreement on the classification stratification (Cohen's $\kappa = 0.7066$) is publicly released for inspection.
 
 The rest of the paper proceeds as follows. Section 2 maps the related literature. Section 3 describes the data. Section 4 develops the methodology. Section 5 reports the cell-level results and the robustness battery; Figure 1 plots the cumulative growth of the long--short basket against a same-horizon SPY benchmark. Section 6 discusses limitations. Section 7 concludes.
-
-\clearpage
 
 # Related Literature
 
@@ -93,13 +95,11 @@ Out-of-sample window    & Not applicable                        & 2025-Q1--2026-
 
 @bartovkonchitchki2017 documents the short-window return reaction; this study, beyond reproducing that reaction under a return source that includes delisting returns, introduces the body-narrative forward signal for subsequent restatement disclosure (Section 5.4), the Form NT 10-Q cohort dominance (Section 5.6), the acceptance-tradable anchor (Section 5.2 and Table 4), and the same-horizon SPY-benchmarked tradeable construction (Figure 1) --- each of which is, to my knowledge, new to the literature.
 
-\clearpage
-
 # Data
 
 ## Universe
 
-The base population is all U.S. publicly traded firms filing a Form NT 10-K, Form NT 10-Q, or Form 12b-25 on the SEC EDGAR public Form Index between 2014-01-01 and 2024-12-31, with a separately processed 2025-01-01 to 2026-06-30 holdout. Ticker-to-Central-Index-Key (CIK) mapping comes from the SEC `company_tickers_exchange.json` static snapshot. The Bartov--Konchitchki-comparable subset restricts the mapped exchange to NYSE or Nasdaq.
+The base population is all U.S. publicly traded firms filing a Form NT 10-K, Form NT 10-Q, or Form 12b-25 on the SEC EDGAR public Form Index between 2014-01-01 and 2024-12-31, with a separately processed 2025-01-01 to 2026-06-30 holdout. Ticker-to-Central-Index-Key (CIK) mapping comes from the SEC's current ticker-to-exchange snapshot. The Bartov--Konchitchki-comparable subset restricts the mapped exchange to NYSE or Nasdaq.
 
 ## SEC Form NT Filings
 
@@ -109,7 +109,7 @@ For the held-out 2025--2026 window the Form Index returns 2,781 filings, of whic
 
 ## Returns
 
-Daily equity returns for the NYSE/Nasdaq cohort are sourced in two layers. The free-tier baseline uses Yahoo Finance auto-adjusted close prices, covering 1,232 of 1,232 unique tickers in the in-sample sample but, by construction, excluding firms whose ticker was deregistered before the snapshot date. The CRSP layer uses the daily stock file (`crsp_a_stock.dsf_v2`) from the Wharton Research Data Services dump; it covers 895 of the 1,106 in-sample CIKs ($81\%$) and includes the delisting return flag, which records the full economic event of distressed delistings rather than truncating them. The held-out window uses CRSP only (330 of 470 CIKs).
+Daily equity returns for the NYSE/Nasdaq cohort are sourced in two layers. The free-tier baseline uses Yahoo Finance auto-adjusted close prices, covering 1,232 of 1,232 unique tickers in the in-sample sample but, by construction, excluding firms whose ticker was deregistered before the snapshot date. The benchmark layer uses the Center for Research in Security Prices (CRSP) daily stock file with delisting returns; it covers 895 of the 1,106 in-sample CIKs ($81\%$) and includes the delisting return flag, which records the full economic event of distressed delistings rather than truncating them. The held-out window uses CRSP only (330 of 470 CIKs).
 
 ## Filing Timestamps
 
@@ -118,8 +118,6 @@ For the intraday-tradability test in Section 5.5 each Form NT filing is matched 
 ## Restatement-Class Disclosures
 
 Restatement-class disclosures are extracted from the SEC Submissions API. Three classes are retained: 8-K filings whose Item field contains $4.02$ (non-reliance) or $4.01$ (auditor change), 10-K/A, and 10-Q/A. The in-sample CIK pool returns $8{,}202$ restatement-class events from $1{,}030$ filers ($93\%$ non-empty coverage); the held-out pool returns $3{,}312$ events from $402$ filers.
-
-\clearpage
 
 ## Sample Selection Waterfall
 
@@ -144,8 +142,6 @@ Monthly long--short basket usable months      &       53 &       5 \\
 \end{tabular}
 \end{table}
 
-\clearpage
-
 # Methodology
 
 ## Body Narrative Classification
@@ -158,11 +154,11 @@ A two-vendor cross-check is performed on a stratified random sample of $n = 50$ 
 
 Three angles are pre-specified.
 
-*Angle 1: short-window cumulative abnormal return.* For each Form NT 10-K and Form NT 10-Q with a valid CRSP daily return at the event date and full $(-2,+2)$ coverage, the five-day CAR is the sum over $t \in \{-2,-1,0,+1,+2\}$ of the firm return less the SPDR S\&P 500 ETF (SPY) return. The three-day $(-1,+1)$ CAR and the sixty-trading-day post-filing drift are reported as robustness sub-cells. Each cell is winsorized at the $1\%$ and $99\%$ percentiles within the cohort.
+The first angle is the short-window cumulative abnormal return. For each Form NT 10-K and Form NT 10-Q with a valid CRSP daily return at the event date and full $(-2,+2)$ coverage, the five-day CAR is the sum over $t \in \{-2,-1,0,+1,+2\}$ of the firm return less the SPDR S\&P 500 ETF (SPY) return. The three-day $(-1,+1)$ CAR and the sixty-trading-day post-filing drift are reported as robustness sub-cells. Each cell is winsorized at the $1\%$ and $99\%$ percentiles within the cohort.
 
-*Angle 2: body-narrative forward signal.* For each filing with a three-class label in $\{$accounting-issue, other$\}$ and a valid match against the SEC Submissions API restatement-event index, the indicator $r_H$ takes value $1$ if any 8-K Item 4.02, 10-K/A, or 10-Q/A filing from the same filer has filing date in $(\text{NT date}, \text{NT date}+H]$ trading days, for $H \in \{14, 30, 90, 180\}$. The two-proportion $z$-statistic compares $\Pr(r_H = 1 \mid \text{accounting-issue})$ against $\Pr(r_H = 1 \mid \text{other})$.
+The second angle is the body-narrative forward signal. For each filing with a three-class label in $\{$accounting-issue, other$\}$ and a valid match against the SEC Submissions API restatement-event index, the indicator $r_H$ takes value $1$ if any 8-K Item 4.02, 10-K/A, or 10-Q/A filing from the same filer has filing date in $(\text{NT date}, \text{NT date}+H]$ trading days, for $H \in \{14, 30, 90, 180\}$. The two-proportion $z$-statistic compares $\Pr(r_H = 1 \mid \text{accounting-issue})$ against $\Pr(r_H = 1 \mid \text{other})$.
 
-*Angle 3: recurring-filer cross-section.* A filer is classified as recurring in a calendar year if it files two or more Form NT filings of any subtype in that year. For each recurring-filer filing with a valid CRSP forward 90-trading-day or 252-trading-day return, the abnormal forward return (firm minus SPY) is winsorized and compared to the same statistic on non-recurring filers.
+The third angle is the recurring-filer cross-section. A filer is classified as recurring in a calendar year if it files two or more Form NT filings of any subtype in that year. For each recurring-filer filing with a valid CRSP forward 90-trading-day or 252-trading-day return, the abnormal forward return (firm minus SPY) is winsorized and compared to the same statistic on non-recurring filers.
 
 ## Long--Short Basket and Net Sharpe Ratio
 
@@ -175,8 +171,6 @@ A filing's event date is taken as the first trading day strictly after the filin
 ## Statistical Inference
 
 Two-proportion $z$-statistics for the rate-difference cells use the pooled-standard-error form. Cell-level $t$-statistics for CAR cells use the winsorized standard error of the mean. The Bonferroni family-wise critical value $|t|, |z| = 2.78$ corresponds to $\alpha = 0.05$ over twelve pre-specified cells and is held constant for the proportionally expanded twenty-four-cell post-hoc family. The net Sharpe deployment floor for the long--short basket is $0.30$ (pass), $0.21$ to $0.29$ (borderline), and below $0.21$ (fail). The deflated-Sharpe-ratio adjustment of @baileylopezdeprado2014 with $n_\text{trials} = 8$ is reported with the point estimate.
-
-\clearpage
 
 # Results
 
@@ -320,15 +314,13 @@ Sector residualization & Within-month within-sector demean (post-hoc) & Net Shar
 
 The break-even round-trip cost at the $0.30$ pass floor is twenty-one times the fifteen-basis-point baseline. The schema and body-length sensitivities are flat. The subsample split is informative: signal magnitude strengthens in the post-COVID period (rate-difference $z$ rises from $2.88$ to $4.66$) while basket Sharpe weakens (from $0.63$ to a borderline $0.25$). The pattern is consistent with improving price-discovery efficiency on the Form NT body content over time: the body still predicts subsequent restatements, but the post-filing CAR conditional on the body shrinks. The post-hoc sector-residualized variant lifts in-sample Sharpe by forty-four percent and reduces volatility by twenty-three percent at no incremental data cost.
 
-\clearpage
-
 # Limitations
 
 I catalog limitations directly rather than relegating them to a footnote.
 
 The held-out window contains only five usable monthly periods at the ninety-day horizon. On that horizon the basket's net Sharpe is $-0.41$, which falls within the in-sample $95\%$ confidence interval $[0.19, 0.73]$ but at the deeply negative tail. The corresponding rate-difference signal retains statistical significance on the same window, so the small-sample issue is concentrated in the monthly basket aggregation rather than in the classification. Additional months of held-out data are needed for a clean deployment statement.
 
-The CRSP join, executed against the daily stock file via the Wharton Research Data Services dump, matches $895$ of $1{,}106$ in-sample CIKs ($81\%$). The unmatched $19\%$ is dominated by historical ticker reassignments. The empirical effect on the short-window CAR magnitude is small (Form NT 10-K gap of $0.15$ percentage points is well within the $0.5$ percentage point replication tolerance). A direct CRSP--Compustat link table is the upgrade path.
+The CRSP join matches $895$ of $1{,}106$ in-sample CIKs ($81\%$). The unmatched $19\%$ is dominated by historical ticker reassignments. The empirical effect on the short-window CAR magnitude is small (Form NT 10-K gap of $0.15$ percentage points is well within the $0.5$ percentage point replication tolerance). A direct CRSP--Compustat link table is the upgrade path.
 
 The body-narrative classifier is operated zero-shot. A pre-2024-vintage model would supply an additional defense against the concern that the classifier's pre-training corpus may encode forward outcome information. The two-vendor cross-check Cohen's $\kappa$ of $0.71$ clears the pre-specified $0.70$ floor at the lower bound, not at the comfortable middle. A subsequent vintage cross-check on the same $n = 49$ stratified sample using a pre-2024 (training-cutoff 2023-Q3) classifier returns Cohen's $\kappa = 0.62$ against the production extractor, below the pre-specified $0.70$ floor. The pre-2024 vintage model is more conservative on the accounting-issue label by approximately ten percentage points, which is consistent with two non-separable hypotheses: classifier-quality (the earlier model is a weaker zero-shot reader) and vintage-leakage (the modern model has learned forward outcomes). The held-out 2025-Q1 to 2026-Q2 rate-difference of $z = 2.83$ on the production extractor without re-training, and the production-extractor-vs-secondary-vendor cross-vendor $\kappa = 0.71$ at the floor, suggest that the vintage-leakage magnitude is bounded but not zero. A re-extraction with an earlier generation of models on a larger stratified sample would discriminate the two hypotheses.
 
@@ -337,8 +329,6 @@ The post-filing CAR cells conditional on the body-narrative label do not reach s
 The Form NT 10-Q cohort dominates the body-narrative signal ($z = 6.77$ on the cohort-split rate-difference cell, versus $z = 0.50$ on the Form NT 10-K cohort). A deployment-relevant follow-up is to overweight the Form NT 10-Q subset or to remove the Form NT 10-K subset from the basket entirely.
 
 The recurring-filer cross-section is constructed on a cohort heavily concentrated in small market-capitalization filers. The closing-price distribution at the anchor date confirms this: the recurring Form NT 10-Q sub-cohort, which is the dominant body-narrative-signal cohort per Finding 2, has a median closing price of $\$3.04$ and a $62\%$ sub-$\$5$ share. Realistic round-trip transaction costs and locate-and-borrow availability for short legs in this cohort exceed the fifteen-basis-point baseline. A point-estimate sensitivity on the CRSP-matched partial sample, under a 15-to-200 basis point round-trip cost schedule and a borrow-restricted filter that drops short leg filings whose anchor-date closing price is below five dollars, returns Net Sharpe in the $-0.65$ to $-0.81$ range across the cost schedule. This is the deployment-relevant downward revision from the full-sample $0.59$ point estimate; the headline number remains the pre-specified construction, but the deployment-relevant figure for an unconstrained-borrow-naive basket is materially lower.
-
-\clearpage
 
 # Conclusion
 
