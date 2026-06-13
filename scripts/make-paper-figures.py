@@ -46,14 +46,9 @@ plt.rcParams.update({
 # =================================================================
 
 def _recurring_xs_monthly_return_series(months: list[str]) -> np.ndarray:
-    """Long–short alternative benchmark: long non-recurring NT filers minus
-    short recurring NT filers, ninety-trading-day forward CAR, monthly basket.
-
-    This is the same-cadence, same-horizon, same-cohort long–short alternative
-    constructed from the paper's recurring-late-filer cross-section angle
-    (Section 4.2, third angle). It is a market-neutral counterpart to the
-    body-narrative-classification basket and therefore the fair benchmark for
-    the cumulative profit-and-loss chart.
+    """In-paper alternative long-short: non-recurring minus recurring NT filer
+    cohorts, same monthly cadence and 90-day forward horizon. See Section 4.2,
+    third angle.
     """
     rows = [json.loads(l) for l in (DATA / "crsp_angle_4_recurring.jsonl").open(encoding="utf-8")]
     by_month_rec: dict[str, list[float]] = {}
@@ -74,10 +69,42 @@ def _recurring_xs_monthly_return_series(months: list[str]) -> np.ndarray:
         if len(rec) < 5 or len(non) < 5:
             out.append(0.0)
             continue
-        # Long-short = non-recurring leg minus recurring leg; the paper's
-        # recurring-filer test predicts recurring filers underperform.
         out.append(np.mean(non) - np.mean(rec))
     return np.array(out)
+
+
+def _factor_replicated_series(months: list[str], strategy_monthly_pct: np.ndarray) -> np.ndarray:
+    """Return the factor-spanned portfolio's monthly return: the fitted value
+    from a Fama-French 5-factor + UMD momentum regression on the strategy's
+    monthly excess return, in percentage points per entry-period (so the
+    cumulative additive convention matches the strategy series).
+
+    The factor-replicated portfolio is the projection of the strategy onto
+    the six common asset-pricing factors. The vertical gap between the
+    strategy and this replicated benchmark is the realized residual alpha
+    trail (the cumulative form of the regression intercept). Both are
+    market-neutral and share the same cadence and horizon, so the
+    comparison is the JF/JFE-conventional factor-baseline test for whether
+    the strategy's profitability is spanned by common factors.
+    """
+    factor_rows = [json.loads(l) for l in (DATA / "ff5_umd_monthly.jsonl").open(encoding="utf-8")]
+    by_ym = {r["year_month"]: r for r in factor_rows}
+    # Build design matrix and excess return on the strategy's months
+    X_cols = ["Mkt-RF", "SMB", "HML", "RMW", "CMA", "MOM"]
+    keep = [i for i, ym in enumerate(months) if ym in by_ym]
+    if not keep:
+        return np.zeros(len(months))
+    y = np.array([strategy_monthly_pct[i] - by_ym[months[i]]["RF"] for i in keep])
+    X = np.array([[1.0] + [by_ym[months[i]][c] for c in X_cols] for i in keep])
+    beta = np.linalg.lstsq(X, y, rcond=None)[0]
+    # Factor-spanned portion of the monthly return (intercept excluded). Add
+    # back the risk-free rate so the series is on the same gross-of-RF scale
+    # as the strategy long-short series.
+    fitted_ex_alpha = X[:, 1:] @ beta[1:]
+    out = np.zeros(len(months))
+    for k, i in enumerate(keep):
+        out[i] = fitted_ex_alpha[k] + by_ym[months[i]]["RF"]
+    return out
 
 
 def make_fig1():
@@ -103,21 +130,26 @@ def make_fig1():
     cum_net = 100.0 * np.cumsum(net_monthly)
     cum_gross = 100.0 * np.cumsum(gross_monthly)
 
-    # Long-short alternative benchmark: recurring vs non-recurring NT filer
-    # cross-section (paper's third angle), same monthly cadence, same 90-day
-    # forward horizon. This is the fair market-neutral comparison.
+    # FF5+UMD factor-spanned benchmark: the projection of the monthly L/S onto
+    # the Fama-French 5-factor + momentum series. The cumulative gap between
+    # the strategy and this benchmark is the realized residual alpha trail.
+    factor_spanned = _factor_replicated_series(months, 100.0 * net_monthly)
+    cum_factor = np.cumsum(factor_spanned)
+    # In-paper alternative L/S kept as a tertiary reference line.
     recurring_xs = _recurring_xs_monthly_return_series(months)
     cum_recurring = 100.0 * np.cumsum(recurring_xs)
 
     x = np.arange(len(months))
-    fig, ax = plt.subplots(figsize=(7.2, 4.2))
+    fig, ax = plt.subplots(figsize=(7.2, 4.4))
     ax.fill_between(x, 0, cum_net, color="C0", alpha=0.15)
     ax.plot(x, cum_net, color="C0", linewidth=1.8,
             label="Body-narrative long–short, net of 15 bp round-trip")
     ax.plot(x, cum_gross, color="C0", linewidth=1.0, linestyle=":", alpha=0.7,
             label="Body-narrative long–short, gross")
-    ax.plot(x, cum_recurring, color="C3", linewidth=1.3, linestyle="--",
-            label="Recurring vs non-recurring NT filer long–short (in-paper alternative)")
+    ax.plot(x, cum_factor, color="C3", linewidth=1.5, linestyle="--",
+            label="FF5 + UMD factor-spanned portfolio (Fama-French 5-factor + momentum projection)")
+    ax.plot(x, cum_recurring, color="gray", linewidth=1.0, linestyle=":", alpha=0.7,
+            label="Recurring vs non-recurring NT filer L/S (in-paper alternative)")
     ax.axhline(0.0, color="black", linewidth=0.6, alpha=0.4)
 
     # X-axis: one tick per calendar year
@@ -135,24 +167,31 @@ def make_fig1():
 
     ax.set_xlabel("Year")
     ax.set_ylabel("Cumulative return (\\%, additive)")
-    ax.set_title("Body-narrative long–short basket vs in-paper recurring-vs-non-recurring\n"
-                 "NT filer long–short alternative, in-sample 2014–2024")
-    ax.legend(loc="upper left", framealpha=0.9, fontsize=9)
+    ax.set_title("Body-narrative long–short vs Fama-French 5-factor + UMD factor-spanned portfolio\n"
+                 "(JF/JFE-conventional factor baseline), in-sample 2014–2024")
+    ax.legend(loc="upper left", framealpha=0.9, fontsize=8)
     ax.grid(True, alpha=0.25)
 
-    # Annotation placement: keep both labels readable
+    # Annotation placement: strategy terminal + alpha trail + alternative
     strategy_end = cum_net[-1]
+    factor_end = cum_factor[-1]
     alt_end = cum_recurring[-1]
+    alpha_gap = strategy_end - factor_end
     ax.annotate(f"Body-narrative L/S:\nterminal = {strategy_end:.0f}\\%, Net Sharpe = 0.59",
                 xy=(x[-1], strategy_end),
-                xytext=(x[-1] - 22, strategy_end + 30),
+                xytext=(x[-1] - 24, strategy_end + 25),
                 fontsize=9, ha="left",
                 arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.8))
-    ax.annotate(f"Recurring-filer L/S:\nterminal = {alt_end:.0f}\\%",
+    ax.annotate(f"Factor-spanned: {factor_end:.0f}\\%\nCum. residual $\\alpha$ trail: {alpha_gap:.0f}\\%",
+                xy=(x[-1], factor_end),
+                xytext=(x[-1] - 24, factor_end - 30),
+                fontsize=9, ha="left",
+                arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.8))
+    ax.annotate(f"Recurring-filer L/S: {alt_end:.0f}\\%",
                 xy=(x[-1], alt_end),
-                xytext=(x[-1] - 22, alt_end - 80),
-                fontsize=9, ha="left",
-                arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.8))
+                xytext=(x[-1] - 24, alt_end - 80),
+                fontsize=8, ha="left", color="gray",
+                arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.6))
 
     fig.tight_layout()
     out = OUT / "fig1_cumulative_pnl.png"
