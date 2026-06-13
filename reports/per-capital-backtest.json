@@ -8,23 +8,23 @@
     "ann_vol_pct": 22.816,
     "terminal": 3.0281
   },
-  "spy_buy_and_hold": {
+  "ff5umd_ew_portfolio": {
     "n_obs": 57,
-    "monthly_mean": 0.024234,
-    "monthly_vol": 0.053765,
-    "ann_sharpe": 1.5614,
-    "ann_mean_pct": 29.0811,
-    "ann_vol_pct": 18.6247,
-    "terminal": 3.6184
+    "monthly_mean": 0.002347,
+    "monthly_vol": 0.013221,
+    "ann_sharpe": 0.615,
+    "ann_mean_pct": 2.8165,
+    "ann_vol_pct": 4.5799,
+    "terminal": 1.1465
   },
-  "ff_market_compounded": {
-    "n_obs": 57,
-    "monthly_mean": 0.010154,
-    "monthly_vol": 0.044179,
-    "ann_sharpe": 0.7962,
-    "ann_mean_pct": 12.1853,
-    "ann_vol_pct": 15.304,
-    "terminal": 1.6892
+  "residual_alpha_trail": {
+    "n_obs": 56,
+    "monthly_mean": 0.026135,
+    "monthly_vol": 0.058409,
+    "ann_sharpe": 1.55,
+    "ann_mean_pct": 31.3618,
+    "ann_vol_pct": 20.2336,
+    "terminal": 3.9993
   },
   "overlap": 4,
   "tc_bps_rt": 15.0,

@@ -108,23 +108,29 @@ def _factor_replicated_series(months: list[str], strategy_monthly_pct: np.ndarra
 
 
 def make_fig1_per_capital():
-    """Per-capital explicit backtest figure replacing the prior per-position
-    cumulative additive plot. $1-of-capital strategy growth vs SPY
-    buy-and-hold vs Fama-French market portfolio compounded, all on the
-    same unit-capital basis.
+    """Per-capital explicit backtest figure: $1-of-capital strategy growth
+    vs FF5+UMD equal-weighted factor portfolio (fair quant baseline) vs
+    the cumulative residual alpha trail (factor-adjusted strategy return).
+    All on the same unit-capital basis. The vertical gap between the
+    strategy and the FF5+UMD EW portfolio at each date is the strategy's
+    realized outperformance against the standard factor baseline; the
+    residual alpha trail (green) is what survives the factor-adjustment.
     """
     series = [json.loads(l) for l in (DATA / "per_capital_backtest.jsonl").open(encoding="utf-8")]
     months = [r["year_month"] for r in series]
     strat = [r["strategy_capital"] for r in series]
-    spy = [r["spy_capital"] for r in series]
-    mkt = [r["mkt_capital"] for r in series]
+    ff_ew = [r.get("ff5umd_ew_capital") for r in series]
+    alpha_trail = [r.get("residual_alpha_capital") for r in series]
 
     x = np.arange(len(months))
-    fig, ax = plt.subplots(figsize=(7.6, 4.4))
-    ax.fill_between(x, 1.0, strat, color="C0", alpha=0.15)
-    ax.plot(x, strat, color="C0", linewidth=1.9, label="Body-narrative long–short basket (overlap-corrected, EW)")
-    ax.plot(x, spy, color="C3", linewidth=1.4, linestyle="--", label="SPDR S\\&P 500 ETF (SPY) buy-and-hold")
-    ax.plot(x, mkt, color="gray", linewidth=1.1, linestyle=":", label="Fama-French market portfolio (Mkt-RF + RF) compounded")
+    fig, ax = plt.subplots(figsize=(7.6, 4.6))
+    ax.fill_between(x, 1.0, strat, color="C0", alpha=0.12)
+    ax.plot(x, strat, color="C0", linewidth=1.9,
+            label="Body-narrative long–short basket (overlap-corrected)")
+    ax.plot(x, ff_ew, color="C3", linewidth=1.4, linestyle="--",
+            label="FF5 + UMD equal-weighted factor portfolio (quant baseline)")
+    ax.plot(x, alpha_trail, color="C2", linewidth=1.5, linestyle="-.",
+            label="Cumulative residual alpha trail (factor-adjusted strategy)")
     ax.axhline(1.0, color="black", linewidth=0.6, alpha=0.4)
 
     seen = set()
@@ -139,25 +145,31 @@ def make_fig1_per_capital():
     ax.set_xticklabels(lbls, rotation=0)
     ax.set_xlabel("Year")
     ax.set_ylabel("Growth of \\$1 of capital")
-    ax.set_title("Per-capital cumulative growth on a unit-capital basis,\nin-sample 2014–2024 (90-day overlap-corrected EW allocation)")
+    ax.set_title("Per-capital cumulative growth on a unit-capital basis,\n"
+                 "in-sample 2014–2024 (90-day overlap-corrected EW allocation)")
     ax.legend(loc="upper left", framealpha=0.9, fontsize=8)
     ax.grid(True, alpha=0.25)
 
-    # Annotate terminal values
-    ax.annotate(f"Strategy: \\${strat[-1]:.2f}\nann. Sharpe = 1.12",
-                xy=(x[-1], strat[-1]),
-                xytext=(x[-1] - 22, strat[-1] + 0.10),
+    # Annotations: strategy + factor-adjusted alpha + FF5+UMD EW
+    s_end = strat[-1]
+    a_end = alpha_trail[-1] if alpha_trail[-1] is not None else 1.0
+    f_end = ff_ew[-1] if ff_ew[-1] is not None else 1.0
+    ax.annotate(f"Strategy: \\${s_end:.2f}\nann. Sharpe = 1.12",
+                xy=(x[-1], s_end),
+                xytext=(x[-1] - 24, s_end + 0.15),
                 fontsize=9, ha="left",
                 arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.8))
-    ax.annotate(f"SPY: \\${spy[-1]:.2f}\nann. Sharpe = 1.56",
-                xy=(x[-1], spy[-1]),
-                xytext=(x[-1] - 22, spy[-1] + 0.25),
-                fontsize=9, ha="left",
+    ax.annotate(f"Residual $\\alpha$ trail: \\${a_end:.2f}\n"
+                f"ann. $\\alpha$ = $+30.1\\%$/yr\n"
+                f"($t = 2.81$, NW HAC), $R^2 = 17.5\\%$",
+                xy=(x[-1], a_end),
+                xytext=(x[-1] - 24, a_end - 0.85),
+                fontsize=9, ha="left", color="C2",
                 arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.8))
-    ax.annotate(f"FF Mkt: \\${mkt[-1]:.2f}",
-                xy=(x[-1], mkt[-1]),
-                xytext=(x[-1] - 22, mkt[-1] - 0.30),
-                fontsize=8, ha="left", color="gray",
+    ax.annotate(f"FF5 + UMD EW: \\${f_end:.2f}",
+                xy=(x[-1], f_end),
+                xytext=(x[-1] - 24, f_end - 0.20),
+                fontsize=8, ha="left", color="C3",
                 arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.6))
 
     fig.tight_layout()

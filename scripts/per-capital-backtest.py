@@ -143,18 +143,58 @@ def spy_unit_capital_path(months: list[str]) -> tuple[list[str], list[float]]:
     return out_months, out_capital
 
 
-def ff_mkt_unit_capital_path(months: list[str]) -> tuple[list[str], list[float]]:
-    """$1 invested in the Fama-French market portfolio (Mkt-RF + RF),
-    compounded monthly. Series is in percent units."""
+def ff5_umd_ew_unit_capital_path(months: list[str]) -> tuple[list[str], list[float]]:
+    """Equal-weighted Fama-French 5-factor + UMD portfolio cumulative.
+
+    Each month allocates 1/6 of capital to each of the six Ken French
+    factor series (Mkt-RF, SMB, HML, RMW, CMA, MOM) plus the risk-free
+    rate on the unallocated cash. The factor returns are already in excess
+    form (long high - short low for SMB/HML/RMW/CMA/MOM; market - RF for
+    Mkt-RF), so this is a zero-cost factor-portfolio overlay on top of the
+    risk-free deposit. Series in percent units.
+    """
     ff = _load_ff_monthly()
     cap = 1.0
     out_months = []
     out_capital = []
+    cols = ["Mkt-RF", "SMB", "HML", "RMW", "CMA", "MOM"]
     for ym in months:
         if ym not in ff:
             continue
-        m_ret = (ff[ym]["Mkt-RF"] + ff[ym]["RF"]) / 100.0
+        factor_excess = sum(ff[ym][c] for c in cols) / len(cols)
+        rf = ff[ym]["RF"]
+        m_ret = (factor_excess + rf) / 100.0
         cap *= 1.0 + m_ret
+        out_months.append(ym)
+        out_capital.append(cap)
+    return out_months, out_capital
+
+
+def residual_alpha_cumulative(monthly_pct: dict[str, float], months: list[str]) -> tuple[list[str], list[float]]:
+    """Strategy's monthly return minus its FF5+UMD factor-explained portion,
+    accumulated as a $1-of-capital-equivalent cumulative growth path. This is
+    the alpha trail: the part of the strategy return that the six-factor
+    model cannot explain. If the regression alpha is positive and significant,
+    this series grows monotonically upward.
+    """
+    ff = _load_ff_monthly()
+    # Estimate factor loadings on the strategy's per-capital monthly return,
+    # then construct strategy_monthly - (X @ beta_factors) for each month.
+    # The result is alpha + residual; its cumulative sum approximates the
+    # alpha trail.
+    cols = ["Mkt-RF", "SMB", "HML", "RMW", "CMA", "MOM"]
+    pairs = [(ym, monthly_pct[ym]) for ym in months if ym in ff and ym in monthly_pct]
+    if len(pairs) < 10:
+        return [], []
+    y = np.array([r for _, r in pairs])
+    X = np.array([[1.0] + [ff[ym][c] for c in cols] for ym, _ in pairs])
+    beta = np.linalg.lstsq(X, y, rcond=None)[0]
+    # Residual + intercept = alpha + epsilon; equivalently y - X[:, 1:] @ beta[1:]
+    alpha_plus_eps = y - X[:, 1:] @ beta[1:]  # this still contains the intercept
+    cap = 1.0
+    out_months, out_capital = [], []
+    for (ym, _), ape in zip(pairs, alpha_plus_eps):
+        cap *= 1.0 + ape / 100.0
         out_months.append(ym)
         out_capital.append(cap)
     return out_months, out_capital
@@ -185,21 +225,30 @@ def main() -> int:
     sim_months, sim_capital = per_capital_simulation(strat_monthly, overlap=4)
     strategy_sharpe = _sharpe_from_capital(sim_capital, periods_per_year=12.0)
 
-    # SPY buy-and-hold
-    spy_months, spy_capital = spy_unit_capital_path(months_sorted)
-    spy_sharpe = _sharpe_from_capital(spy_capital, periods_per_year=12.0)
+    # FF5+UMD equal-weighted factor portfolio (fair quant baseline)
+    ff_months, ff_capital = ff5_umd_ew_unit_capital_path(months_sorted)
+    ff_sharpe = _sharpe_from_capital(ff_capital, periods_per_year=12.0)
 
-    # Mkt-RF compounded
-    mkt_months, mkt_capital = ff_mkt_unit_capital_path(months_sorted)
-    mkt_sharpe = _sharpe_from_capital(mkt_capital, periods_per_year=12.0)
+    # Cumulative residual alpha trail (factor-adjusted return cumulative)
+    # built from the per-capital monthly return series implied by the
+    # explicit backtest, projected onto FF5+UMD and the residual accumulated.
+    strat_monthly_per_capital = {}
+    for i in range(1, len(sim_capital[:len(months_sorted)])):
+        ym = months_sorted[i]
+        prev = sim_capital[i-1]
+        curr = sim_capital[i]
+        if prev > 0:
+            strat_monthly_per_capital[ym] = 100.0 * (curr / prev - 1.0)
+    alpha_months, alpha_capital = residual_alpha_cumulative(strat_monthly_per_capital, months_sorted)
+    alpha_sharpe = _sharpe_from_capital(alpha_capital, periods_per_year=12.0)
 
     print("Per-capital backtest results (unit capital = $1):")
-    print(f"  Strategy (overlap=4 EW allocation): terminal = ${sim_capital[-1]:.4f}")
-    print(f"     Sharpe (monthly→ann): {strategy_sharpe['ann_sharpe']}, ann_mean = {strategy_sharpe['ann_mean_pct']}%, ann_vol = {strategy_sharpe['ann_vol_pct']}%")
-    print(f"  SPY buy-and-hold:                    terminal = ${spy_capital[-1]:.4f}")
-    print(f"     Sharpe (monthly→ann): {spy_sharpe['ann_sharpe']}, ann_mean = {spy_sharpe['ann_mean_pct']}%, ann_vol = {spy_sharpe['ann_vol_pct']}%")
-    print(f"  FF Mkt portfolio compounded:        terminal = ${mkt_capital[-1]:.4f}")
-    print(f"     Sharpe (monthly→ann): {mkt_sharpe['ann_sharpe']}, ann_mean = {mkt_sharpe['ann_mean_pct']}%, ann_vol = {mkt_sharpe['ann_vol_pct']}%")
+    print(f"  Strategy (overlap=4 EW allocation):   terminal = ${sim_capital[-1]:.4f}")
+    print(f"     Sharpe (monthly->ann): {strategy_sharpe['ann_sharpe']}, ann_mean = {strategy_sharpe['ann_mean_pct']}%, ann_vol = {strategy_sharpe['ann_vol_pct']}%")
+    print(f"  FF5+UMD EW factor portfolio:           terminal = ${ff_capital[-1]:.4f}")
+    print(f"     Sharpe (monthly->ann): {ff_sharpe['ann_sharpe']}, ann_mean = {ff_sharpe['ann_mean_pct']}%, ann_vol = {ff_sharpe['ann_vol_pct']}%")
+    print(f"  Cumulative residual alpha trail:       terminal = ${alpha_capital[-1]:.4f}")
+    print(f"     Sharpe (monthly->ann): {alpha_sharpe['ann_sharpe']}, ann_mean = {alpha_sharpe['ann_mean_pct']}%, ann_vol = {alpha_sharpe['ann_vol_pct']}%")
 
     # Write per-month series to data/. Use the final close-out cash balance
     # (with all open positions liquidated) as the terminal point so the
@@ -210,18 +259,17 @@ def main() -> int:
     strat_series = list(sim_capital[:n])
     if len(sim_capital) > n:
         strat_series[-1] = sim_capital[-1]
+    # Align FF EW portfolio and alpha trail to the same n-month axis as
+    # strategy, padding with None where the factor data is missing.
+    ff_by_ym = dict(zip(ff_months, ff_capital))
+    alpha_by_ym = dict(zip(alpha_months, alpha_capital))
     with out_jsonl.open("w", encoding="utf-8") as f:
-        for ym, sc, mc, spc in zip(
-            months_sorted,
-            strat_series,
-            (mkt_capital + [None] * n)[:n],
-            (spy_capital + [None] * n)[:n],
-        ):
+        for ym, sc in zip(months_sorted, strat_series):
             f.write(json.dumps({
                 "year_month": ym,
                 "strategy_capital": sc,
-                "mkt_capital": mc,
-                "spy_capital": spc,
+                "ff5umd_ew_capital": ff_by_ym.get(ym),
+                "residual_alpha_capital": alpha_by_ym.get(ym),
             }) + "\n")
     print(f"\nWrote {out_jsonl}")
 
@@ -229,8 +277,8 @@ def main() -> int:
     out_json = REPORTS / "per-capital-backtest.json"
     out_json.write_text(json.dumps({
         "strategy": strategy_sharpe,
-        "spy_buy_and_hold": spy_sharpe,
-        "ff_market_compounded": mkt_sharpe,
+        "ff5umd_ew_portfolio": ff_sharpe,
+        "residual_alpha_trail": alpha_sharpe,
         "overlap": 4,
         "tc_bps_rt": TC_BPS_RT,
         "n_monthly_obs_strategy": len(months_sorted),
