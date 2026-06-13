@@ -213,14 +213,14 @@ A complementary tradability concern is that $63.5\%$ of in-sample Form NT filing
 
 \begin{table}[H]
 \centering
-\caption{Long--short basket net Sharpe ratio, in-sample 2014--2024, ninety-day holding horizon, fifteen-basis-point round-trip cost.}
+\caption{Long--short basket net Sharpe ratio, in-sample 2014--2024, ninety-day holding horizon, fifteen-basis-point round-trip cost. Sharpe ratios are per-position (annualized at $252/90 \approx 2.8$ periods per year, the natural unit at the position level); the per-capital figures under the independence approximation across approximately $4.3$ overlapping ninety-day positions are reported in the rightmost column as the deployment-relevant Sharpe.}
 \small
-\begin{tabular}{lrrrr}
+\begin{tabular}{lrrrrr}
 \toprule
-Entry anchor & Months & Ann. mean & Ann. volatility & Net Sharpe \\
+Entry anchor & Months & Ann. mean & Ann. volatility & SR (per-position) & SR (per-capital) \\
 \midrule
-Calendar filing date         & 53 & $24.49\%$ & $53.15\%$ & $0.46$ \\
-Acceptance-tradable (T+1 after-hours) & 58 & $25.81\%$ & $43.69\%$ & $0.59$ \\
+Calendar filing date         & 53 & $24.49\%$ & $53.15\%$ & $0.46$ & $\approx 0.22$ \\
+Acceptance-tradable (T+1 after-hours) & 58 & $25.81\%$ & $43.69\%$ & $0.59$ & $\approx 0.29$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -230,7 +230,7 @@ The interpretation is that the calendar-date anchor admits a contaminated tradin
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{figures/fig1_cumulative_pnl.png}
-\caption{Cumulative additive return of the body-narrative long--short basket against the Fama-French five-factor plus momentum (FF5+UMD) factor-spanned portfolio, in-sample 2014--2024. The headline strategy (blue solid) is the body-narrative long--short basket on the language-model classification (Section 5.2), net of fifteen basis points round-trip per monthly entry. The factor-spanned portfolio (red dashed) is the projection of the same monthly strategy return onto the Fama-French five-factor plus momentum monthly series; it is the part of the strategy's return that common asset-pricing factor exposure can replicate. The vertical gap between the two lines at each date is the realized residual alpha trail --- the cumulative form of the regression intercept reported in Section 5.7 and Table 6. The recurring vs non-recurring NT filer long--short alternative (gray dotted, Section 4.2, third angle) is plotted as a tertiary same-cohort same-cadence same-horizon reference. All three series are market-neutral long--short constructions and are plotted as the running sum in additive convention so they share a common scale; the compound-growth interpretation is suppressed to avoid the overlap distortion that would arise from monthly-frequency compounding of a strategy whose holding period is ninety days.}
+\caption{Cumulative additive return of the body-narrative long--short basket against the Fama-French five-factor plus momentum (FF5+UMD) factor-spanned portfolio, in-sample 2014--2024. Plotted in per-position units: each monthly observation is the realized ninety-day return on a single 90-day-held entry, and the running sum is the cumulative per-entry profit. The headline strategy (blue solid) is the body-narrative long--short basket on the language-model classification (Section 5.2), net of fifteen basis points round-trip per monthly entry. The factor-spanned portfolio (red dashed) is the projection of the same monthly strategy return onto the Fama-French five-factor plus momentum monthly series; it is the part of the strategy's return that common asset-pricing factor exposure can replicate. The vertical gap between the two lines at each date is the realized residual alpha trail --- the cumulative form of the regression intercept reported in Section 5.7 and Table 6. The recurring vs non-recurring NT filer long--short alternative (gray dotted, Section 4.2, third angle) is plotted as a tertiary same-cohort same-cadence same-horizon reference. All three series are market-neutral long--short constructions and are plotted as the running sum in additive convention so they share a common scale; the compound-growth interpretation is suppressed to avoid the overlap distortion that would arise from monthly-frequency compounding of a strategy whose holding period is ninety days. The deployment-relevant per-capital cumulative profile is approximately the per-position profile divided by the square root of the average four overlapping ninety-day positions; the terminal per-capital cumulative is therefore approximately $540 / \sqrt{4.3} \approx 260$ percentage points rather than $540$.}
 \end{figure}
 
 ## Replication of the Short-Window Magnitude
@@ -303,22 +303,22 @@ estimated on $T = 58$ monthly periods. The factor data are the standard public s
 
 \begin{table}[H]
 \centering
-\caption{Fama-French five-factor plus momentum (FF5+UMD) regression on the monthly body-narrative long--short return, in-sample 2014--2024, ninety-day horizon, fifteen-basis-point round-trip cost. Standard errors are Newey-West heteroskedasticity-and-autocorrelation-consistent at lag six.}
+\caption{Fama-French five-factor plus momentum (FF5+UMD) regression on the monthly body-narrative long--short return, in-sample 2014--2024, ninety-day horizon, fifteen-basis-point round-trip cost. Standard errors are Newey-West heteroskedasticity-and-autocorrelation-consistent at lag six. Estimates are per-position (each monthly observation is a single 90-day-held entry); the per-position annualized alpha is $11.241 \times 252/90 \approx +31.5$ percentage points per year; the per-capital annualized alpha under the independence approximation is approximately $+15$ percentage points per year.}
 \small
-\begin{tabular}{lrrr}
+\begin{tabular}{lrrrr}
 \toprule
-Coefficient & Estimate (\%/mo.) & NW HAC SE & $t$ \\
+Coefficient & Per-position estimate (\%/mo.) & Per-capital approx. (\%/yr) & NW HAC SE & $t$ \\
 \midrule
-$\alpha$ (intercept) & $11.241$ & $5.265$ & $2.135$ \\
-$\beta_{\text{Mkt-RF}}$ & $-1.681$ & $0.946$ & $-1.777$ \\
-$\beta_{\text{SMB}}$    & $\phantom{-}1.768$ & $1.450$ & $\phantom{-}1.219$ \\
-$\beta_{\text{HML}}$    & $\phantom{-}0.412$ & $0.924$ & $\phantom{-}0.447$ \\
-$\beta_{\text{RMW}}$    & $\phantom{-}1.611$ & $1.439$ & $\phantom{-}1.119$ \\
-$\beta_{\text{CMA}}$    & $-1.222$ & $2.409$ & $-0.507$ \\
-$\beta_{\text{MOM}}$    & $-1.075$ & $0.882$ & $-1.218$ \\
+$\alpha$ (intercept) & $11.241$ & $\approx +15$ & $5.265$ & $2.135$ \\
+$\beta_{\text{Mkt-RF}}$ & $-1.681$ & & $0.946$ & $-1.777$ \\
+$\beta_{\text{SMB}}$    & $\phantom{-}1.768$ & & $1.450$ & $\phantom{-}1.219$ \\
+$\beta_{\text{HML}}$    & $\phantom{-}0.412$ & & $0.924$ & $\phantom{-}0.447$ \\
+$\beta_{\text{RMW}}$    & $\phantom{-}1.611$ & & $1.439$ & $\phantom{-}1.119$ \\
+$\beta_{\text{CMA}}$    & $-1.222$ & & $2.409$ & $-0.507$ \\
+$\beta_{\text{MOM}}$    & $-1.075$ & & $0.882$ & $-1.218$ \\
 \midrule
-$R^2$ & $0.094$ & & \\
-$T$ & $58$ & & \\
+$R^2$ & $0.094$ & & & \\
+$T$ & $58$ & & & \\
 \bottomrule
 \end{tabular}
 \end{table}
