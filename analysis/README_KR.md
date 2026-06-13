@@ -66,6 +66,12 @@ calendar anchor 가 filing-day intraday price impact (이미 가격에 반영된
 
 cumulative excess return (figure 1) 은 58개 monthly entry 의 90-day excess return 누적합. terminal $\approx +540$ percentage points. compound-growth interpretation 은 overlap distortion 회피 위해 의도적으로 suppress.
 
+**Factor-adjusted performance** (paper §5.7, FF5+UMD regression, Newey-West HAC lag=6):
+- Annualized residual α = **+31.47%/yr** (HAC SE 14.74%, **t = 2.14**) → 5% 유의수준 PASS
+- Factor loadings (none individually significant at conventional t): β_Mkt-RF = −1.68, β_SMB = +1.77 (small-cap), β_RMW = +1.61 (quality), β_MOM = −1.07 (contrarian)
+- R² = 9.4% → 6-factor model 이 strategy variation 의 9% 만 설명. 나머지는 alpha.
+- Factor loading direction 이 §7 Discussion limits-of-arbitrage reading 과 일치 (small-cap quality-of-disclosure cohort 의 contrarian signal).
+
 OOS holdout 의 $n = 5$ monthly periods 는 sharpe 재검증에 부족 ($n = 5$ 에서 net Sharpe $-0.41$ 이지만 in-sample 95% CI $[0.19, 0.73]$ 의 deeply negative tail). signal 자체는 OOS 에서 유지되므로 small-sample 문제로 해석.
 
 ### 기여 4: 재현가능성
@@ -78,10 +84,10 @@ OOS holdout 의 $n = 5$ monthly periods 는 sharpe 재검증에 부족 ($n = 5$ 
 
 1. **OOS basket sharpe 미확정**: holdout 의 90일 horizon 에 usable monthly periods $n = 5$ → basket sim 재검증 불가. signal (rate-diff) 은 OOS 에서 유지되므로 small-sample issue 가 basket aggregation 단계에 한정.
 2. **CRSP join coverage $81\%$**: ticker reassignment 로 인한 19% 미매치. short-window CAR magnitude 영향은 작음 ($0.15$ pp gap 으로 입증).
-3. **LLM vintage look-ahead** 가능성: 2024-vintage 모델 사용. pre-2024 vintage 모델로 monitoring step 권장.
+3. **LLM vintage look-ahead** 정량화 (paper §6): gpt-3.5-turbo (training cutoff 2023-Q3) 으로 같은 $n=50$ stratified sample re-classify → 3-class $\kappa = 0.6154$ (sub-0.70 floor). gpt-3.5-turbo 는 accounting-issue label 에 약 10pp 더 conservative. 두 가설 분리 불가 — (a) classifier-quality (earlier model 이 weaker zero-shot reader) vs (b) vintage-leakage (2024 vintage 가 implicit forward outcome 학습). OOS 2025-Q1\~2026-Q2 $z = 2.83$ (production extractor) 이 leakage magnitude 의 upper bound 를 제공하지만 zero 는 아님. larger $n \geq 200$ stratified cross-check 권장 (deferred).
 4. **CAR-diff null, rate-diff PASS**: 시장이 본문을 filing date 에 가격 반영 → conditional CAR 은 null, conditional rate (subsequent restatement disclosure) 만 economic distinct prediction.
 5. **NT 10-Q dominant**: NT 10-K cohort 의 신호는 $z = 0.50$ 로 null. deployment 시 NT 10-K subset 제외 가능.
-6. **Recurring filer 의 borrow cost**: small market-cap 비중 큼. 15bp 가정 위 30bp 이상 가정 시에도 320bp break-even 미달치 못함.
+6. **Recurring filer 의 borrow cost 정량화 (paper §6)**: recurring NT 10-Q sub-cohort (dominant body-narrative-signal cohort) 의 anchor-date closing price median **$3.04**, sub-$5 share **62%**. CRSP-matched partial sample ($n = 1{,}356$ of $3{,}232$ angle-2 rows) 위에서 borrow-restricted filter (drop short leg with anchor-date close $<5\$$) × {15, 25, 50, 100, 200} bp round-trip cost schedule → net Sharpe **$-0.65$ ~ $-0.81$** range. 즉 full-sample $0.59$ headline 의 deployment-relevant downward revision. unconstrained-borrow-naive deployment 는 infeasible. borrow-availability sourcing (e.g., S3 Partners locate API) 후 large-cap-only subset 으로 capacity 재산정 필요.
 
 ---
 
@@ -102,6 +108,10 @@ OOS holdout 의 $n = 5$ monthly periods 는 sharpe 재검증에 부족 ($n = 5$ 
 
 | 항목 | 값 |
 |---|---|
+| Annualized FF5+UMD residual α | **+31.47%/yr** (HAC SE 14.74%, t = 2.14) |
+| FF5+UMD R² | 9.4% |
+| Strategy 90d L/S terminal (cumulative additive) | ~+540 pp |
+| In-paper alternative (recurring-filer L/S) terminal | ~+277 pp |
 | In-sample window | 2014-01-01 \~ 2024-12-31 |
 | OOS window | 2025-01-01 \~ 2026-06-30 |
 | Form NT filings (in-sample) | 31,693 |
@@ -112,10 +122,14 @@ OOS holdout 의 $n = 5$ monthly periods 는 sharpe 재검증에 부족 ($n = 5$ 
 | OOS NYSE/Nasdaq matched | 912 |
 | OOS classified | 912 (100% success) |
 | LLM cost (in-sample + OOS) | $0.45 USD |
-| Inter-LLM Cohen's $\kappa$ ($n = 49$) | 0.7066 |
+| Inter-LLM Cohen's $\kappa$ — gpt-4o-mini vs Llama-3.3-70B ($n = 49$) | 0.7066 |
+| Inter-LLM Cohen's $\kappa$ — gpt-4o-mini vs gpt-3.5-turbo (vintage, $n = 50$) | 0.6154 (sub-floor) |
 | In-sample net Sharpe (90d, PIT anchor) | $+0.59$ |
 | In-sample net Sharpe (90d, calendar anchor) | $+0.46$ |
-| Break-even round-trip cost (at PASS 0.30) | 320 bp |
+| Sub-$5 borrow-restricted net Sharpe (90d, full TC schedule) | $-0.65$ ~ $-0.81$ |
+| OOS PIT CRSP-extended rate-diff 14d $z$ / 90d $z$ | 2.87 / 2.71 |
+| OOS basket net Sharpe (90d, $n_{\text{months}} = 5$) | $-0.35$ (CRSP) / $-0.41$ (yfinance) |
+| Break-even round-trip cost (at PASS 0.30, full sample) | 320 bp |
 | Bonferroni-24 PASS count (mechanical) | 18 / 24 |
 | Bonferroni-24 PASS count (direction-conditioned) | 15 / 24 |
 
