@@ -107,6 +107,66 @@ def _factor_replicated_series(months: list[str], strategy_monthly_pct: np.ndarra
     return out
 
 
+def make_fig1_per_capital():
+    """Per-capital explicit backtest figure replacing the prior per-position
+    cumulative additive plot. $1-of-capital strategy growth vs SPY
+    buy-and-hold vs Fama-French market portfolio compounded, all on the
+    same unit-capital basis.
+    """
+    series = [json.loads(l) for l in (DATA / "per_capital_backtest.jsonl").open(encoding="utf-8")]
+    months = [r["year_month"] for r in series]
+    strat = [r["strategy_capital"] for r in series]
+    spy = [r["spy_capital"] for r in series]
+    mkt = [r["mkt_capital"] for r in series]
+
+    x = np.arange(len(months))
+    fig, ax = plt.subplots(figsize=(7.6, 4.4))
+    ax.fill_between(x, 1.0, strat, color="C0", alpha=0.15)
+    ax.plot(x, strat, color="C0", linewidth=1.9, label="Body-narrative long–short basket (overlap-corrected, EW)")
+    ax.plot(x, spy, color="C3", linewidth=1.4, linestyle="--", label="SPDR S\\&P 500 ETF (SPY) buy-and-hold")
+    ax.plot(x, mkt, color="gray", linewidth=1.1, linestyle=":", label="Fama-French market portfolio (Mkt-RF + RF) compounded")
+    ax.axhline(1.0, color="black", linewidth=0.6, alpha=0.4)
+
+    seen = set()
+    ticks, lbls = [], []
+    for i, m in enumerate(months):
+        y = m[:4]
+        if y not in seen:
+            seen.add(y)
+            ticks.append(i)
+            lbls.append(y)
+    ax.set_xticks(ticks)
+    ax.set_xticklabels(lbls, rotation=0)
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Growth of \\$1 of capital")
+    ax.set_title("Per-capital cumulative growth on a unit-capital basis,\nin-sample 2014–2024 (90-day overlap-corrected EW allocation)")
+    ax.legend(loc="upper left", framealpha=0.9, fontsize=8)
+    ax.grid(True, alpha=0.25)
+
+    # Annotate terminal values
+    ax.annotate(f"Strategy: \\${strat[-1]:.2f}\nann. Sharpe = 1.12",
+                xy=(x[-1], strat[-1]),
+                xytext=(x[-1] - 22, strat[-1] + 0.10),
+                fontsize=9, ha="left",
+                arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.8))
+    ax.annotate(f"SPY: \\${spy[-1]:.2f}\nann. Sharpe = 1.56",
+                xy=(x[-1], spy[-1]),
+                xytext=(x[-1] - 22, spy[-1] + 0.25),
+                fontsize=9, ha="left",
+                arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.8))
+    ax.annotate(f"FF Mkt: \\${mkt[-1]:.2f}",
+                xy=(x[-1], mkt[-1]),
+                xytext=(x[-1] - 22, mkt[-1] - 0.30),
+                fontsize=8, ha="left", color="gray",
+                arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.6))
+
+    fig.tight_layout()
+    out = OUT / "fig1_cumulative_pnl.png"
+    fig.savefig(out, dpi=300, bbox_inches="tight")
+    plt.close(fig)
+    print(f"wrote {out}")
+
+
 def make_fig1():
     """Cumulative additive excess-return chart, strategy vs SPY benchmark.
 
@@ -366,7 +426,7 @@ def make_fig4():
 
 
 if __name__ == "__main__":
-    make_fig1()
+    make_fig1_per_capital()
     make_fig2()
     make_fig3()
     make_fig4()
