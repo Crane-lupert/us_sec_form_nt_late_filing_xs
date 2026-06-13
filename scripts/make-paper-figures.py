@@ -119,22 +119,18 @@ def make_fig1_per_capital():
     """
     series = [json.loads(l) for l in (DATA / "per_capital_backtest.jsonl").open(encoding="utf-8")]
     months = [r["year_month"] for r in series]
-    strat = [r["strategy_capital"] for r in series]
     strat_voladj = [r.get("strategy_capital_vol_scaled") for r in series]
     tangent = [r.get("ff5umd_max_sharpe_capital") for r in series]
-    alpha_trail = [r.get("residual_alpha_capital") for r in series]
+    alpha_voladj = [r.get("residual_alpha_capital_vol_scaled") for r in series]
 
     x = np.arange(len(months))
-    fig, ax = plt.subplots(figsize=(8.2, 4.6))
-    ax.fill_between(x, 1.0, strat, color="C0", alpha=0.10)
-    ax.plot(x, strat, color="C0", linewidth=1.9,
-            label="Strategy (native vol)")
-    ax.plot(x, alpha_trail, color="C2", linewidth=1.5, linestyle="-.",
-            label="Residual $\\alpha$ trail (factor-adjusted)")
-    ax.plot(x, tangent, color="C3", linewidth=1.4, linestyle="--",
+    fig, ax = plt.subplots(figsize=(7.6, 4.4))
+    ax.plot(x, strat_voladj, color="C0", linewidth=1.9,
+            label="Strategy, vol-scaled to tangent")
+    ax.plot(x, alpha_voladj, color="C2", linewidth=1.6, linestyle="-.",
+            label=r"Residual $\alpha$ trail, vol-scaled to tangent")
+    ax.plot(x, tangent, color="C3", linewidth=1.5, linestyle="--",
             label="FF5+UMD max-Sharpe tangent (natural)")
-    ax.plot(x, strat_voladj, color="C0", linewidth=1.2, linestyle=":", alpha=0.7,
-            label="Strategy (vol-scaled to tangent)")
     ax.axhline(1.0, color="black", linewidth=0.6, alpha=0.4)
 
     seen = set()
@@ -148,31 +144,31 @@ def make_fig1_per_capital():
     ax.set_xticks(ticks)
     ax.set_xticklabels(lbls, rotation=0)
     ax.set_xlabel("Year")
-    ax.set_ylabel("Growth of \\$1 of capital")
-    ax.set_title("Per-capital cumulative growth on a unit-capital basis,\n"
-                 "in-sample 2014–2024 (90-day overlap-corrected EW allocation)")
-    ax.legend(loc="upper left", framealpha=0.9, fontsize=8)
+    ax.set_ylabel(r"Growth of \$1 of capital")
+    ax.set_title("Per-capital cumulative growth at the FF5+UMD tangent risk budget\n"
+                 r"(4.7\% annualized vol), in-sample 2014--2024")
+    ax.legend(loc="upper left", framealpha=0.9, fontsize=9)
     ax.grid(True, alpha=0.25)
 
-    # Right-margin text box with terminal capital + Sharpe instead of
-    # overlapping arrow annotations. Pull values from the time series.
-    s_end = strat[-1]
+    # Compact summary text in the lower right (inside the axes, away from
+    # the line endpoints) so the figure stays a single self-contained panel
+    # and the axes are tight.
     sv_end = strat_voladj[-1] if strat_voladj[-1] is not None else 1.0
     t_end = tangent[-1] if tangent[-1] is not None else 1.0
-    a_end = alpha_trail[-1] if alpha_trail[-1] is not None else 1.0
-    text = (
-        "Terminal capital, Sharpe, ann.\\,vol\n"
-        f"Strategy (native):           \\${s_end:.2f},  1.12,  22.8\\%\n"
-        f"Residual $\\alpha$ trail:       \\${a_end:.2f},  1.55,  20.2\\%\n"
-        f"   ($\\alpha=+30.1\\%$/yr, $t=2.81$, $R^2=17.5\\%$)\n"
-        f"FF5+UMD tangent (natural):  \\${t_end:.2f},  1.96,   4.7\\%\n"
-        f"Strategy (vol-scaled):       \\${sv_end:.2f},  1.30,   4.7\\%"
+    a_end = alpha_voladj[-1] if alpha_voladj[-1] is not None else 1.0
+    summary = (
+        r"Terminal capital, ann.\,Sharpe (all at 4.7\% vol):"
+        "\n"
+        rf"Strategy:   \${sv_end:.2f},  1.30"
+        "\n"
+        rf"Residual $\alpha$:  \${a_end:.2f},  1.55  ($\alpha = +30.1\%$/yr, $t = 2.81$, $R^2 = 17.5\%$)"
+        "\n"
+        rf"Tangent:    \${t_end:.2f},  1.96 (in-sample optimal)"
     )
-    ax.text(1.02, 0.5, text, transform=ax.transAxes,
-            fontsize=8, verticalalignment="center",
-            family="monospace",
-            bbox=dict(boxstyle="round,pad=0.5", facecolor="white",
-                      edgecolor="gray", alpha=0.95))
+    ax.text(0.03, 0.97, summary, transform=ax.transAxes,
+            fontsize=8, verticalalignment="top", horizontalalignment="left",
+            bbox=dict(boxstyle="round,pad=0.4", facecolor="white",
+                      edgecolor="lightgray", alpha=0.92))
 
     fig.tight_layout()
     out = OUT / "fig1_cumulative_pnl.png"

@@ -302,6 +302,18 @@ def main() -> int:
     # strat_rescaled is 1-indexed (first row is the starting $1, then a
     # row per month). Align to the months_sorted axis.
     strat_rescaled_by_idx = {months_sorted[i]: strat_rescaled[i] for i in range(min(len(months_sorted), len(strat_rescaled)))}
+
+    # Rescale the cumulative residual alpha trail to the tangent vol as
+    # well, so the fig1 figure can display all three series at a common
+    # risk budget without a y-axis stretched by the strategy's native vol.
+    alpha_monthly_pct_arr = np.array([100.0 * (alpha_capital[i] / alpha_capital[i-1] - 1.0)
+                                       for i in range(1, len(alpha_capital))])
+    alpha_vol_unscaled = float(np.std(alpha_monthly_pct_arr, ddof=0))
+    alpha_vol_scale = ff_monthly_vol / max(alpha_vol_unscaled, 1e-9)
+    alpha_rescaled = [1.0]
+    for r in alpha_monthly_pct_arr:
+        alpha_rescaled.append(alpha_rescaled[-1] * (1.0 + alpha_vol_scale * r / 100.0))
+    alpha_rescaled_by_idx = {alpha_months[i]: alpha_rescaled[i] for i in range(min(len(alpha_months), len(alpha_rescaled)))}
     with out_jsonl.open("w", encoding="utf-8") as f:
         for ym, sc in zip(months_sorted, strat_series):
             f.write(json.dumps({
@@ -310,6 +322,7 @@ def main() -> int:
                 "strategy_capital_vol_scaled": strat_rescaled_by_idx.get(ym),
                 "ff5umd_max_sharpe_capital": ff_by_ym.get(ym),
                 "residual_alpha_capital": alpha_by_ym.get(ym),
+                "residual_alpha_capital_vol_scaled": alpha_rescaled_by_idx.get(ym),
             }) + "\n")
     print(f"\nWrote {out_jsonl}")
 
