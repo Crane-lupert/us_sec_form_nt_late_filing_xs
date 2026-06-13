@@ -45,34 +45,38 @@ plt.rcParams.update({
 # Figure 1: cumulative long-short PnL, PIT acceptance anchor, 90d
 # =================================================================
 
-def _spy_horizon_return_series(months: list[str], horizon_trading_days: int = 90) -> np.ndarray:
-    """For each strategy month-end entry, compute the SPY return over the same
-    forward holding horizon used by the strategy basket. This is the natural
-    market benchmark for a strategy with monthly entries and a ninety-trading-
-    day holding period: at the same entry-date cadence the SPY position is
-    bought, held for ninety trading days, and the realized total return is
-    recorded as the benchmark observation for that month.
-    """
-    spy_rows = [json.loads(l) for l in (DATA / "yfinance_cache" / "SPY.jsonl").open(encoding="utf-8")]
-    spy_rows.sort(key=lambda r: r["date"])
-    dates = [r["date"] for r in spy_rows]
-    closes = [r["close"] for r in spy_rows]
-    by_month_last_idx: dict[str, int] = {}
-    for i, d in enumerate(dates):
-        by_month_last_idx[d[:7]] = i
+def _recurring_xs_monthly_return_series(months: list[str]) -> np.ndarray:
+    """Long–short alternative benchmark: long non-recurring NT filers minus
+    short recurring NT filers, ninety-trading-day forward CAR, monthly basket.
 
+    This is the same-cadence, same-horizon, same-cohort long–short alternative
+    constructed from the paper's recurring-late-filer cross-section angle
+    (Section 4.2, third angle). It is a market-neutral counterpart to the
+    body-narrative-classification basket and therefore the fair benchmark for
+    the cumulative profit-and-loss chart.
+    """
+    rows = [json.loads(l) for l in (DATA / "crsp_angle_4_recurring.jsonl").open(encoding="utf-8")]
+    by_month_rec: dict[str, list[float]] = {}
+    by_month_non: dict[str, list[float]] = {}
+    for r in rows:
+        ym = r["date_filed"][:7]
+        v = r.get("fwd_90d")
+        if v is None:
+            continue
+        if r.get("recurring"):
+            by_month_rec.setdefault(ym, []).append(v)
+        else:
+            by_month_non.setdefault(ym, []).append(v)
     out = []
     for ym in months:
-        entry_idx = by_month_last_idx.get(ym)
-        if entry_idx is None:
+        rec = by_month_rec.get(ym, [])
+        non = by_month_non.get(ym, [])
+        if len(rec) < 5 or len(non) < 5:
             out.append(0.0)
             continue
-        exit_idx = entry_idx + horizon_trading_days
-        if exit_idx >= len(closes):
-            out.append(np.nan)
-            continue
-        c0, c1 = closes[entry_idx], closes[exit_idx]
-        out.append(c1 / c0 - 1.0 if c0 > 0 else 0.0)
+        # Long-short = non-recurring leg minus recurring leg; the paper's
+        # recurring-filer test predicts recurring filers underperform.
+        out.append(np.mean(non) - np.mean(rec))
     return np.array(out)
 
 
@@ -99,21 +103,21 @@ def make_fig1():
     cum_net = 100.0 * np.cumsum(net_monthly)
     cum_gross = 100.0 * np.cumsum(gross_monthly)
 
-    # SPY benchmark: same-cadence monthly entry, 90-day forward holding period
-    spy_90d = _spy_horizon_return_series(months, horizon_trading_days=90)
-    # Replace any NaN (entry too close to end of available SPY data) with 0
-    spy_90d = np.nan_to_num(spy_90d, nan=0.0)
-    cum_spy = 100.0 * np.cumsum(spy_90d)
+    # Long-short alternative benchmark: recurring vs non-recurring NT filer
+    # cross-section (paper's third angle), same monthly cadence, same 90-day
+    # forward horizon. This is the fair market-neutral comparison.
+    recurring_xs = _recurring_xs_monthly_return_series(months)
+    cum_recurring = 100.0 * np.cumsum(recurring_xs)
 
     x = np.arange(len(months))
     fig, ax = plt.subplots(figsize=(7.2, 4.2))
     ax.fill_between(x, 0, cum_net, color="C0", alpha=0.15)
     ax.plot(x, cum_net, color="C0", linewidth=1.8,
-            label="Long–short basket, net of 15 bp round-trip")
+            label="Body-narrative long–short, net of 15 bp round-trip")
     ax.plot(x, cum_gross, color="C0", linewidth=1.0, linestyle=":", alpha=0.7,
-            label="Long–short basket, gross")
-    ax.plot(x, cum_spy, color="C3", linewidth=1.3, linestyle="--",
-            label="SPY benchmark (same monthly entry, 90-day hold)")
+            label="Body-narrative long–short, gross")
+    ax.plot(x, cum_recurring, color="C3", linewidth=1.3, linestyle="--",
+            label="Recurring vs non-recurring NT filer long–short (in-paper alternative)")
     ax.axhline(0.0, color="black", linewidth=0.6, alpha=0.4)
 
     # X-axis: one tick per calendar year
@@ -131,22 +135,22 @@ def make_fig1():
 
     ax.set_xlabel("Year")
     ax.set_ylabel("Cumulative return (\\%, additive)")
-    ax.set_title("Long–short basket on Form NT body-narrative classification\n"
-                 "vs same-horizon SPDR S\\&P 500 ETF (SPY) benchmark, 2014–2024")
-    ax.legend(loc="upper left", framealpha=0.9)
+    ax.set_title("Body-narrative long–short basket vs in-paper recurring-vs-non-recurring\n"
+                 "NT filer long–short alternative, in-sample 2014–2024")
+    ax.legend(loc="upper left", framealpha=0.9, fontsize=9)
     ax.grid(True, alpha=0.25)
 
     # Annotation placement: keep both labels readable
     strategy_end = cum_net[-1]
-    spy_end = cum_spy[-1]
-    ax.annotate(f"Strategy: terminal = {strategy_end:.0f}\\%\nNet Sharpe = 0.59",
+    alt_end = cum_recurring[-1]
+    ax.annotate(f"Body-narrative L/S:\nterminal = {strategy_end:.0f}\\%, Net Sharpe = 0.59",
                 xy=(x[-1], strategy_end),
                 xytext=(x[-1] - 22, strategy_end + 30),
                 fontsize=9, ha="left",
                 arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.8))
-    ax.annotate(f"SPY: terminal = {spy_end:.0f}\\%",
-                xy=(x[-1], spy_end),
-                xytext=(x[-1] - 22, spy_end - 80),
+    ax.annotate(f"Recurring-filer L/S:\nterminal = {alt_end:.0f}\\%",
+                xy=(x[-1], alt_end),
+                xytext=(x[-1] - 22, alt_end - 80),
                 fontsize=9, ha="left",
                 arrowprops=dict(arrowstyle="->", color="gray", linewidth=0.8))
 
