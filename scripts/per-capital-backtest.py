@@ -143,54 +143,47 @@ def spy_unit_capital_path(months: list[str]) -> tuple[list[str], list[float]]:
     return out_months, out_capital
 
 
-def ff5_umd_max_sharpe_unit_capital_path(months: list[str],
-                                          target_vol_pct_per_yr: float = 22.82
-                                          ) -> tuple[list[str], list[float]]:
-    """Volatility-matched maximum-Sharpe Fama-French 5-factor + UMD portfolio.
+def ff5_umd_max_sharpe_unit_capital_path(months: list[str]
+                                          ) -> tuple[list[str], list[float], float]:
+    """Natural-scale maximum-Sharpe Fama-French 5-factor + UMD portfolio.
 
     Compute the in-sample tangent portfolio on the six factor return series
     (Mkt-RF, SMB, HML, RMW, CMA, MOM) using sample means and covariances on
-    the strategy's monthly observations, then re-scale the resulting
-    portfolio's weights so that the realized monthly portfolio standard
-    deviation annualizes to `target_vol_pct_per_yr` (default 22.82, the
-    strategy's per-capital realized annualized volatility). This makes
-    the factor portfolio a fair quant baseline: same risk budget, optimal
-    mean-variance combination of the six factors, comparable terminal
-    capital under the same one-dollar-of-capital convention.
+    the strategy's monthly observations, then normalize the resulting weights
+    so that the sum of absolute weights equals one (a one-dollar long /
+    short overlay on top of risk-free cash, the textbook unleveraged
+    convention). Returns the unit-capital cumulative path AND the realized
+    monthly volatility of the portfolio, which is the natural risk budget
+    that strategies should be compared against.
     """
     ff = _load_ff_monthly()
     cols = ["Mkt-RF", "SMB", "HML", "RMW", "CMA", "MOM"]
     pairs = [(ym, [ff[ym][c] for c in cols], ff[ym]["RF"])
              for ym in months if ym in ff]
     if len(pairs) < 12:
-        return [], []
-    F = np.array([p[1] for p in pairs])   # shape (T, 6) in percent/month
+        return [], [], 0.0
+    F = np.array([p[1] for p in pairs])
     mu = F.mean(axis=0)
     cov = np.cov(F.T)
     try:
-        w_unscaled = np.linalg.solve(cov, mu)
+        w_raw = np.linalg.solve(cov, mu)
     except np.linalg.LinAlgError:
-        w_unscaled = np.linalg.pinv(cov) @ mu
-    # Sign-stabilize: ensure the resulting series has positive mean
-    if float((F @ w_unscaled).mean()) < 0:
-        w_unscaled = -w_unscaled
-    # Re-scale to the target monthly volatility
-    raw_port_pct = F @ w_unscaled
-    realized_vol_monthly = float(np.std(raw_port_pct, ddof=0))
-    target_vol_monthly = target_vol_pct_per_yr / np.sqrt(12.0)
-    scale = target_vol_monthly / max(realized_vol_monthly, 1e-9)
-    w = w_unscaled * scale
+        w_raw = np.linalg.pinv(cov) @ mu
+    if float((F @ w_raw).mean()) < 0:
+        w_raw = -w_raw
+    # Normalize so that sum of absolute weights = 1 (one dollar of gross
+    # leverage, the standard "unleveraged tangent" convention).
+    w = w_raw / max(np.sum(np.abs(w_raw)), 1e-9)
+    port_pct = F @ w
+    realized_vol_monthly = float(np.std(port_pct, ddof=0))
     cap = 1.0
     out_months, out_capital = [], []
-    for (ym, f, rf), pct in zip(pairs, F @ w):
-        # Tangent portfolio earns `pct` % on the deployed leverage; cash
-        # earns `rf` (we treat the factor positions as zero-cost overlays on
-        # top of risk-free cash, the textbook convention).
+    for (ym, _f, rf), pct in zip(pairs, port_pct):
         m_ret = (pct + rf) / 100.0
         cap *= 1.0 + m_ret
         out_months.append(ym)
         out_capital.append(cap)
-    return out_months, out_capital
+    return out_months, out_capital, realized_vol_monthly
 
 
 def residual_alpha_cumulative(monthly_pct: dict[str, float], months: list[str]) -> tuple[list[str], list[float]]:
@@ -248,9 +241,29 @@ def main() -> int:
     sim_months, sim_capital = per_capital_simulation(strat_monthly, overlap=4)
     strategy_sharpe = _sharpe_from_capital(sim_capital, periods_per_year=12.0)
 
-    # FF5+UMD max-Sharpe (tangent) portfolio, vol-matched to the strategy
-    ff_months, ff_capital = ff5_umd_max_sharpe_unit_capital_path(months_sorted)
+    # FF5+UMD max-Sharpe (tangent) portfolio at the natural unleveraged scale
+    # (sum of |weights| = 1). This portfolio's volatility is the natural
+    # risk budget that the strategy should be scaled against.
+    ff_months, ff_capital, ff_monthly_vol = ff5_umd_max_sharpe_unit_capital_path(months_sorted)
     ff_sharpe = _sharpe_from_capital(ff_capital, periods_per_year=12.0)
+    ff_ann_vol_pct = ff_monthly_vol * (12.0 ** 0.5)
+    print(f"  Tangent portfolio natural ann. vol: {ff_ann_vol_pct:.2f}%  (strategy 22.82%)")
+
+    # Rescale the strategy to the tangent portfolio's natural volatility
+    # (the user-requested reversed vol-matching direction): scale every
+    # monthly per-capital strategy return by (ff_ann_vol / strategy_ann_vol)
+    # and re-simulate the cumulative cash balance.
+    strat_monthly_pct_arr = np.array([100.0 * (sim_capital[i] / sim_capital[i-1] - 1.0)
+                                       for i in range(1, len(sim_capital[:len(months_sorted)]))])
+    strat_monthly_vol_unscaled = float(np.std(strat_monthly_pct_arr, ddof=0))
+    vol_scale = ff_monthly_vol / max(strat_monthly_vol_unscaled, 1e-9)
+    print(f"  Strategy vol-scaled to match tangent: scaling factor = {vol_scale:.4f}")
+    strat_rescaled = [1.0]
+    for r in strat_monthly_pct_arr:
+        strat_rescaled.append(strat_rescaled[-1] * (1.0 + vol_scale * r / 100.0))
+    strat_rescaled_sharpe = _sharpe_from_capital(strat_rescaled, periods_per_year=12.0)
+    print(f"  Strategy (vol-scaled to tangent):  terminal = ${strat_rescaled[-1]:.4f}")
+    print(f"     Sharpe (monthly->ann): {strat_rescaled_sharpe['ann_sharpe']}, ann_mean = {strat_rescaled_sharpe['ann_mean_pct']}%, ann_vol = {strat_rescaled_sharpe['ann_vol_pct']}%")
 
     # Cumulative residual alpha trail (factor-adjusted return cumulative)
     # built from the per-capital monthly return series implied by the
@@ -286,11 +299,15 @@ def main() -> int:
     # strategy, padding with None where the factor data is missing.
     ff_by_ym = dict(zip(ff_months, ff_capital))
     alpha_by_ym = dict(zip(alpha_months, alpha_capital))
+    # strat_rescaled is 1-indexed (first row is the starting $1, then a
+    # row per month). Align to the months_sorted axis.
+    strat_rescaled_by_idx = {months_sorted[i]: strat_rescaled[i] for i in range(min(len(months_sorted), len(strat_rescaled)))}
     with out_jsonl.open("w", encoding="utf-8") as f:
         for ym, sc in zip(months_sorted, strat_series):
             f.write(json.dumps({
                 "year_month": ym,
                 "strategy_capital": sc,
+                "strategy_capital_vol_scaled": strat_rescaled_by_idx.get(ym),
                 "ff5umd_max_sharpe_capital": ff_by_ym.get(ym),
                 "residual_alpha_capital": alpha_by_ym.get(ym),
             }) + "\n")
@@ -299,8 +316,11 @@ def main() -> int:
     REPORTS.mkdir(parents=True, exist_ok=True)
     out_json = REPORTS / "per-capital-backtest.json"
     out_json.write_text(json.dumps({
-        "strategy": strategy_sharpe,
-        "ff5umd_max_sharpe_vol_matched": ff_sharpe,
+        "strategy_native_vol": strategy_sharpe,
+        "strategy_vol_scaled_to_tangent": strat_rescaled_sharpe,
+        "ff5umd_max_sharpe_natural_scale": ff_sharpe,
+        "ff5umd_tangent_ann_vol_pct": round(ff_ann_vol_pct, 4),
+        "vol_scale_factor_strategy_to_tangent": round(vol_scale, 4),
         "residual_alpha_trail": alpha_sharpe,
         "overlap": 4,
         "tc_bps_rt": TC_BPS_RT,

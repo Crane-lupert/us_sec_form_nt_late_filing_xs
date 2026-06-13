@@ -1,5 +1,5 @@
 {
-  "strategy": {
+  "strategy_native_vol": {
     "n_obs": 58,
     "monthly_mean": 0.021385,
     "monthly_vol": 0.065864,
@@ -8,15 +8,26 @@
     "ann_vol_pct": 22.816,
     "terminal": 3.0281
   },
-  "ff5umd_max_sharpe_vol_matched": {
+  "strategy_vol_scaled_to_tangent": {
     "n_obs": 57,
-    "monthly_mean": 0.033473,
-    "monthly_vol": 0.06641,
-    "ann_sharpe": 1.746,
-    "ann_mean_pct": 40.1677,
-    "ann_vol_pct": 23.0052,
-    "terminal": 5.7139
+    "monthly_mean": 0.005057,
+    "monthly_vol": 0.013495,
+    "ann_sharpe": 1.2982,
+    "ann_mean_pct": 6.0689,
+    "ann_vol_pct": 4.6747,
+    "terminal": 1.3263
   },
+  "ff5umd_max_sharpe_natural_scale": {
+    "n_obs": 57,
+    "monthly_mean": 0.007843,
+    "monthly_vol": 0.013865,
+    "ann_sharpe": 1.9596,
+    "ann_mean_pct": 9.4119,
+    "ann_vol_pct": 4.803,
+    "terminal": 1.5479
+  },
+  "ff5umd_tangent_ann_vol_pct": 4.6747,
+  "vol_scale_factor_strategy_to_tangent": 0.2119,
   "residual_alpha_trail": {
     "n_obs": 56,
     "monthly_mean": 0.026135,
