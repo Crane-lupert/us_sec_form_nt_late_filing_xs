@@ -144,31 +144,29 @@ def make_fig1_per_capital():
     ax.set_xticks(ticks)
     ax.set_xticklabels(lbls, rotation=0)
     ax.set_xlabel("Year")
-    ax.set_ylabel(r"Growth of \$1 of capital")
+    ax.set_ylabel("Growth of $1 of capital")
     ax.set_title("Per-capital cumulative growth at the FF5+UMD tangent risk budget\n"
-                 r"(4.7\% annualized vol), in-sample 2014--2024")
+                 "(4.7% annualized vol), in-sample 2014--2024")
     ax.legend(loc="upper left", framealpha=0.9, fontsize=9)
     ax.grid(True, alpha=0.25)
 
-    # Compact summary text in the lower right (inside the axes, away from
-    # the line endpoints) so the figure stays a single self-contained panel
-    # and the axes are tight.
+    # Compact summary text in the lower right (clear of the legend at
+    # top-left and clear of the three line endpoints at top-right).
     sv_end = strat_voladj[-1] if strat_voladj[-1] is not None else 1.0
     t_end = tangent[-1] if tangent[-1] is not None else 1.0
     a_end = alpha_voladj[-1] if alpha_voladj[-1] is not None else 1.0
     summary = (
-        r"Terminal capital, ann.\,Sharpe (all at 4.7\% vol):"
-        "\n"
-        rf"Strategy:   \${sv_end:.2f},  1.30"
-        "\n"
-        rf"Residual $\alpha$:  \${a_end:.2f},  1.55  ($\alpha = +30.1\%$/yr, $t = 2.81$, $R^2 = 17.5\%$)"
-        "\n"
-        rf"Tangent:    \${t_end:.2f},  1.96 (in-sample optimal)"
+        "Terminal capital, ann. Sharpe (all at 4.7% vol)\n"
+        f"Strategy:        ${sv_end:.2f},  1.30\n"
+        f"Residual alpha:  ${a_end:.2f},  1.55\n"
+        f"   alpha = +30.1%/yr, t = 2.81, R^2 = 17.5%\n"
+        f"Tangent:         ${t_end:.2f},  1.96 (in-sample optimal)"
     )
-    ax.text(0.03, 0.97, summary, transform=ax.transAxes,
-            fontsize=8, verticalalignment="top", horizontalalignment="left",
+    ax.text(0.97, 0.03, summary, transform=ax.transAxes,
+            fontsize=8, verticalalignment="bottom", horizontalalignment="right",
+            family="monospace",
             bbox=dict(boxstyle="round,pad=0.4", facecolor="white",
-                      edgecolor="lightgray", alpha=0.92))
+                      edgecolor="lightgray", alpha=0.95))
 
     fig.tight_layout()
     out = OUT / "fig1_cumulative_pnl.png"
