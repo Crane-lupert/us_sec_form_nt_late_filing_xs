@@ -8,14 +8,14 @@
     "ann_vol_pct": 22.816,
     "terminal": 3.0281
   },
-  "ff5umd_ew_portfolio": {
+  "ff5umd_max_sharpe_vol_matched": {
     "n_obs": 57,
-    "monthly_mean": 0.002347,
-    "monthly_vol": 0.013221,
-    "ann_sharpe": 0.615,
-    "ann_mean_pct": 2.8165,
-    "ann_vol_pct": 4.5799,
-    "terminal": 1.1465
+    "monthly_mean": 0.033473,
+    "monthly_vol": 0.06641,
+    "ann_sharpe": 1.746,
+    "ann_mean_pct": 40.1677,
+    "ann_vol_pct": 23.0052,
+    "terminal": 5.7139
   },
   "residual_alpha_trail": {
     "n_obs": 56,
