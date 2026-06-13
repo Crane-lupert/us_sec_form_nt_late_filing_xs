@@ -1,0 +1,13 @@
+{
+  "matched_NYSE_Nasdaq": 3970,
+  "body_extracted": 3970,
+  "valid_3class_label": 3959,
+  "in_long_short_basket": 2559,
+  "drop_no_body": 0,
+  "drop_no_label": 11,
+  "drop_unresolved": 73,
+  "drop_no_90d_car": 1252,
+  "in_basket_AI_share_pct": 52.33,
+  "dropped_AI_share_pct": 61.26,
+  "differential_pp": -8.94
+}

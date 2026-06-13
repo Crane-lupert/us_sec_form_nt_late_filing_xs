@@ -1,0 +1,42 @@
+{
+  "equal_weight": {
+    "n_months": 58,
+    "ann_mean_pct": 1540.9926,
+    "ann_vol_pct": 6730.375,
+    "sharpe": 0.229
+  },
+  "inverse_price_weight": {
+    "n_months": 58,
+    "ann_mean_pct": 1211.1059,
+    "ann_vol_pct": 5045.529,
+    "sharpe": 0.24
+  },
+  "price_floor_$1.0": {
+    "n_months": 56,
+    "ann_mean_pct": 2175.944,
+    "ann_vol_pct": 9439.2785,
+    "sharpe": 0.2305
+  },
+  "price_floor_$5.0": {
+    "n_months": 43,
+    "ann_mean_pct": 27.5366,
+    "ann_vol_pct": 59.4994,
+    "sharpe": 0.4628
+  },
+  "price_floor_$10.0": {
+    "n_months": 13,
+    "ann_mean_pct": 47.0936,
+    "ann_vol_pct": 60.3938,
+    "sharpe": 0.7798
+  },
+  "price_floor_$25.0": {
+    "n_months": 0,
+    "sharpe": null
+  },
+  "price_weight": {
+    "n_months": 58,
+    "ann_mean_pct": 593.3765,
+    "ann_vol_pct": 2476.8397,
+    "sharpe": 0.2396
+  }
+}
